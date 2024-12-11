@@ -6,7 +6,7 @@ import SocialSharing from "../components/SocialSharing";
 import movies from "../public/movies.json";
 import tvshow from "../public/tvshow.json";
 import adult from "../public/adult.json";
-import hindidubbed from "../public/hindidubbed.json";
+import hindidubbed from "../public/hindiDubbed.json";
 
 // Helper function to create a slug from a title
 function generateSlug(title) {
