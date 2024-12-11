@@ -453,8 +453,8 @@ export default function adultArticle({ adultItem, videoSources = [] }) {
         <h1 style={styles.title}>{adultItem.title}</h1>
 
         {/* Description Section */}
-        {adultItem.description && (
-          <p style={styles.description}>{adultItem.description}</p>
+        {adultItem.synopsis && (
+          <p style={styles.synopsis}>{adultItem.synopsis}</p>
         )}
 
         {/* Image Section */}
@@ -765,7 +765,7 @@ const styles = {
     fontWeight: "bold",
     textShadow: "1px 1px 0px #000",
   },
-  description: {
+  synopsis: {
     fontSize: "1.5rem",
     lineHeight: "1.6",
     fontWeight: "bold",

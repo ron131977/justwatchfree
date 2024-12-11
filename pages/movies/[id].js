@@ -453,11 +453,14 @@ const moviesSchema = (moviesItem) =>
 
         <h1 style={styles.title}>{moviesItem.title}</h1>
       
-
-        {/* Description Section */}
+ {/* Description Section */}
+ {moviesItem.synopsis && (
+          <p style={styles.synopsis}>{moviesItem.synopsis}</p>
+        )}
+        {/* Description Section
         {moviesItem.description && (
           <p style={styles.description}>{moviesItem.description}</p>
-        )}
+        )} */}
 
         {/* Image Section */}
         {/* {moviesItem.image && (
@@ -736,7 +739,7 @@ const styles = {
     fontWeight: "bold",
     textShadow: "1px 1px 0px #000",
   },
-  description: {
+  synopsis: {
     fontSize: "1.5rem",
     lineHeight: "1.6",
     fontWeight: "bold",

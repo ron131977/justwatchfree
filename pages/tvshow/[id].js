@@ -445,8 +445,8 @@ const [Id, season, episode] = currentTvShowId.split("/");
       
 
         {/* Description Section */}
-        {tvshowItem.description && (
-          <p style={styles.description}>{tvshowItem.description}</p>
+        {tvshowItem.synopsis && (
+          <p style={styles.synopsis}>{tvshowItem.synopsis}</p>
         )}
 
         {/* Image Section */}
@@ -740,7 +740,7 @@ const styles = {
     fontWeight: "bold",
     textShadow: "1px 1px 0px #000",
   },
-  description: {
+  synopsis: {
     fontSize: "1.5rem",
     lineHeight: "1.6",
     fontWeight: "bold",

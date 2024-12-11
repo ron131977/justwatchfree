@@ -6,7 +6,7 @@ import SocialSharing from "../components/SocialSharing";
 import movies from "../public/movies.json";
 import tvshow from "../public/tvshow.json";
 import adult from "../public/adult.json";
-import hindidubbed from "../public/hindiDubbed.json";
+// import hindiDubbed from "../public/hindiDubbed.json";
 
 // Helper function to create a slug from a title
 function generateSlug(title) {
@@ -542,7 +542,7 @@ function HomePage({ allData }) {
     </>
   );
 }
-
+    
 export async function getStaticProps() {
   const sanitizeData = (data) =>
     data
@@ -557,7 +557,7 @@ export async function getStaticProps() {
     movies: sanitizeData(movies),
     tvshow: sanitizeData(tvshow),
     adult: sanitizeData(adult),
-    hindidubbed: sanitizeData(hindidubbed),
+    // hindiDubbed: sanitizeData(hindiDubbed),
   };
 
   return {
