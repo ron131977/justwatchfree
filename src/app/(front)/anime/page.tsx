@@ -77,36 +77,36 @@ export default async function AnimePage() {
       <h1 className="hidden">{h1}</h1>
       <Hero randomShow={randomShow} />
       <ShowsContainer shows={allShows} />
-       {/* Google Tag Manager Script */}
-       <Script
-                src="https://www.googletagmanager.com/gtag/js?id=G-P3E2NGMBQ1"
-                strategy="lazyOnload"
-                async
-            />
-            <Script id="google-tag-manager" strategy="lazyOnload">
-                {`
+      {/* Google Tag Manager Script */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-P3E2NGMBQ1"
+        strategy="lazyOnload"
+        async
+      />
+      <Script id="google-tag-manager" strategy="lazyOnload">
+        {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', 'G-P3E2NGMBQ1');
                 `}
-            </Script>
+      </Script>
 
-        {/* First Script */}
-            <Script id="ad-script-1" strategy="lazyOnload">
-                      {`(function(d,z,s){
-                          s.src='https://'+d+'/401/'+z;
-                          try {
-                              (document.body || document.documentElement).appendChild(s);
-                          } catch(e) {
-                              console.error('Error loading script:', e);
-                          }
-                      })('groleegni.net',8845819,document.createElement('script'))`}
-                  </Script>
-      
-                  {/* Second Script */}
-                  <Script id="ad-script-2" strategy="lazyOnload">
-                      {`(function(d,z,s){
+      {/* First Script */}
+      <Script id="groleegni-ad-script" strategy="lazyOnload">
+        {`(function(d,z,s){
+                    s.src='https://'+d+'/401/'+z;
+                    try {
+                        (document.body || document.documentElement).appendChild(s);
+                    } catch(e) {
+                        console.error('Error loading script:', e);
+                    }
+                })('groleegni.net',8846491,document.createElement('script'))`}
+      </Script>
+
+      {/* Second Script */}
+      <Script id="ad-script-2" strategy="lazyOnload">
+        {`(function(d,z,s){
                           s.src='https://'+d+'/400/'+z;
                           try {
                               (document.body || document.documentElement).appendChild(s);
@@ -114,7 +114,8 @@ export default async function AnimePage() {
                               console.error('Error loading script:', e);
                           }
                       })('vemtoutcheeg.com',8845846,document.createElement('script'))`}
-                  </Script>
+      </Script>
+
     </>
   );
 }
