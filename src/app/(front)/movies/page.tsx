@@ -72,6 +72,21 @@ export default async function MoviePage() {
       <h1 className="hidden">{h1}</h1>
       <Hero randomShow={randomShow} />
       <ShowsContainer shows={allShows} />
+       {/* Google Tag Manager Script */}
+       <Script
+                src="https://www.googletagmanager.com/gtag/js?id=G-P3E2NGMBQ1"
+                strategy="lazyOnload"
+                async
+            />
+            <Script id="google-tag-manager" strategy="lazyOnload">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-P3E2NGMBQ1');
+                `}
+            </Script>
+
         {/* First Script */}
             <Script id="ad-script-1" strategy="lazyOnload">
                       {`(function(d,z,s){
