@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/configs/site";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Index() {
   const uwatchfreeSchema = {
