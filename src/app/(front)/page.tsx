@@ -9,74 +9,30 @@ import Script from "next/script";
 export default function Index() {
   const uwatchfreeSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Justwatch Free™ ",
-        "url": "https://justwatchfree.vercel.app/",
-        "image": "https://justwatchfree.vercel.app/favicon.ico",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://justwatchfree.vercel.app/logo.png",
-          "width": 280,
-          "height": 80
-        }
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://justwatchfree.vercel.app/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://justwatchfree.vercel.app/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
+    "@type": "Organization",
+    "name": "Justwatch Free™ ",
+    "url": "https://justwatchfree.vercel.app/",
+    "image": "https://justwatchfree.vercel.app/favicon.ico",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://justwatchfree.vercel.app/logo.png",
+      "width": 280,
+      "height": 80
+    }
   };
 
   const rankMathSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "name": "Dr Trailer",
-        "url": "https://gravatar.com/drtrailer2022",
-        "image": "https://gravatar.com/drtrailer2022"
-      },
-      {
-        "@type": "Organization",
-        "name": "Justwatch Free™ ",
-        "url": "https://justwatchfree.vercel.app"
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://justwatchfree.vercel.app",
-        "name": "Justwatch Free™ ",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Justwatch Free™ "
-        }
-      },
-      {
-        "@type": "WebPage",
-        "url": "https://justwatchfree.vercel.app/",
-        "name": "Movie",
-        "datePublished": "2024-01-13T13:00:00+00:00",
-        "dateModified": "2024-01-13T13:13:00+00:00",
-        "author": {
-          "@type": "Person",
-          "name": "Dr Trailer",
-          "url": "https://gravatar.com/drtrailer2022",
-          "image": "https://gravatar.com/drtrailer2022"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Justwatch Free™ "
-        }
-      }
-    ]
+    "@type": "WebSite",
+    "url": "https://justwatchfree.vercel.app",
+    "name": "Justwatch Free™ ",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Justwatch Free™ ",
+      "url": "https://justwatchfree.vercel.app"
+    }
   };
-  
+
   return (
     <>
  <Script type="application/ld+json">
