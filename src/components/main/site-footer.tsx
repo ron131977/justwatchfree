@@ -55,11 +55,11 @@ const SiteFooter = () => {
             href={siteConfig.links.twitter}
             target="_blank"
             rel="noreferrer"
-            className="font-medium underline underline-offset-4"
+            className="font-medium underline-offset-4"
           >
             {siteConfig.author}
           </a>
-          . The source code is available on{" "}
+          {/* . The source code is available on{" "}
           <a
             href={siteConfig.links.github}
             target="_blank"
@@ -68,7 +68,7 @@ const SiteFooter = () => {
           >
             GitHub
           </a>
-          .
+          . */}
         </p>
       </div>
       {/* </div> */}
