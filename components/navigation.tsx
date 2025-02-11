@@ -77,9 +77,9 @@ export function Navigation() {
           <Link href="/adult" className="text-sm font-medium hover:no-underline">
             Adult
           </Link>
-          <Link href="/admin" className="text-sm font-medium hover:no-underline">
+          {/* <Link href="/admin" className="text-sm font-medium hover:no-underline">
             Admin
-          </Link>
+          </Link> */}
         </div>
 
         {/* Search Bar */}
@@ -103,9 +103,9 @@ export function Navigation() {
           <Link href="/adult" className="text-sm font-medium hover:no-underline" onClick={() => setIsOpen(false)}>
             Adult
           </Link>
-          <Link href="/admin" className="text-sm font-medium hover:no-underline">
+          {/* <Link href="/admin" className="text-sm font-medium hover:no-underline">
             Admin
-          </Link>
+          </Link> */}
 
           {/* Search Bar (Mobile) */}
           <div className="w-half max-w-sm px-4">
