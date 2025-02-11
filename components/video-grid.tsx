@@ -73,7 +73,7 @@ export function VideoGrid({ videos }: { videos: Video[] }) {
             </div>
             <div className="mt-2">
               <h3 className="font-medium line-clamp-2 group-hover:text-primary"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{video.title}</h3>
-              {video.description && <p className="text-sm text-muted-foreground mt-1"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{video.description}</p>}
+              {/* {video.description && <p className="text-sm text-muted-foreground mt-1"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{video.description}</p>} */}
               <p className="text-sm text-muted-foreground flex items-center mt-1"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Eye className="w-4 h-4 mr-1" />
                 {video.views.toLocaleString()} views

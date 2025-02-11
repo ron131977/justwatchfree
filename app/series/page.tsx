@@ -145,7 +145,7 @@ export default function SeriesPage() {
             </div>
             <div className="mt-2">
               <h3 className="font-medium line-clamp-2 group-hover:text-primary"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{series.title}</h3>
-              <p className="text-sm text-muted-foreground mt-1 line-clamp-2"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{series.description}</p>
+              {/* <p className="text-sm text-muted-foreground mt-1 line-clamp-2"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{series.description}</p> */}
 
               <p className="text-sm text-muted-foreground flex items-center mt-1"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Eye className="w-4 h-4 mr-1" />
