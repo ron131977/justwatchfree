@@ -77,6 +77,9 @@ export function Navigation() {
           <Link href="/adult" className="text-sm font-medium hover:no-underline">
             Adult
           </Link>
+          <Link href="/blog" className="text-sm font-medium hover:no-underline">
+            Blog Post
+          </Link>
           {/* <Link href="/admin" className="text-sm font-medium hover:no-underline">
             Admin
           </Link> */}
@@ -102,6 +105,9 @@ export function Navigation() {
           </Link>
           <Link href="/adult" className="text-sm font-medium hover:no-underline" onClick={() => setIsOpen(false)}>
             Adult
+          </Link>
+          <Link href="/blog" className="text-sm font-medium hover:no-underline">
+            Blog Post
           </Link>
           {/* <Link href="/admin" className="text-sm font-medium hover:no-underline">
             Admin
