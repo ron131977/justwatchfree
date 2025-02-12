@@ -65,7 +65,7 @@ import { JsonLd } from "react-schemaorg"
 //   alternates: {
 //     canonical: "https://justwatchfree.vercel.app/",
 //   },
-   
+
 // }
 
 export default function Home() {
@@ -75,7 +75,7 @@ export default function Home() {
     type: "Movie" as const,
   }))
 
- 
+
   // const tvSeries = superdata.series.map((series) => ({
   //   ...series,
   //   type: "TVSeries" as const,
@@ -93,7 +93,7 @@ export default function Home() {
   // )
 
   const tvSeries = superdata.series.map((series) => ({
-    ...series,    
+    ...series,
     type: "TVSeries",
     // views: series.rating || (series.episodes.length > 0 ? series.episodes[0].rating : 0), 
   }))
@@ -103,9 +103,9 @@ export default function Home() {
     type: "Adult" as const,
   }))
 
-  const allVideos = [...movies, ...tvSeries,  ...adultVideos]
+  const allVideos = [...movies, ...tvSeries, ...adultVideos]
 
-// MAIN USED 
+  // MAIN USED 
 
   //   const structuredData = {
   //   "@context": "https://schema.org",
@@ -184,14 +184,14 @@ export default function Home() {
   //   ],
   // }
 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
   // const structuredData = {
   //   "@context": "https://schema.org",
   //   "@graph": [
@@ -301,7 +301,7 @@ export default function Home() {
   //     }
   //   ]
   // };
-  
+
 
 
 
@@ -379,7 +379,7 @@ export default function Home() {
   // });
 
   const structuredData = {
-    metadataBase: new URL("https://justwatchfree.vercel.app"),
+    metadataBase: "https://justwatchfree.vercel.app",
     title: {
       default: "JustWatch Free - Watch Movies, Series & More",
       template: "%s | JustWatch Free",
@@ -440,80 +440,88 @@ export default function Home() {
       {
         "@type": "ItemList",
         "name": "Movies List",
-        "itemListElement": movies.map((movie, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "Movie",
-            "name": movie.title,
-            "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
-            "image": movie.thumbnail,
-            "datePublished": movie.uploadDate,
-            "duration": movie.duration,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": movie.rating,
-              "bestRating": 10,
-              "worstRating": 0,
-              "ratingCount": 1,
+        "itemListElement": Array.isArray(movies)
+          ? movies.map((movie, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Movie",
+              "name": movie.title,
+              "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
+              "image": movie.thumbnail,
+              "datePublished": movie.uploadDate,
+              "duration": movie.duration,
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": movie.rating,
+                "bestRating": 10,
+                "worstRating": 0,
+                "ratingCount": 1,
+              },
             },
-          },
-        })),
+          }))
+          : [],
       },
       {
         "@type": "ItemList",
         "name": "Adult List",
-        "itemListElement": adultMovies.map((movie, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "Movie",
-            "name": movie.title,
-            "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
-            "image": movie.thumbnail,
-            "datePublished": movie.uploadDate,
-            "duration": movie.duration,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": movie.rating,
-              "bestRating": 10,
-              "worstRating": 0,
-              "ratingCount": 1,
+        "itemListElement": Array.isArray(adultMovies)
+          ? adultMovies.map((movie, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Movie",
+              "name": movie.title,
+              "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
+              "image": movie.thumbnail,
+              "datePublished": movie.uploadDate,
+              "duration": movie.duration,
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": movie.rating,
+                "bestRating": 10,
+                "worstRating": 0,
+                "ratingCount": 1,
+              },
             },
-          },
-        })),
+          }))
+          : [],
       },
       {
         "@type": "ItemList",
         "name": "TV Series List",
-        "itemListElement": tvSeries.map((series, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "TVSeries",
-            "name": series.title,
-            "url": `https://justwatchfree.vercel.app/series/${series.id}`,
-            "image": series.thumbnail,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": series.rating || 0,
-              "bestRating": 10,
-              "worstRating": 0,
-              "ratingCount": 1,
+        "itemListElement": Array.isArray(tvSeries)
+          ? tvSeries.map((series, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "TVSeries",
+              "name": series.title,
+              "url": `https://justwatchfree.vercel.app/series/${series.id}`,
+              "image": series.thumbnail,
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": series.rating || 0,
+                "bestRating": 10,
+                "worstRating": 0,
+                "ratingCount": 1,
+              },
+              "numberOfEpisodes": series.episodes?.length || 0,
+              "episode": Array.isArray(series.episodes)
+                ? series.episodes.map((episode, epIndex) => ({
+                  "@type": "TVEpisode",
+                  "episodeNumber": epIndex + 1,
+                  "name": episode.title,
+                  "url": `https://justwatchfree.vercel.app/series/${episode.id}`,
+                }))
+                : [],
             },
-            "numberOfEpisodes": series.episodes.length,
-            "episode": series.episodes.map((episode, epIndex) => ({
-              "@type": "TVEpisode",
-              "episodeNumber": epIndex + 1,
-              "name": episode.title,
-              "url": `https://justwatchfree.vercel.app/series/${episode.id}`,
-            })),
-          },
-        })),
+          }))
+          : [],
       },
     ],
   };
-  
+
 
   return (
     <>
@@ -530,7 +538,7 @@ export default function Home() {
           },
         }}
       />
-       <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
@@ -551,7 +559,7 @@ export default function Home() {
           })),
         }}
       /> */}
-         {/* <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
       /> */}
