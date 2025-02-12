@@ -182,115 +182,207 @@ export default function Home() {
   //   ],
   // }
 
+  // const structuredData = {
+  //   "@context": "https://schema.org",
+  //   "@graph": [
+  //     {
+  //       "@type": "ItemList",
+  //       "name": "Movies List",
+  //       "itemListElement": movies.map((movie, index) => ({
+  //         "@type": "ListItem",
+  //         "position": index + 1,
+  //         "item": {
+  //           "@type": "Movie",
+  //           "name": movie.title,
+  //           "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
+  //           "image": movie.thumbnail,
+  //           "datePublished": movie.uploadDate,
+  //           "duration": movie.duration,
+  //           "aggregateRating": {
+  //             "@type": "AggregateRating",
+  //             "ratingValue": movie.rating,
+  //             "bestRating": 10,
+  //             "worstRating": 0,
+  //             "ratingCount": 1,
+  //             "ratingExplanation":
+  //               "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
+  //           },
+  //           "author": [],
+  //           "genre": [],
+  //           "offers": {
+  //             "@type": "AggregateOffer",
+  //             "offerCount": 0,
+  //             "offers": []
+  //           },
+  //           "countryOfOrigin": "United States"
+  //         }
+  //       }))
+  //     },
+  //     {
+  //       "@type": "ItemList",
+  //       "name": "Adult Movies List",
+  //       "itemListElement": movies.map((movie, index) => ({
+  //         "@type": "ListItem",
+  //         "position": index + 1,
+  //         "item": {
+  //           "@type": "Movie",
+  //           "name": movie.title,
+  //           "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
+  //           "image": movie.thumbnail,
+  //           "datePublished": movie.uploadDate,
+  //           "duration": movie.duration,
+  //           "aggregateRating": {
+  //             "@type": "AggregateRating",
+  //             "ratingValue": movie.rating,
+  //             "bestRating": 10,
+  //             "worstRating": 0,
+  //             "ratingCount": 1,
+  //             "ratingExplanation":
+  //               "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
+  //           },
+  //           "author": [],
+  //           "genre": [],
+  //           "offers": {
+  //             "@type": "AggregateOffer",
+  //             "offerCount": 0,
+  //             "offers": []
+  //           },
+  //           "countryOfOrigin": "United States"
+  //         }
+  //       }))
+  //     },
+  //     {
+  //       "@type": "ItemList",
+  //       "name": "Tv Show List",
+  //       "itemListElement": tvSeries.map((series, index) => ({
+  //         "@type": "ListItem",
+  //         "position": index + 1,
+  //         "item": {
+  //           "@type": "TVSeries",
+  //           "name": series.title,
+  //           "url": `https://justwatchfree.vercel.app/series/${series.id}`,
+  //           "image": series.thumbnail,
+  //           "aggregateRating": {
+  //             "@type": "AggregateRating",
+  //             "ratingValue": series.rating || 0,
+  //             "bestRating": 10,
+  //             "worstRating": 0,
+  //             "ratingCount": 1,
+  //             "ratingExplanation":
+  //               "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
+  //           },
+  //           "numberOfEpisodes": series.episodes.length,
+  //           "episode": series.episodes.map((episode, epIndex) => ({
+  //             "@type": "TVEpisode",
+  //             "episodeNumber": epIndex + 1,
+  //             "name": episode.title,
+  //             "url": `https://justwatchfree.vercel.app/series/${episode.id}`
+  //           })),
+  //           "author": [],
+  //           "genre": [],
+  //           "offers": {
+  //             "@type": "AggregateOffer",
+  //             "offerCount": 0,
+  //             "offers": []
+  //           },
+  //           "countryOfOrigin": "United States"
+  //         }
+  //       }))
+  //     }
+  //   ]
+  // };
+  
+
   const structuredData = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ItemList",
-        "name": "Movies List",
-        "itemListElement": movies.map((movie, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "Movie",
-            "name": movie.title,
-            "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
-            "image": movie.thumbnail,
-            "datePublished": movie.uploadDate,
-            "duration": movie.duration,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": movie.rating,
-              "bestRating": 10,
-              "worstRating": 0,
-              "ratingCount": 1,
-              "ratingExplanation":
-                "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
-            },
-            "author": [],
-            "genre": [],
-            "offers": {
-              "@type": "AggregateOffer",
-              "offerCount": 0,
-              "offers": []
-            },
-            "countryOfOrigin": "United States"
-          }
-        }))
-      },
-      {
-        "@type": "ItemList",
-        "name": "Adult Movies List",
-        "itemListElement": movies.map((movie, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "Movie",
-            "name": movie.title,
-            "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
-            "image": movie.thumbnail,
-            "datePublished": movie.uploadDate,
-            "duration": movie.duration,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": movie.rating,
-              "bestRating": 10,
-              "worstRating": 0,
-              "ratingCount": 1,
-              "ratingExplanation":
-                "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
-            },
-            "author": [],
-            "genre": [],
-            "offers": {
-              "@type": "AggregateOffer",
-              "offerCount": 0,
-              "offers": []
-            },
-            "countryOfOrigin": "United States"
-          }
-        }))
-      },
-      {
-        "@type": "ItemList",
-        "name": "Tv Show List",
-        "itemListElement": tvSeries.map((series, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "TVSeries",
-            "name": series.title,
-            "url": `https://justwatchfree.vercel.app/series/${series.id}`,
-            "image": series.thumbnail,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": series.rating || 0,
-              "bestRating": 10,
-              "worstRating": 0,
-              "ratingCount": 1,
-              "ratingExplanation":
-                "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
-            },
-            "numberOfEpisodes": series.episodes.length,
-            "episode": series.episodes.map((episode, epIndex) => ({
-              "@type": "TVEpisode",
-              "episodeNumber": epIndex + 1,
-              "name": episode.title,
-              "url": `https://justwatchfree.vercel.app/series/${episode.id}`
-            })),
-            "author": [],
-            "genre": [],
-            "offers": {
-              "@type": "AggregateOffer",
-              "offerCount": 0,
-              "offers": []
-            },
-            "countryOfOrigin": "United States"
-          }
-        }))
-      }
+    "@type": "ItemList",
+    "name": "Complete Media List",
+    "itemListElement": [
+      ...movies.map((movie, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Movie",
+          "name": movie.title,
+          "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
+          "image": movie.thumbnail,
+          "datePublished": movie.uploadDate,
+          "duration": movie.duration,
+          "genre": "General",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": movie.rating,
+            "bestRating": 10,
+            "worstRating": 0,
+            "ratingCount": 1
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": 0,
+            "offers": []
+          },
+          "countryOfOrigin": { "@type": "Country", "name": "United States" }
+        }
+      })),
+      ...adultMovies.map((movie, index) => ({
+        "@type": "ListItem",
+        "position": movies.length + index + 1, // Ensuring unique position values
+        "item": {
+          "@type": "Movie",
+          "name": movie.title,
+          "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
+          "image": movie.thumbnail,
+          "datePublished": movie.uploadDate,
+          "duration": movie.duration,
+          "genre": "Adult",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": movie.rating,
+            "bestRating": 10,
+            "worstRating": 0,
+            "ratingCount": 1
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": 0,
+            "offers": []
+          },
+          "countryOfOrigin": { "@type": "Country", "name": "United States" }
+        }
+      })),
+      ...tvSeries.map((series, index) => ({
+        "@type": "ListItem",
+        "position": movies.length + adultMovies.length + index + 1, // Ensuring unique position values
+        "item": {
+          "@type": "TVSeries",
+          "name": series.title,
+          "url": `https://justwatchfree.vercel.app/series/${series.id}`,
+          "image": series.thumbnail,
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": series.rating || 0,
+            "bestRating": 10,
+            "worstRating": 0,
+            "ratingCount": 1
+          },
+          "numberOfEpisodes": series.episodes.length,
+          "episode": series.episodes.map((episode, epIndex) => ({
+            "@type": "TVEpisode",
+            "episodeNumber": epIndex + 1,
+            "name": episode.title,
+            "url": `https://justwatchfree.vercel.app/series/${episode.id}`
+          })),
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": 0,
+            "offers": []
+          },
+          "countryOfOrigin": { "@type": "Country", "name": "United States" }
+        }
+      }))
     ]
   };
+  
   
   return (
     <>
