@@ -88,35 +88,35 @@
 //             gtag('config', 'G-P3E2NGMBQ1');
 //           `}
 //         </Script>
-    
+
 //       </head>
 //       <body className={inter.className}>
 //         <Navigation />
 //         <main className="min-h-screen bg-background">{children}</main>
 
-        // {/* First Ad Script */}
-        // <Script id="ad-script-1" strategy="lazyOnload">
-        //   {`(function(d,z,s){
-        //       s.src='https://'+d+'/401/'+z;
-        //       try {
-        //           (document.body || document.documentElement).appendChild(s);
-        //       } catch(e) {
-        //           console.error('Error loading script:', e);
-        //       }
-        //   })('groleegni.net',8640299,document.createElement('script'))`}
-        // </Script>
+// {/* First Ad Script */}
+// <Script id="ad-script-1" strategy="lazyOnload">
+//   {`(function(d,z,s){
+//       s.src='https://'+d+'/401/'+z;
+//       try {
+//           (document.body || document.documentElement).appendChild(s);
+//       } catch(e) {
+//           console.error('Error loading script:', e);
+//       }
+//   })('groleegni.net',8640299,document.createElement('script'))`}
+// </Script>
 
-        // {/* Second Ad Script */}
-        // <Script id="ad-script-2" strategy="lazyOnload">
-        //   {`(function(d,z,s){
-        //       s.src='https://'+d+'/400/'+z;
-        //       try {
-        //           (document.body || document.documentElement).appendChild(s);
-        //       } catch(e) {
-        //           console.error('Error loading script:', e);
-        //       }
-        //   })('vemtoutcheeg.com',8845846,document.createElement('script'))`}
-        // </Script>
+// {/* Second Ad Script */}
+// <Script id="ad-script-2" strategy="lazyOnload">
+//   {`(function(d,z,s){
+//       s.src='https://'+d+'/400/'+z;
+//       try {
+//           (document.body || document.documentElement).appendChild(s);
+//       } catch(e) {
+//           console.error('Error loading script:', e);
+//       }
+//   })('vemtoutcheeg.com',8845846,document.createElement('script'))`}
+// </Script>
 
 //       </body>
 //     </html>
@@ -283,6 +283,114 @@ export const metadata: Metadata = {
 //   countryOfOrigin: "United States",
 // };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "itemListElement": movies.map((movie, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Movie",
+          "name": movie.title,
+          "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
+          "image": movie.thumbnail,
+          "datePublished": movie.uploadDate,
+          "duration": movie.duration,
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": movie.rating,
+            "bestRating": 10,
+            "worstRating": 0,
+            "ratingCount": 1,
+            "ratingExplanation":
+              "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
+          },
+          "author": [],
+          "genre": [],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": 0,
+            "offers": []
+          },
+          "countryOfOrigin": "United States"
+        }
+      }))
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": movies.map((movie, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Movie",
+          "name": movie.title,
+          "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
+          "image": movie.thumbnail,
+          "datePublished": movie.uploadDate,
+          "duration": movie.duration,
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": movie.rating,
+            "bestRating": 10,
+            "worstRating": 0,
+            "ratingCount": 1,
+            "ratingExplanation":
+              "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
+          },
+          "author": [],
+          "genre": [],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": 0,
+            "offers": []
+          },
+          "countryOfOrigin": "United States"
+        }
+      }))
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": tvSeries.map((series, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "TVSeries",
+          "name": series.title,
+          "url": `https://justwatchfree.vercel.app/series/${series.id}`,
+          "image": series.thumbnail,
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": series.rating || 0,
+            "bestRating": 10,
+            "worstRating": 0,
+            "ratingCount": 1,
+            "ratingExplanation":
+              "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
+          },
+          "numberOfEpisodes": series.episodes.length,
+          "episode": series.episodes.map((episode, epIndex) => ({
+            "@type": "TVEpisode",
+            "episodeNumber": epIndex + 1,
+            "name": episode.title,
+            "url": `https://justwatchfree.vercel.app/series/${episode.id}`
+          })),
+          "author": [],
+          "genre": [],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": 0,
+            "offers": []
+          },
+          "countryOfOrigin": "United States"
+        }
+      }))
+    }
+  ]
+};
+
+
 export default function RootLayout({
   children,
 }: {
@@ -311,13 +419,20 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         /> */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Navigation />
         <main className="min-h-screen bg-background">{children}</main>
-        
-                {/* First Ad Script */}
-                <Script id="ad-script-1" strategy="lazyOnload">
+
+        {/* First Ad Script */}
+        <Script id="ad-script-1" strategy="lazyOnload">
           {`(function(d,z,s){
               s.src='https://'+d+'/401/'+z;
               try {
