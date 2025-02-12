@@ -105,6 +105,8 @@ export default function Home() {
 
   const allVideos = [...movies, ...tvSeries,  ...adultVideos]
 
+// MAIN USED 
+
   //   const structuredData = {
   //   "@context": "https://schema.org",
   //   "@graph": [
@@ -182,6 +184,14 @@ export default function Home() {
   //   ],
   // }
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   // const structuredData = {
   //   "@context": "https://schema.org",
   //   "@graph": [
@@ -293,97 +303,82 @@ export default function Home() {
   // };
   
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Complete Media List",
-    "itemListElement": [
-      ...movies.map((movie, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "Movie",
-          "name": movie.title,
-          "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
-          "image": movie.thumbnail,
-          "datePublished": movie.uploadDate,
-          "duration": movie.duration,
-          "genre": "General",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": movie.rating,
-            "bestRating": 10,
-            "worstRating": 0,
-            "ratingCount": 1
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "offerCount": 0,
-            "offers": []
-          },
-          "countryOfOrigin": { "@type": "Country", "name": "United States" }
-        }
-      })),
-      ...adultMovies.map((movie, index) => ({
-        "@type": "ListItem",
-        "position": movies.length + index + 1, // Ensuring unique position values
-        "item": {
-          "@type": "Movie",
-          "name": movie.title,
-          "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
-          "image": movie.thumbnail,
-          "datePublished": movie.uploadDate,
-          "duration": movie.duration,
-          "genre": "Adult",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": movie.rating,
-            "bestRating": 10,
-            "worstRating": 0,
-            "ratingCount": 1
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "offerCount": 0,
-            "offers": []
-          },
-          "countryOfOrigin": { "@type": "Country", "name": "United States" }
-        }
-      })),
-      ...tvSeries.map((series, index) => ({
-        "@type": "ListItem",
-        "position": movies.length + adultMovies.length + index + 1, // Ensuring unique position values
-        "item": {
-          "@type": "TVSeries",
-          "name": series.title,
-          "url": `https://justwatchfree.vercel.app/series/${series.id}`,
-          "image": series.thumbnail,
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": series.rating || 0,
-            "bestRating": 10,
-            "worstRating": 0,
-            "ratingCount": 1
-          },
-          "numberOfEpisodes": series.episodes.length,
-          "episode": series.episodes.map((episode, epIndex) => ({
-            "@type": "TVEpisode",
-            "episodeNumber": epIndex + 1,
-            "name": episode.title,
-            "url": `https://justwatchfree.vercel.app/series/${episode.id}`
-          })),
-          "offers": {
-            "@type": "AggregateOffer",
-            "offerCount": 0,
-            "offers": []
-          },
-          "countryOfOrigin": { "@type": "Country", "name": "United States" }
-        }
-      }))
-    ]
-  };
-  
-  
+
+
+
+
+
+  // const uwatchfreeSchema = JSON.stringify({
+  //   "@context": "https://schema.org",
+  //   "@graph": [
+  //     {
+  //       "@type": "Organization",
+  //       "@id": "https://justwatchfree.vercel.app/#organization",
+  //       "name": "JustWatch Free - Watch Movies, Series & More",
+  //       "url": "https://justwatchfree.vercel.app/",
+  //       "logo": {
+  //         "@type": "ImageObject",
+  //         "url": "https://justwatchfree.vercel.app/og_image.jpg",
+  //         "width": 1280,
+  //         "height": 720
+  //       }
+  //     },
+  //     {
+  //       "@type": "WebSite",
+  //       "@id": "https://justwatchfree.vercel.app/#website",
+  //       "url": "https://justwatchfree.vercel.app/",
+  //       "name": "JustWatch Free - Watch Movies, Series & More",
+  //       "publisher": { "@id": "https://justwatchfree.vercel.app/#organization" },
+  //       "potentialAction": {
+  //         "@type": "SearchAction",
+  //         "target": {
+  //           "@type": "EntryPoint",
+  //           "urlTemplate": "https://justwatchfree.vercel.app/search?q={search_term_string}"
+  //         },
+  //         "query-input": "required name=search_term_string"
+  //       }
+  //     },
+  //     {
+  //       "@type": "WebPage",
+  //       "@id": "https://justwatchfree.vercel.app/#webpage",
+  //       "url": "https://justwatchfree.vercel.app/",
+  //       "name": "Movie Streaming Platform",
+  //       "datePublished": "2024-01-13T13:00:00+00:00",
+  //       "dateModified": "2024-01-13T13:13:00+00:00",
+  //       "isPartOf": { "@id": "https://justwatchfree.vercel.app/#website" },
+  //       "inLanguage": "en-US",
+  //       "mainEntity": {
+  //         "@type": "Article",
+  //         "@id": "https://justwatchfree.vercel.app/#article",
+  //         "url": "https://justwatchfree.vercel.app/",
+  //         "headline": "JustWatch Free - Watch Movies, Series & More",
+  //         "datePublished": "2024-01-13T13:00:00+00:00",
+  //         "dateModified": "2024-01-13T13:13:00+00:00",
+  //         "image": {
+  //           "@type": "ImageObject",
+  //           "url": "https://justwatchfree.vercel.app/og_image.jpg",
+  //           "width": 1280,
+  //           "height": 720
+  //         },
+  //         "author": {
+  //           "@type": "Person",
+  //           "@id": "https://gravatar.com/drtrailer2022",
+  //           "name": "Dr Trailer",
+  //           "url": "https://gravatar.com/drtrailer2022",
+  //           "image": {
+  //             "@type": "ImageObject",
+  //             "url": "https://gravatar.com/drtrailer2022",
+  //             "caption": "Dr Trailer",
+  //             "inLanguage": "en-US"
+  //           }
+  //         },
+  //         "publisher": { "@id": "https://justwatchfree.vercel.app/#organization" }
+  //       }
+  //     }
+  //   ]
+  // });
+
+
   return (
     <>
       <JsonLd<any>
@@ -399,12 +394,12 @@ export default function Home() {
           },
         }}
       />
-       <script
+       {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
         }}
-      />
+      /> */}
       {/* <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -419,6 +414,10 @@ export default function Home() {
             },
           })),
         }}
+      /> */}
+         {/* <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: uwatchfreeSchema }}
       /> */}
       <div className="container py-6 space-y-8 mx-auto text-center">
         <section>
