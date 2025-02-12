@@ -88,35 +88,35 @@
 //             gtag('config', 'G-P3E2NGMBQ1');
 //           `}
 //         </Script>
-
+    
 //       </head>
 //       <body className={inter.className}>
 //         <Navigation />
 //         <main className="min-h-screen bg-background">{children}</main>
 
-// {/* First Ad Script */}
-// <Script id="ad-script-1" strategy="lazyOnload">
-//   {`(function(d,z,s){
-//       s.src='https://'+d+'/401/'+z;
-//       try {
-//           (document.body || document.documentElement).appendChild(s);
-//       } catch(e) {
-//           console.error('Error loading script:', e);
-//       }
-//   })('groleegni.net',8640299,document.createElement('script'))`}
-// </Script>
+        // {/* First Ad Script */}
+        // <Script id="ad-script-1" strategy="lazyOnload">
+        //   {`(function(d,z,s){
+        //       s.src='https://'+d+'/401/'+z;
+        //       try {
+        //           (document.body || document.documentElement).appendChild(s);
+        //       } catch(e) {
+        //           console.error('Error loading script:', e);
+        //       }
+        //   })('groleegni.net',8640299,document.createElement('script'))`}
+        // </Script>
 
-// {/* Second Ad Script */}
-// <Script id="ad-script-2" strategy="lazyOnload">
-//   {`(function(d,z,s){
-//       s.src='https://'+d+'/400/'+z;
-//       try {
-//           (document.body || document.documentElement).appendChild(s);
-//       } catch(e) {
-//           console.error('Error loading script:', e);
-//       }
-//   })('vemtoutcheeg.com',8845846,document.createElement('script'))`}
-// </Script>
+        // {/* Second Ad Script */}
+        // <Script id="ad-script-2" strategy="lazyOnload">
+        //   {`(function(d,z,s){
+        //       s.src='https://'+d+'/400/'+z;
+        //       try {
+        //           (document.body || document.documentElement).appendChild(s);
+        //       } catch(e) {
+        //           console.error('Error loading script:', e);
+        //       }
+        //   })('vemtoutcheeg.com',8845846,document.createElement('script'))`}
+        // </Script>
 
 //       </body>
 //     </html>
@@ -420,19 +420,24 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         /> */}
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
+{/* <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      /> */}
       </head>
       <body className={inter.className}>
         <Navigation />
         <main className="min-h-screen bg-background">{children}</main>
-
-        {/* First Ad Script */}
-        <Script id="ad-script-1" strategy="lazyOnload">
+        <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+                {/* First Ad Script */}
+                <Script id="ad-script-1" strategy="lazyOnload">
           {`(function(d,z,s){
               s.src='https://'+d+'/401/'+z;
               try {

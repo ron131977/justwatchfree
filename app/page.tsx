@@ -65,7 +65,7 @@ import { JsonLd } from "react-schemaorg"
 //   alternates: {
 //     canonical: "https://justwatchfree.vercel.app/",
 //   },
-
+   
 // }
 
 export default function Home() {
@@ -75,7 +75,7 @@ export default function Home() {
     type: "Movie" as const,
   }))
 
-
+ 
   // const tvSeries = superdata.series.map((series) => ({
   //   ...series,
   //   type: "TVSeries" as const,
@@ -93,7 +93,7 @@ export default function Home() {
   // )
 
   const tvSeries = superdata.series.map((series) => ({
-    ...series,
+    ...series,    
     type: "TVSeries",
     // views: series.rating || (series.episodes.length > 0 ? series.episodes[0].rating : 0), 
   }))
@@ -103,7 +103,7 @@ export default function Home() {
     type: "Adult" as const,
   }))
 
-  const allVideos = [...movies, ...tvSeries, ...adultVideos]
+  const allVideos = [...movies, ...tvSeries,  ...adultVideos]
 
   //   const structuredData = {
   //   "@context": "https://schema.org",
@@ -288,7 +288,7 @@ export default function Home() {
   //     }
   //   ]
   // };
-
+  
   return (
     <>
       <JsonLd<any>
@@ -304,7 +304,7 @@ export default function Home() {
           },
         }}
       />
-      {/* <script
+       {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
