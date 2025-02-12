@@ -147,6 +147,8 @@ export const metadata: Metadata = {
   description:
     "Stream the latest movies, TV series, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
   keywords: [
+    "justwatch",
+    "just watch free",
     "movies",
     "TV series",
     "video",

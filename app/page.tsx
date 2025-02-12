@@ -9,64 +9,64 @@ import { JsonLd } from "react-schemaorg"
 //     "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
 // }
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://justwatchfree.vercel.app/"),
-  title: {
-    default: "JustWatch Free - Your Ultimate Streaming Platform",
-    template: "%s | JustWatchFree",
-  },
-  description:
-    "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
-  keywords: ["video streaming", "movies", "TV series", "adult content", "entertainment", "watch online"],
-  authors: [{ name: "Dr Trailer Team" }],
-  creator: "Dr Trailer",
-  publisher: "Dr Trailer",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://justwatchfree.vercel.app/",
-    siteName: "JustWatch Free",
-    title: "JustWatch Free - Your Ultimate Streaming Platform",
-    description:
-      "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
-    images: [
-      {
-        url: "https://justwatchfree.vercel.app/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "JustWatch Free - Your Ultimate Streaming Platform",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "JustWatch Free - Your Ultimate Streaming Platform",
-    description:
-      "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
-    images: ["https://justwatchfree.vercel.app/og-image.jpg"],
-    creator: "@videostream",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://justwatchfree.vercel.app/",
-  },
+// export const metadata: Metadata = {
+//   metadataBase: new URL("https://justwatchfree.vercel.app/"),
+//   title: {
+//     default: "JustWatch Free - Your Ultimate Streaming Platform",
+//     template: "%s | JustWatchFree",
+//   },
+//   description:
+//     "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
+//   keywords: ["video streaming", "movies", "TV series", "adult content", "entertainment", "watch online"],
+//   authors: [{ name: "Dr Trailer Team" }],
+//   creator: "Dr Trailer",
+//   publisher: "Dr Trailer",
+//   formatDetection: {
+//     email: false,
+//     address: false,
+//     telephone: false,
+//   },
+//   openGraph: {
+//     type: "website",
+//     locale: "en_US",
+//     url: "https://justwatchfree.vercel.app/",
+//     siteName: "JustWatch Free",
+//     title: "JustWatch Free - Your Ultimate Streaming Platform",
+//     description:
+//       "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
+//     images: [
+//       {
+//         url: "https://justwatchfree.vercel.app/og-image.jpg",
+//         width: 1200,
+//         height: 630,
+//         alt: "JustWatch Free - Your Ultimate Streaming Platform",
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "JustWatch Free - Your Ultimate Streaming Platform",
+//     description:
+//       "Stream the latest movies, TV series, adult content, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
+//     images: ["https://justwatchfree.vercel.app/og-image.jpg"],
+//     creator: "@videostream",
+//   },
+//   robots: {
+//     index: true,
+//     follow: true,
+//     googleBot: {
+//       index: true,
+//       follow: true,
+//       "max-video-preview": -1,
+//       "max-image-preview": "large",
+//       "max-snippet": -1,
+//     },
+//   },
+//   alternates: {
+//     canonical: "https://justwatchfree.vercel.app/",
+//   },
    
-}
+// }
 
 export default function Home() {
   const movies = superdata.videos.map((video) => ({
