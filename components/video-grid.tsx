@@ -31,6 +31,7 @@ export function VideoGrid({ videos }: { videos: Video[] }) {
   }
 
   return (
+    <div className="mb-6 px-4 md:px-8 lg:px-12">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {videos.length > 0 ? (
         videos.map((video) => (
@@ -98,6 +99,7 @@ export function VideoGrid({ videos }: { videos: Video[] }) {
       ) : (
         <p className="text-center col-span-full text-muted-foreground">No videos available.</p>
       )}
+    </div>
     </div>
   )
 }
