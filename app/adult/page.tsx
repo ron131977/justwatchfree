@@ -7,7 +7,8 @@ export default function AdultPage() {
   const adultBlogPosts = superdata.blog.filter((post) => post.category === "adult")
 
   return (
-    <div className="container py-6 space-y-8">
+    // <div className="container py-6 space-y-8">
+    <div className="container py-6 space-y-8 px-4 md:px-8 lg:px-12">
       <h1 className="text-3xl font-bold mb-6">Adult Content</h1>
       <VideoGrid videos={superdata.adult.map((video) => ({ ...video, type: "Adult" }))} />
       <section className="mt-12">
