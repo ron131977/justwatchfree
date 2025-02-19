@@ -149,6 +149,9 @@ export const metadata: Metadata = {
   keywords: [
     "justwatch",
     "just watch free",
+    "justwatch free movies",
+    "justwatch .com free",
+    "just watch movies online free",
     "movies",
     "TV series",
     "video",
