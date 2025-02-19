@@ -98,8 +98,7 @@ export default function VideoPage({ params }: Props) {
   return (
     <>
       <StructuredData video={video} />
-      {/* <div className="container py-6"> */}
-      <div className="container py-6 space-y-8 px-4 md:px-8 lg:px-12">
+      <div className="container py-6">
         <VideoPlayer video={video} />
         <div className="mt-4">
           <h1 className="text-2xl font-bold">{video.title}</h1>
