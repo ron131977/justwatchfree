@@ -113,7 +113,7 @@ export default function SeriesPage() {
         {allVideos.map((series) => (
           <Link key={series.id} href={`/series/${series.id}`} className="group">
             <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
-              <Image
+              {/* <Image
                 src={series.thumbnail || "/placeholder.svg"}
                 alt={series.title}
                 quality={90}
@@ -123,7 +123,21 @@ export default function SeriesPage() {
                   filter:
                     "contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)", // Image filter effects
                 }}
-              />
+              /> */}
+               <div className="relative w-full aspect-[16/9]">
+                <Image
+                  src={series.thumbnail || "/placeholder.svg"}
+                  alt={series.title}
+                  quality={90}
+                  fill
+                  loading="lazy"
+                  className="transition-transform group-hover:scale-105"
+                  style={{
+                    objectFit: "cover",
+                    filter: "contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)",
+                  }}
+                />
+              </div>
 
               {/* Display 'Series' label for series titles */}
               {series.title && (
