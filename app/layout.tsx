@@ -138,6 +138,77 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// export const metadata: Metadata = {
+//   metadataBase: new URL("https://justwatchfree.vercel.app"),
+//   title: {
+//     default: "JustWatch Free - Watch Movies, Series & More",
+//     template: "%s | JustWatch Free",
+//   },
+//   description:
+//     "Stream the latest movies, TV series, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
+//   keywords: [
+//     "justwatch",
+//     "just watch free",
+//     "movies",
+//     "TV series",
+//     "video",
+//     "free movies",
+//     "free TV series",
+//     "watch movie online",
+//     "watch TV series online",
+//     "free movie streaming",
+//     "free TV series streaming",
+//     "video streaming",
+//     "entertainment",
+//     "watch online",
+//   ],
+//   openGraph: {
+//     type: "website",
+//     locale: "en_US",
+//     url: "https://justwatchfree.vercel.app",
+//     siteName: "JustWatch Free",
+//     title: "JustWatch Free - Watch Movies, Series & More",
+//     description:
+//       "Stream the latest movies, TV series, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
+//     images: [
+//       {
+//         url: "https://justwatchfree.vercel.app/og_image.jpg",
+//         width: 1200,
+//         height: 630,
+//         alt: "JustWatch Free - Your Ultimate Streaming Platform",
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "JustWatch Free - Watch Movies, Series & More",
+//     description:
+//       "Stream the latest movies, TV series, and exclusive content on JustWatch Free. Your ultimate entertainment destination.",
+//     images: ["https://justwatchfree.vercel.app/og_image.jpg"],
+//     creator: "@JustWatch Free",
+//   },
+//   robots: {
+//     index: true,
+//     follow: true,
+//   },
+//   alternates: {
+//     canonical: "https://justwatchfree.vercel.app",
+//   },
+// };
+
+// ✅ Define structuredData before using it
+// const structuredData = {
+//   "@context": "https://schema.org",
+//   "@type": "WebSite",
+//   name: "JustWatch Free",
+//   url: "https://justwatchfree.vercel.app",
+//   potentialAction: {
+//     "@type": "SearchAction",
+//     target: "https://justwatchfree.vercel.app/search?q={search_term_string}",
+//     "query-input": "required name=search_term_string",
+//   },
+// };
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://justwatchfree.vercel.app"),
   title: {
@@ -197,20 +268,23 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://justwatchfree.vercel.app",
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    bestRating: "100",
+    ratingCount: "47",
+    ratingValue: "56",
+    ratingExplanation:
+      "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries.",
+  },
+  author: [],
+  genre: [],
+  offers: {
+    "@type": "AggregateOffer",
+    offerCount: 0,
+    offers: [],
+  },
+  countryOfOrigin: "United States",
 };
-
-// ✅ Define structuredData before using it
-// const structuredData = {
-//   "@context": "https://schema.org",
-//   "@type": "WebSite",
-//   name: "JustWatch Free",
-//   url: "https://justwatchfree.vercel.app",
-//   potentialAction: {
-//     "@type": "SearchAction",
-//     target: "https://justwatchfree.vercel.app/search?q={search_term_string}",
-//     "query-input": "required name=search_term_string",
-//   },
-// };
 
 export default function RootLayout({
   children,

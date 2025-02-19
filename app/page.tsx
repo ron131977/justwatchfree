@@ -105,83 +105,197 @@ export default function Home() {
 
   const allVideos = [...movies, ...tvSeries,  ...adultVideos]
 
-    const structuredData = {
+  //   const structuredData = {
+  //   "@context": "https://schema.org",
+  //   "@graph": [
+  //     {
+  //       "@type": "ItemList",
+  //       itemListElement: movies.map((movie, index) => ({
+  //         "@type": "ListItem",
+  //         position: index + 1,
+  //         item: {
+  //           "@type": "Movie",
+  //           name: movie.title,
+  //           url: `https://justwatchfree.vercel.app/movies/${movie.id}`,
+  //           image: movie.thumbnail,
+  //           datePublished: movie.uploadDate,
+  //           duration: movie.duration,
+  //           aggregateRating: {
+  //             "@type": "AggregateRating",
+  //             ratingValue: movie.rating,
+  //             bestRating: 10,
+  //             worstRating: 0,
+  //             ratingCount: 1,                            
+  //           },
+  //         },
+  //       })),
+  //     },
+  //     {
+  //       "@type": "ItemList",
+  //       itemListElement: movies.map((movie, index) => ({
+  //         "@type": "ListItem",
+  //         position: index + 1,
+  //         item: {
+  //           "@type": "Movie",
+  //           name: movie.title,
+  //           url: `https://justwatchfree.vercel.app/adult/${movie.id}`,
+  //           image: movie.thumbnail,
+  //           datePublished: movie.uploadDate,
+  //           duration: movie.duration,
+  //           aggregateRating: {
+  //             "@type": "AggregateRating",
+  //             ratingValue: movie.rating,
+  //             bestRating: 10,
+  //             worstRating: 0,
+  //             ratingCount: 1,
+  //           },
+  //         },
+  //       })),
+  //     },
+  //     {
+  //       "@type": "ItemList",
+  //       itemListElement: tvSeries.map((series, index) => ({
+  //         "@type": "ListItem",
+  //         position: index + 1,
+  //         item: {
+  //           "@type": "TVSeries",
+  //           name: series.title,
+  //           url: `https://justwatchfree.vercel.app/series/${series.id}`,
+  //           image: series.thumbnail,
+  //           aggregateRating: {
+  //             "@type": "AggregateRating",
+  //             ratingValue: series.rating || 0, 
+  //             bestRating: 10,
+  //             worstRating: 0,
+  //             ratingCount: 1,
+  //           },
+  //           numberOfEpisodes: series.episodes.length,
+  //           episode: series.episodes.map((episode, epIndex) => ({
+  //             "@type": "TVEpisode",
+  //             episodeNumber: epIndex + 1,
+  //             name: episode.title,
+  //             url: `https://justwatchfree.vercel.app/series/${episode.id}`,
+  //           })),
+  //         },
+  //       })),
+  //     },
+  //   ],
+  // }
+
+ 
+ 
+ 
+ 
+  const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "ItemList",
-        itemListElement: movies.map((movie, index) => ({
+        "name": "Movies List",
+        "itemListElement": movies.map((movie, index) => ({
           "@type": "ListItem",
-          position: index + 1,
-          item: {
+          "position": index + 1,
+          "item": {
             "@type": "Movie",
-            name: movie.title,
-            url: `https://justwatchfree.vercel.app/movies/${movie.id}`,
-            image: movie.thumbnail,
-            datePublished: movie.uploadDate,
-            duration: movie.duration,
-            aggregateRating: {
+            "name": movie.title,
+            "url": `https://justwatchfree.vercel.app/movies/${movie.id}`,
+            "image": movie.thumbnail,
+            "datePublished": movie.uploadDate,
+            "duration": movie.duration,
+            "aggregateRating": {
               "@type": "AggregateRating",
-              ratingValue: movie.rating,
-              bestRating: 10,
-              worstRating: 0,
-              ratingCount: 1,
+              "ratingValue": movie.rating,
+              "bestRating": 10,
+              "worstRating": 0,
+              "ratingCount": 1,
+              "ratingExplanation":
+                "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
             },
-          },
-        })),
+            "author": [],
+            "genre": [],
+            "offers": {
+              "@type": "AggregateOffer",
+              "offerCount": 0,
+              "offers": []
+            },
+            "countryOfOrigin": "United States"
+          }
+        }))
       },
       {
         "@type": "ItemList",
-        itemListElement: movies.map((movie, index) => ({
+        "name": "Adult Movies List",
+        "itemListElement": movies.map((movie, index) => ({
           "@type": "ListItem",
-          position: index + 1,
-          item: {
+          "position": index + 1,
+          "item": {
             "@type": "Movie",
-            name: movie.title,
-            url: `https://justwatchfree.vercel.app/adult/${movie.id}`,
-            image: movie.thumbnail,
-            datePublished: movie.uploadDate,
-            duration: movie.duration,
-            aggregateRating: {
+            "name": movie.title,
+            "url": `https://justwatchfree.vercel.app/adult/${movie.id}`,
+            "image": movie.thumbnail,
+            "datePublished": movie.uploadDate,
+            "duration": movie.duration,
+            "aggregateRating": {
               "@type": "AggregateRating",
-              ratingValue: movie.rating,
-              bestRating: 10,
-              worstRating: 0,
-              ratingCount: 1,
+              "ratingValue": movie.rating,
+              "bestRating": 10,
+              "worstRating": 0,
+              "ratingCount": 1,
+              "ratingExplanation":
+                "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
             },
-          },
-        })),
+            "author": [],
+            "genre": [],
+            "offers": {
+              "@type": "AggregateOffer",
+              "offerCount": 0,
+              "offers": []
+            },
+            "countryOfOrigin": "United States"
+          }
+        }))
       },
       {
         "@type": "ItemList",
-        itemListElement: tvSeries.map((series, index) => ({
+        "name": "Tv Show List",
+        "itemListElement": tvSeries.map((series, index) => ({
           "@type": "ListItem",
-          position: index + 1,
-          item: {
+          "position": index + 1,
+          "item": {
             "@type": "TVSeries",
-            name: series.title,
-            url: `https://justwatchfree.vercel.app/series/${series.id}`,
-            image: series.thumbnail,
-            aggregateRating: {
+            "name": series.title,
+            "url": `https://justwatchfree.vercel.app/series/${series.id}`,
+            "image": series.thumbnail,
+            "aggregateRating": {
               "@type": "AggregateRating",
-              ratingValue: series.rating || 0, 
-              bestRating: 10,
-              worstRating: 0,
-              ratingCount: 1,
+              "ratingValue": series.rating || 0,
+              "bestRating": 10,
+              "worstRating": 0,
+              "ratingCount": 1,
+              "ratingExplanation":
+                "The JustWatch rating is calculated by weighing and measuring how our users interact with shows & movies across different time periods and countries."
             },
-            numberOfEpisodes: series.episodes.length,
-            episode: series.episodes.map((episode, epIndex) => ({
+            "numberOfEpisodes": series.episodes.length,
+            "episode": series.episodes.map((episode, epIndex) => ({
               "@type": "TVEpisode",
-              episodeNumber: epIndex + 1,
-              name: episode.title,
-              url: `https://justwatchfree.vercel.app/series/${episode.id}`,
+              "episodeNumber": epIndex + 1,
+              "name": episode.title,
+              "url": `https://justwatchfree.vercel.app/series/${episode.id}`
             })),
-          },
-        })),
-      },
-    ],
-  }
-
+            "author": [],
+            "genre": [],
+            "offers": {
+              "@type": "AggregateOffer",
+              "offerCount": 0,
+              "offers": []
+            },
+            "countryOfOrigin": "United States"
+          }
+        }))
+      }
+    ]
+  };
+  
   return (
     <>
       <JsonLd<any>
