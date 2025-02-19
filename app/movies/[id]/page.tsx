@@ -83,7 +83,7 @@ export default function VideoPage({ params }: Props) {
           <VideoPlayer video={video} />
           <p className="text-muted-foreground mb-6 mt-4">{video.description}</p>
         </div>
-
+        <div className="px-4 md:px-8 lg:px-12">
         <h2 className="text-2xl font-semibold mb-4">Recommended Movies</h2>
 
         {recommendedVideos.length > 0 ? (
@@ -113,6 +113,7 @@ export default function VideoPage({ params }: Props) {
         ) : (
           <p>No recommended movies available.</p>
         )}
+      </div>
       </div>
     </>
   )
