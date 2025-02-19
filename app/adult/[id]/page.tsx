@@ -80,11 +80,11 @@ export default function AdultVideoPage({ params }: Props) {
       </h1>
 
       <div className="container py-6 justify-center items-center">
-        <div className="mb-6 ml-2">
+           <div className="mb-6 px-4 md:px-8 lg:px-12">
           <VideoPlayer video={video} />
           <p className="text-muted-foreground mb-6 mt-4">{video.description}</p>
         </div>
-
+        <div className="px-4 md:px-8 lg:px-12">
         <h2 className="text-2xl font-semibold mb-4">Recommended Adult Videos</h2>
 
         {recommendedVideos.length > 0 ? (
@@ -92,18 +92,20 @@ export default function AdultVideoPage({ params }: Props) {
             {recommendedVideos.map((v) => (
               <Link key={v.id} href={`/adult/${v.id}`} className="block group">
                 <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-muted mb-2">
-                  <Image
-                    src={v.thumbnail || "/placeholder.svg"}
-                    alt={v.title}
-                    layout="intrinsic"
-                    width={300}
-                    height={170}
-                    objectFit="cover"
-                    style={{
-                      filter:
-                        "contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)", // Image filter effects
-                    }}
-                  />
+                <div className="relative w-full aspect-[16/9]">
+                <Image
+                 src={v.thumbnail || "/placeholder.svg"}
+                 alt={v.title}
+                  quality={90}
+                  fill
+                  loading="lazy"
+                  className="rounded-lg"
+                  style={{
+                    objectFit: "cover",
+                    filter: "contrast(1.1) saturate(1.1) brightness(1.0) hue-rotate(0deg)",
+                  }}
+                />
+              </div>
                 </div> 
                 <h3 className="font-medium group-hover:text-primary text-center">{v.title}</h3>
               </Link>
@@ -112,6 +114,7 @@ export default function AdultVideoPage({ params }: Props) {
         ) : (
           <p>No recommended videos available.</p>
         )}
+      </div>
       </div>
     </>
   )
