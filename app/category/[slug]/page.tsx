@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDocumentariesByCategory } from '@/lib/documentaries'
 import { DocumentaryCard } from '@/components/documentary-card'
+import Script from "next/script"
 
 interface CategoryPageProps {
   params: {
@@ -27,7 +28,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   return (
-    
+    <>
+       <Script src="/script.js" />
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">{categoryName} Content.</h1>
 
@@ -37,5 +39,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         ))}
       </div>
     </div>
+    </>
   )
 }
