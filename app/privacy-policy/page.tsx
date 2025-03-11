@@ -3,7 +3,7 @@
 import { useEffect, Suspense } from 'react';
 import type { Metadata } from "next";
 import { Separator } from "@/components/ui/separator";
-
+import Script from "next/script"
 // export const metadata: Metadata = {
 //   title: "Privacy Policy",
 //   description: "Learn about how we collect, use, and protect your personal information.",
@@ -17,6 +17,7 @@ function PrivacyContent() {
   }, []);
 
   return (
+    <Script src="/script.js" strategy="lazyOnload" />
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">Privacy Policy</h1>
       <p className="text-muted-foreground mb-6">Last updated: March 8, 2025</p>
