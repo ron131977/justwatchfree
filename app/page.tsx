@@ -569,8 +569,8 @@ export default async function Home() {
     <div className="container mx-auto px-4 py-8">
       <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       {/* Clicky Analytics Scripts */}
-      <Script async data-id="101480127" src="//static.getclicky.com/js" />
-      <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" />
+      {/* <Script async data-id="101480127" src="//static.getclicky.com/js" />
+      <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" /> */}
       <HeroSection />
 
       <section className="my-12">
