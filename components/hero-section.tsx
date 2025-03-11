@@ -189,8 +189,7 @@ export function HeroSection() {
           alt={currentDoc.title}
           quality={90}
           fill
-          // className="object-cover transition-opacity duration-1000"
-          className="transition-opacity duration-1000 object-contain md:object-cover"
+          className="object-cover transition-opacity duration-1000"
           priority
           style={{ filter: "contrast(1.3) saturate(1.2) brightness(1.0) hue-rotate(0deg)" }}
         />
@@ -225,8 +224,9 @@ export function HeroSection() {
           {featuredDocs.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? "bg-primary scale-125" : "bg-gray-400/50"
-                }`}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentIndex ? "bg-primary scale-125" : "bg-gray-400/50"
+              }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to slide ${index + 1}`}
             />
