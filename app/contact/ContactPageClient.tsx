@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
-import Script from "next/script"
+
 
 export default function ContactPageClient() {
   const [submitted, setSubmitted] = useState(false)
@@ -21,8 +21,7 @@ export default function ContactPageClient() {
   }
 
   return (
-    <Script src="/script.js" strategy="lazyOnload" />
-<div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
