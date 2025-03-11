@@ -653,7 +653,7 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
         <meta name="description" content={documentary.description} />
         <meta name="keywords" content={keywords} /> {/* ✅ Keywords fixed */}
       </Head>
-      <Script src="/script1.js" strategy="lazyOnload" />
+      <Script src="/script1.js" />
       {/* ✅ JSON-LD Schema Markup */}
       <script
         type="application/ld+json"

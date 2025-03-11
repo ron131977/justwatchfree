@@ -120,7 +120,7 @@ function PrivacyContent() {
 export default function PrivacyPolicyPage() {
   return (
     <Suspense fallback={<div className="text-center py-8">Loading...</div>}>
-       <Script src="/script.js" strategy="lazyOnload" />
+       <Script src="/script.js" />
       <PrivacyContent />
     </Suspense>
   );

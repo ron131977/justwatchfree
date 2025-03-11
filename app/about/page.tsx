@@ -98,7 +98,7 @@ function AboutContent() {
 export default function AboutPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-         <Script src="/script.js" strategy="lazyOnload" />
+         <Script src="/script.js" />
       <AboutContent />
     </Suspense>
   )

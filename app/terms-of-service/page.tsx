@@ -67,7 +67,7 @@ function TermsContent() {
 export default function TermsOfServicePage() {
   return (
     <Suspense fallback={<div className="text-center py-8">Loading...</div>}>
-      <Script src="/script.js" strategy="lazyOnload" />
+      <Script src="/script.js" />
       <TermsContent />
     </Suspense>
   );

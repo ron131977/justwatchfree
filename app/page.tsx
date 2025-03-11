@@ -573,7 +573,7 @@ export default async function Home() {
       <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" /> */}
      
       <HeroSection />
-      <Script src="/script.js" strategy="lazyOnload" />
+      <Script src="/script.js" />
       {/* ✅ Add h1 tag for SEO */}
       <h1 className="text-4xl font-bold text-center mt-12 mb-8">
         JustWatch Free  Movies & TV Shows Online
