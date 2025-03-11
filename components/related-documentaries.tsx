@@ -22,6 +22,7 @@ export function RelatedDocumentaries({ documentaries }: RelatedDocumentariesProp
               src={doc.thumbnailUrl || "/placeholder.svg"}
               alt={doc.title}
               quality={90}
+              loading="lazy"
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               style={{ filter: "contrast(1.3) saturate(1.2) brightness(1.0) hue-rotate(0deg)" }}
