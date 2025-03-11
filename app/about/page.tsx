@@ -4,6 +4,7 @@ import { Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Image from "next/image"
 import { Separator } from "@/components/ui/separator"
+import Script from "next/script"
 
 // Client component that uses searchParams
 function AboutContent() {
@@ -97,6 +98,7 @@ function AboutContent() {
 export default function AboutPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
+         <Script src="/script.js" strategy="lazyOnload" />
       <AboutContent />
     </Suspense>
   )
