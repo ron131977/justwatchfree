@@ -145,7 +145,7 @@ export default function RootLayout({
               </Script>
               {/* Clicky Analytics Scripts */}
               <Script async data-id="101480127" src="//static.getclicky.com/js" />
-              <Script async data-id="101480127" src="/96930ac493198ab9ca.js" />
+              <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" />
             </div>
             <Toaster />
             <Analytics />
