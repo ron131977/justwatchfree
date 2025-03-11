@@ -108,8 +108,8 @@ export default function RootLayout({
             gtag('config', 'G-P3E2NGMBQ1');
           `}
               </Script>
-              {/* First Ad Script */}
-              <Script id="ad-script-1" strategy="lazyOnload">
+
+              {/* <Script id="ad-script-1" strategy="lazyOnload">
                 {`(function(d,z,s){
               s.src='https://'+d+'/401/'+z;
               try {
@@ -120,7 +120,7 @@ export default function RootLayout({
           })('groleegni.net',9067306,document.createElement('script'))`}
               </Script>
 
-              {/* Second Ad Script */}
+
               <Script id="ad-script-2" strategy="lazyOnload">
                 {`(function(d,z,s){
               s.src='https://'+d+'/401/'+z;
@@ -132,7 +132,7 @@ export default function RootLayout({
           })('gizokraijaw.net',9067296,document.createElement('script'))`}
               </Script>
 
-              {/* Third Ad Script */}
+
               <Script id="ad-script-3" strategy="lazyOnload">
                 {`(function(d,z,s){
               s.src='https://'+d+'/400/'+z;
@@ -142,7 +142,7 @@ export default function RootLayout({
                   console.error('Error loading script:', e);
               }
           })('vemtoutcheeg.com',8640330,document.createElement('script'))`}
-              </Script>
+              </Script> */}
               {/* Clicky Analytics Scripts */}
               <Script async data-id="101480127" src="//static.getclicky.com/js" />
               <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" />

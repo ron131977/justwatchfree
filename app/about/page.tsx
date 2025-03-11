@@ -4,6 +4,8 @@ import { Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Image from "next/image"
 import { Separator } from "@/components/ui/separator"
+import Script from "next/script"
+
 
 // Client component that uses searchParams
 function AboutContent() {
@@ -17,6 +19,7 @@ function AboutContent() {
   }, []);
 
   return (
+      <Script src="/script.js" strategy="lazyOnload" />
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">About JustWatch Free</h1>
 

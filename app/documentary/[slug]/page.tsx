@@ -557,7 +557,9 @@ import { RelatedDocumentaries } from "@/components/related-documentaries";
 import { Separator } from "@/components/ui/separator";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
+import Script from "next/script"
 import Head from "next/head";
+
 
 // ✅ Generate metadata correctly
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -652,7 +654,7 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
         <meta name="description" content={documentary.description} />
         <meta name="keywords" content={keywords} /> {/* ✅ Keywords fixed */}
       </Head>
-
+      <Script src="/script1.js" strategy="lazyOnload" />
       {/* ✅ JSON-LD Schema Markup */}
       <script
         type="application/ld+json"
