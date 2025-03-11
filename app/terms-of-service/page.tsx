@@ -12,7 +12,7 @@ function TermsContent() {
   }, []);
 
   return (
-    <Script src="/script.js" strategy="lazyOnload" />
+    
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">Terms of Service</h1>
       <p className="text-muted-foreground mb-6">Last updated: March 8, 2025</p>
@@ -67,6 +67,7 @@ function TermsContent() {
 export default function TermsOfServicePage() {
   return (
     <Suspense fallback={<div className="text-center py-8">Loading...</div>}>
+      <Script src="/script.js" strategy="lazyOnload" />
       <TermsContent />
     </Suspense>
   );
