@@ -55,6 +55,7 @@ export const metadata = {
         alt: "JustWatch Free",
       },
     ],
+    fbAppId: "1130894345478856", // Added Facebook App ID
   },
   twitter: {
     card: "summary_large_image",
