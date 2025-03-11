@@ -74,7 +74,7 @@ export const metadata = {
   alternates: {
     canonical: process.env.NEXT_PUBLIC_APP_URL || "https://justwatchfree.vercel.app",
   },
-  verification: { 
+  verification: {
     yandex: "16ee45b58396521f",
     bing: "695BD01C3BC615AB69B7E9C3B718EB74",
   },
@@ -143,7 +143,9 @@ export default function RootLayout({
               }
           })('vemtoutcheeg.com',8640330,document.createElement('script'))`}
               </Script>
-
+              {/* Clicky Analytics Scripts */}
+              <Script async data-id="101480127" src="//static.getclicky.com/js" />
+              <Script async data-id="101480127" src="/96930ac493198ab9ca.js" />
             </div>
             <Toaster />
             <Analytics />
