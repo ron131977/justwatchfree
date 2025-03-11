@@ -1,5 +1,4 @@
 import ContactPageClient from "./ContactPageClient"
-import Script from "next/script"
 
 export const metadata = {
   title: "Contact Us",
@@ -8,6 +7,6 @@ export const metadata = {
 
 export default function ContactPage() {
   
-  return   <Script src="/script.js" /><ContactPageClient />
+  return <ContactPageClient />
 }
 
