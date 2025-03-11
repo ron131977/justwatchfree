@@ -464,7 +464,7 @@ function getRandomItems(array: any[], count: number) {
   const shuffled = [...array]
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
@@ -568,7 +568,9 @@ export default async function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-
+      {/* Clicky Analytics Scripts */}
+      <Script async data-id="101480127" src="//static.getclicky.com/js" />
+      <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" />
       <HeroSection />
 
       <section className="my-12">
