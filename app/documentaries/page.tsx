@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { getAllDocumentaries } from "@/lib/documentaries"
 import { DocumentaryCard } from "@/components/documentary-card"
 import { Separator } from "@/components/ui/separator"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "All Movies & Tv Show",
@@ -24,6 +25,8 @@ export default async function DocumentariesPage() {
   )
 
   return (
+    <>
+       <Script src="/script.js" />
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">All Movies | Tv Show | Adult Content</h1>
       <p className="text-muted-foreground mb-8">
@@ -42,6 +45,7 @@ export default async function DocumentariesPage() {
         </div>
       ))}
     </div>
+    </>
   )
 }
 
