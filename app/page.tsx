@@ -575,7 +575,7 @@ export default async function Home() {
 
       {/* ✅ Add h1 tag for SEO */}
       <h1 className="text-4xl font-bold text-center mt-12 mb-8">
-        JustWatch Free - Movies & TV Shows Online
+        JustWatch Free  Movies & TV Shows Online
       </h1>
       <section className="my-12">
         <div className="flex items-center justify-between mb-6">
