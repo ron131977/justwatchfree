@@ -74,11 +74,10 @@ export const metadata = {
   alternates: {
     canonical: process.env.NEXT_PUBLIC_APP_URL || "https://justwatchfree.vercel.app",
   },
-  // verification: {
-  //   google: "google9a97f9b3a43f6609",
-  //   yandex: "b09707947ff1686d",
-  //   bing: "695BD01C3BC615AB69B7E9C3B718EB74",
-  // },
+  verification: { 
+    yandex: "16ee45b58396521f",
+    bing: "695BD01C3BC615AB69B7E9C3B718EB74",
+  },
 
 }
 
