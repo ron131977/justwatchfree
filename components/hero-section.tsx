@@ -191,9 +191,7 @@ export function HeroSection() {
           fill
           className="object-cover transition-opacity duration-1000"
           priority
-          style={{ filter: "contrast(1.3) saturate(1.2) brightness(1.0) hue-rotate(0deg)",
-            objectFit: "cover", // Ensures the image fills the container
-            objectPosition: "center", // Centers the image           
+          style={{ filter: "contrast(1.3) saturate(1.2) brightness(1.0) hue-rotate(0deg)"     
            }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
