@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { getFeaturedDocumentaries } from "@/lib/documentaries"
 import { DocumentaryCard } from "@/components/documentary-card"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "Featured Movies & Tv Show",
@@ -11,6 +12,8 @@ export default async function FeaturedPage() {
   const documentaries = await getFeaturedDocumentaries()
 
   return (
+    <>
+       <Script src="/script.js" />
     
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">Featured Updates</h1>
@@ -22,6 +25,7 @@ export default async function FeaturedPage() {
         ))}
       </div>
     </div>
+    </>
   )
 }
 
