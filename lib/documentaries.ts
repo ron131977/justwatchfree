@@ -3461,7 +3461,7 @@ const documentaries: Documentary[] = [
     description:
       "A weekend getaway with friends at a remote cabin turns into chaos after it's revealed that one of the guests is not what they seem.",
     thumbnailUrl:
-      "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/companion-et00414405-1737629384.jpg",
+      "https://www.chennaitop10.com/wp-content/uploads/2025/01/Companion-2025-movie-review-1.jpg",
     videoUrl:
       "https://short.icu/cnnbaV0sV?thumbnail=https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/companion-et00414405-1737629384.jpg",
     duration: 5820,
