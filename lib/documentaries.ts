@@ -54,7 +54,7 @@ const documentaries: Documentary[] = [
     description:
       "Five housewives who run a high stakes secret cartel in which style, ambition, love, friendship and betrayal set in the rich 1960s Mumbai.",
     thumbnailUrl:
-      "https://tomindia.s3.ap-south-1.amazonaws.com/prod/post/ogImage/1739186216436_69911b2b667b44d2aeceef17e407e3e3_Dabba-Cartel_- Webseries_TomorrowsIndia.jpg",
+      "https://i.ytimg.com/vi/3Or802K9Ys8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAe0o5JnuUPYBkTMx7BPrL9NwFRVw",
     videoUrl:
       "https://short.icu/TfSsQpXl8?thumbnail=https://static.tnn.in/thumb/msid-117788538,thumbsize-149196,width-448,height-252,resizemode-75/117788538.jpg",
     duration: 20280,
