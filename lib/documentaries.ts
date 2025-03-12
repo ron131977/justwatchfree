@@ -20,6 +20,34 @@ export interface Documentary {
 const documentaries: Documentary[] = [
   //TV SHOW SECTION
   {
+    id: "T52",
+    slug: "medusa-s01",
+    title: "Medusa (Season 1) Full Series",
+    description:
+      "Somebody wants to kill CEO Bárbara Hidalgo. Can she find the culprit as her family schemes ruthlessly for control of their Colombian business empire?",
+    thumbnailUrl:
+      "https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
+    videoUrl:
+      "https://short.icu/A0ebje9Jm?thumbnail=https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
+    duration: 26940,
+    views: 1903000,
+    category: "Tvshow",
+    tags: [
+      "medusa",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-05-05",
+    director: "Juan Felipe Cano, Maria Gamboa",
+    featured: false,
+  },
+  {
     id: "T51",
     slug: "suzhal-the-vortexl-s02",
     title: "Suzhal – The Vortex (Season 2) Full Series",
