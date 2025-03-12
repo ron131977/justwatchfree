@@ -649,7 +649,7 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
   return (
     <>
       <Head>
-        <title>{documentary.title} | JustWatch Free</title>
+        <title>{documentary.title} | JWF™</title>
         <meta name="description" content={documentary.description} />
         <meta name="keywords" content={keywords} /> {/* ✅ Keywords fixed */}
       </Head>
