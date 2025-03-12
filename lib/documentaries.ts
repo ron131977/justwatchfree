@@ -3184,6 +3184,34 @@ const documentaries: Documentary[] = [
 
   //MOVIES SECTION
   {
+    id: "M76",
+    slug: "chhava-2025",
+    title: "Chhava (2025)",
+    description:
+      "A historical play based on the life of Chhatrapati Sambhaji Maharaj, son of Chhatrapati Shivaji Maharaj.",
+    thumbnailUrl:
+      "https://i.ytimg.com/vi/qupmreWFuW8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6ii8bBtjo-IxRoNf0bTh7Zi66uQ",
+    videoUrl:
+      "https://short.icu/33E_ByTe34?thumbnail=https://akm-img-a-in.tosshub.com/indiatoday/images/story/202502/vicky-kaushal--rashmika-mandanna--chhava-box-office-191923961-16x9_0.jpg?VersionId=e4yTxFLsu7cf8D8QmW8i7j_r8lQmFGeX&size=690:388",
+    duration: 9060,
+    views: 1926100,
+    category: "Movie",
+    tags: [
+      "chhava",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-02-14",
+    director: "Laxman Utekar",
+    featured: true,
+  },
+  {
     id: "M75",
     slug: "superboys-of-malegaon-2025",
     title: "Superboys of Malegaon (2025)",

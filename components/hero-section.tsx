@@ -267,10 +267,10 @@ interface FeaturedDoc {
 const featuredDocs: FeaturedDoc[] = [
   {
     id: "1",
-    slug: "captain-america-brave-new-world-2025",
-    title: "Captain America: Brave New World (2025)",
-    description: "'Captain America: Brave New World is a 2025 superhero film, based on the Marvel Comics character of the same name.",
-    thumbnailUrl: "https://pacificsciencecenter.org/wp-content/uploads/2025/01/cap-america-web-1.jpg",
+    slug: "chhava-2025",
+    title: "Chhava (2025)",
+    description: "'A historical play based on the life of Chhatrapati Sambhaji Maharaj, son of Chhatrapati Shivaji Maharaj.",
+    thumbnailUrl: "https://i.ytimg.com/vi/qupmreWFuW8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6ii8bBtjo-IxRoNf0bTh7Zi66uQ",
     category: "Movie",
   },
   {
