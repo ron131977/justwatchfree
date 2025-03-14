@@ -107,7 +107,7 @@ const documentaries: Documentary[] = [
       "online",
       "download",
       "watch",
-      "free",
+      "free", 
       "justwatch",
       "movie",
     ],
@@ -127,7 +127,7 @@ const documentaries: Documentary[] = [
       "https://short.icu/-s8i5FIUU?thumbnail=https://i.gadgets360cdn.com/large/image_3_F_1736408509883.jpg",
     videoUrl1: "",
     // videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt9288030",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt9288030",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt9288030",
     videoUrl3: "",
     duration: 9000,
     views: 1603000,
@@ -157,7 +157,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/Ry9QLbJkFV?thumbnail=https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUl42L3rmzugRiNg_zNtjDp9mrpLOEkEsGScVYqpSjcQj69m6P9i6GlgAOK9ykBx8fuCfHROODHN7k6resZ7iuc61m7LpyTRVaKX.jpg?r=c68",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt14879018",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt14879018",
     videoUrl3: "",
     duration: 18180,
     views: 903000,
@@ -218,7 +218,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/O8a1H9M74?thumbnail=https://i.ytimg.com/vi/RhCwkmNUV-s/maxresdefault.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt12805346",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt12805346",
     videoUrl3: "",
     duration: 12180,
     views: 1953000,
@@ -524,7 +524,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/7VLd3Ag7G?thumbnail=https://i.imgur.com/Xf8qqXc.png?dtrcs",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt23872886",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt23872886",
     videoUrl3: "",
     duration: 18480,
     views: 959000,
@@ -617,7 +617,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/bk949evrt?thumbnail=https://images.justwatch.com/backdrop/324950607/s640/season-1",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29081720",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt29081720",
     videoUrl3: "",
     duration: 20700,
     views: 390000,
@@ -648,7 +648,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/nrz-ja9IR?thumbnail=https://images.justwatch.com/backdrop/324750546/s640/season-1",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29353885",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt29353885",
     videoUrl3: "",
     duration: 17280,
     views: 1790000,
@@ -709,7 +709,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/n0H388-Bg?thumbnail=https://resizing.flixster.com/x7sQ3hfRehwYfbyLZSdLOHwdNAQ=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29168277_b_h10_ab.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt23664162",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt23664162",
     videoUrl3: "",
     duration: 10860,
     views: 590000,
@@ -832,7 +832,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/ye3mrVNl8?thumbnail=https://resizing.flixster.com/SFE9lBUawrz-9l4VcjAN28MlzBo=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29163641_b_h10_ab.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29632046",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt29632046",
     videoUrl3: "",
     duration: 16140,
     views: 850000,
@@ -863,7 +863,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/KTsi418-P?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/02/Cassandra-2025-Netflix-series-review.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29135600",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt29135600",
     videoUrl3: "",
     duration: 17760,
     views: 850000,
@@ -1142,7 +1142,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/KHda7icmV?thumbnail=https://cdn.iview.abc.net.au/thumbs/i/X0_67566b108039f_3600.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt32903033",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt32903033",
     videoUrl3: "",
     duration: 10380,
     views: 470000,
@@ -1203,7 +1203,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/_HOziCi4B?thumbnail=https://dvd-fever.co.uk/dvd-fever/wp-content/uploads/2025/01/brian-and-maggie.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt32499500",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt32499500",
     videoUrl3: "",
     duration: 5520,
     views: 390000,
@@ -1234,7 +1234,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/G4BEjJnlh?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/8343630afa4e00ea6178e9369927146bc36d7bad7fda5300405424cb968324ef.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt30135004",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt30135004",
     videoUrl3: "",
     duration: 11460,
     views: 590000,
@@ -1451,7 +1451,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/_7OgC3doU?thumbnail=https://i1.wp.com/image.tmdb.org/t/p/w1280/gvUddLzXRbPPgrrXkNq5sJY3ynn.jpg?w=1280",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt31495377",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt31495377",
     videoUrl3: "",
     duration: 16740,
     views: 490000,
@@ -1513,7 +1513,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/CuYT-k9_a?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2024/12/Missing-You-2025-Netflix-series-review.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt31019484",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt31019484",
     videoUrl3: "",
     duration: 13560,
     views: 590000,
@@ -1575,7 +1575,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/daJ2iAPuU?thumbnail=https://www.masala.com/cloud/2025/01/03/Black-Warrant.jpg",
     videoUrl1: "",
-    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt35064818",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt35064818",
     videoUrl3: "",
     duration: 20040,
     views: 390000,
@@ -3814,7 +3814,7 @@ const documentaries: Documentary[] = [
       "https://short.icu/jdV-iXoEy?thumbnail=https://occ-0-8407-92.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVzd8Ohn4-pCqHnXEbIOET-BFCXz4jwGVQYCDvm0WcgSKsmERsYqaP8VJePAgqroGE3Wv3wa_xyyxCcxwZVajVbMQSzqhvYiWfY-.jpg?r=475",
     videoUrl1: "",
     videoUrl2: "",
-    videoUrl3: "https://vidsrc.net/embed/movie/tt31828532",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt31828532",
     duration: 5640,
     views: 306100,
     category: "Movie",
@@ -3845,7 +3845,7 @@ const documentaries: Documentary[] = [
       "https://short.icu/BqkWgLgsB?thumbnail=https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTsD5dzRWGNhVxRAqABThVvi7CXBZMSYg4ERjKNk1TBPbIeVh0l_hI9-NSJ6XBO_d_MFexsWM6AxKiowKwd8P87AoUBSbET8voP8.jpg?r=c27",
     videoUrl1: "",
     videoUrl2: "",
-    videoUrl3: "https://vidsrc.net/embed/movie/tt35624097",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35624097",
     duration: 6180,
     views: 106100,
     category: "Movie",
