@@ -8,6 +8,7 @@ export interface Documentary {
   description: string;
   thumbnailUrl: string;
   videoUrl: string;
+  videoUrl1: string;
   duration: number; // in seconds
   views: number;
   category: string;
@@ -29,6 +30,8 @@ const documentaries: Documentary[] = [
       "https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
     videoUrl:
       "https://short.icu/A0ebje9Jm?thumbnail=https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
+    videoUrl1:
+      "https://voe.sx/e/kcw004qv6itb",
     duration: 26940,
     views: 1903000,
     category: "Tvshow",
@@ -1494,6 +1497,66 @@ const documentaries: Documentary[] = [
   },
 
   //ADULT SECTION
+  {
+    id: "A36",
+    slug: "kolektor-2025",
+    title: "Kolektor - Tagalog Movie",
+    description:
+      "Jessie is an attractive young man with a dark secret. The women in his life all seem to go missing. Desire and danger collide in this Erotic horror-thriller.",
+    thumbnailUrl:
+      "https://desix11.com/wp-content/uploads/2025/03/Kolektor-2025-Tagalong-Hot-Movie-Vivamax.jpg",
+    videoUrl:
+      "https://short.icu/r6Cl5VZDe?thumbnail=https://desix11.com/wp-content/uploads/2025/03/Kolektor-2025-Tagalong-Hot-Movie-Vivamax.jpg",
+      videoUrl1:
+      "https://voe.sx/e/yvlkqqlinzq8",
+    duration: 5760,
+    views: 183100,
+    category: "Adult",
+    tags: [
+      "kolektor",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-07",
+    director: "NA",
+    featured: false,
+  },
+  {
+    id: "A35",
+    slug: "raat-baaki-baat-baaki-2025",
+    title: "Raat Baaki Baat Baaki - Webseries",
+    description:
+      "Ravinder, an influential disabled Man, acts caring toward his servant's daughter, Kavita, but secretly seeks revenge for a past betrayal.",
+    thumbnailUrl:
+      "https://i.ytimg.com/vi/PyhSWkORcdo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAeVa_lqREaqNeOK42LzZT9_wSEhw",
+    videoUrl:
+      "https://short.icu/uQttB1FEr?thumbnail=https://i.ytimg.com/vi/PyhSWkORcdo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAeVa_lqREaqNeOK42LzZT9_wSEhw",
+      videoUrl1:
+      "https://voe.sx/e/z2e5fnokhsad",
+    duration: 6000,
+    views: 83100,
+    category: "Adult",
+    tags: [
+      "raat baaki baat baaki",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-06",
+    director: "NA",
+    featured: false,
+  },
   {
     id: "A34",
     slug: "shudh-shakahari-2025",
@@ -3210,7 +3273,68 @@ const documentaries: Documentary[] = [
   //   featured: false,
   // },
 
+  //xvwb9e2G7 Coming Soon Video
   //MOVIES SECTION
+  {
+    id: "M78",
+    slug: "promotion-2025",
+    title: "Promotion (2025)",
+    description:
+      "A young corporate employee, desperate to climb the career ladder, is presented with a shocking proposition by his ruthless boss: spend a night with his wife, and he'll be rewarded with a promotion and a doubled salary. Will the husband prioritize his ambition over his marriage, or will he find a way to",
+    thumbnailUrl:
+      "https://pbs.twimg.com/media/Gk9g-gqaEAAYsfn.jpg",
+    videoUrl:
+      "https://short.icu/Bx1dct126?thumbnail=https://pbs.twimg.com/media/Gk9g-gqaEAAYsfn.jpg",
+    videoUrl1:
+      "https://voe.sx/e/h53qrngiigdt",
+    duration: 3900,
+    views: 526100,
+    category: "Movie",
+    tags: [
+      "promotion",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-02-14",
+    director: "Kajal Kapoor",
+    featured: true,
+  },
+  {
+    id: "M77",
+    slug: "pati-patni-aur-caregiver-2025",
+    title: "Pati Patni Aur Caregiver (2025)",
+    description:
+      "Sonal (35), who lives with her unfaithful husband Sanjay and their son Sankalp. An old woman Chandrika Mehta (72), She has called a young man named Aditya to take care of her as she is physically disabled due the age factor. Aditya falls in love with Sonal, who lives next door, but their tragic relationship",
+    thumbnailUrl:
+      "https://www.mastram.app/media/posters/2025-03-06f66708b1dc9e428aa5153af58d15117d.jpg",
+    videoUrl:
+      "https://short.icu/KfHOO3Ghi3?thumbnail=https://www.mastram.app/media/posters/2025-03-06f66708b1dc9e428aa5153af58d15117d.jpg",
+    videoUrl1:
+      "https://voe.sx/e/kcw004qv6itb",
+    duration: 1500,
+    views: 226100,
+    category: "Movie",
+    tags: [
+      "pati patni aur caregiver",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-02-14",
+    director: "Krishna Sharma",
+    featured: true,
+  },
   {
     id: "M76",
     slug: "chhava-2025",

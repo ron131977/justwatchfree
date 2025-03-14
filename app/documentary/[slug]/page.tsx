@@ -63,7 +63,7 @@
 //     5
 //   );
 
-  
+
 //    // ✅ Correct Schema Markup
 //    const schema = {
 //     "@context": "https://schema.org",
@@ -333,7 +333,7 @@
 //         type="application/ld+json"
 //         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
 //       />
-      
+
 //       <div className="container mx-auto px-4 py-8">
 //         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 //           <div className="lg:col-span-2">
@@ -496,7 +496,7 @@
 //         type="application/ld+json"
 //         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
 //       />
-      
+
 //       <div className="container mx-auto px-4 py-8">
 //         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 //           <div className="lg:col-span-2">
@@ -610,8 +610,8 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
   }
 
   let relatedDocumentaries = await getRelatedDocumentaries(
-    documentary.id, 
-    documentary.category, 
+    documentary.id,
+    documentary.category,
     5
   );
 
@@ -663,50 +663,56 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <VideoPlayer
+            {/* <VideoPlayer
               videoUrl={documentary.videoUrl}
               thumbnailUrl={documentary.thumbnailUrl}
               title={documentary.title}
-            />
-
-            <div className="mt-6">
-              <h1 className="text-3xl font-bold mb-2">{documentary.title}</h1>
-              <DocumentaryMeta
-                views={documentary.views}
-                duration={documentary.duration}
-                releaseDate={documentary.releaseDate}
-                category={documentary.category}
-                tags={documentary.tags} 
+            /> */}
+            <div className="lg:col-span-2">
+              <VideoPlayer
+                videoUrl={documentary.videoUrl}
+                videoUrl1={documentary.videoUrl1}
+                thumbnailUrl={documentary.thumbnailUrl}
+                title={documentary.title}
               />
-
-              <div className="flex items-center justify-between mt-4">
-                <div className="flex items-center space-x-4">
-                  <span className="text-sm text-muted-foreground">Released: {formatDate(documentary.releaseDate)}</span>
-                  <span className="text-sm text-muted-foreground">Director: {documentary.director}</span>
-                </div>
-                <ShareButtons
-                  url={`${process.env.NEXT_PUBLIC_APP_URL || "https://justwatchfree.vercel.app"}/documentary/${documentary.slug}`}
-                  title={documentary.title}
-                  description={documentary.description}
+              <div className="mt-6">
+                <h1 className="text-3xl font-bold mb-2">{documentary.title}</h1>
+                <DocumentaryMeta
+                  views={documentary.views}
+                  duration={documentary.duration}
+                  releaseDate={documentary.releaseDate}
+                  category={documentary.category}
+                  tags={documentary.tags}
                 />
-              </div>
 
-              <Separator className="my-6" />
+                <div className="flex items-center justify-between mt-4">
+                  <div className="flex items-center space-x-4">
+                    <span className="text-sm text-muted-foreground">Released: {formatDate(documentary.releaseDate)}</span>
+                    <span className="text-sm text-muted-foreground">Director: {documentary.director}</span>
+                  </div>
+                  <ShareButtons
+                    url={`${process.env.NEXT_PUBLIC_APP_URL || "https://justwatchfree.vercel.app"}/documentary/${documentary.slug}`}
+                    title={documentary.title}
+                    description={documentary.description}
+                  />
+                </div>
 
-              <div className="prose dark:prose-invert max-w-none">
-                <h2 className="text-2xl font-semibold mb-4">About this Movie & TV Show</h2>
-                <p className="text-base leading-relaxed">{documentary.description}</p>
+                <Separator className="my-6" />
+
+                <div className="prose dark:prose-invert max-w-none">
+                  <h2 className="text-2xl font-semibold mb-4">About this Movie & TV Show</h2>
+                  <p className="text-base leading-relaxed">{documentary.description}</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* ✅ Keep related documentaries unchanged */}
-          <div className="lg:col-span-1">
-            <h2 className="text-2xl font-semibold mb-4">Related Movie & TV Show</h2>
-            <RelatedDocumentaries documentaries={relatedDocumentaries} />
+            {/* ✅ Keep related documentaries unchanged */}
+            <div className="lg:col-span-1">
+              <h2 className="text-2xl font-semibold mb-4">Related Movie & TV Show</h2>
+              <RelatedDocumentaries documentaries={relatedDocumentaries} />
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+      );
 }
