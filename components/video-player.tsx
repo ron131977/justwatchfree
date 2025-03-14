@@ -211,52 +211,127 @@
 
 
 
-"use client"
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// interface VideoPlayerProps {
+//   videoUrl: string
+//   thumbnailUrl: string  // Added missing prop
+//   title: string
+// }
+
+// export function VideoPlayer({ videoUrl, thumbnailUrl, title }: VideoPlayerProps) {
+//   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+// const filterStyle = {
+//   filter: isMobile
+//     // ? "contrast(1.4) saturate(1.5) brightness(1.3) hue-rotate(6deg)" // Softer for small screens
+//     // : "contrast(1.5) saturate(1.7) brightness(1.4) hue-rotate(8deg)", // More vibrant on larger screens
+ 
+//     // ? "contrast(1.3) saturate(1.6) brightness(1.5) hue-rotate(6deg)" // Mobile: Softer and brighter
+//     // : "contrast(1.4) saturate(1.7) brightness(1.6) hue-rotate(7deg)", // Desktop: Vibrant but not too dark
+
+//     ? "contrast(1.1) saturate(1.4) brightness(1.6) hue-rotate(0deg)" // Mobile: Softer, lighter, and natural
+//     : "contrast(1.1) saturate(1.5) brightness(1.7) hue-rotate(0deg)", // Desktop: Balanced vibrance, no harsh blacks
+
+//     // ? "contrast(1.2) saturate(1.1) brightness(1.1) hue-rotate(-2deg)" // Mobile: Softer & slightly brighter
+//     // : "contrast(1.3) saturate(1.2) brightness(1.0) hue-rotate(0deg)", // Desktop: Natural & balanced
+// };
+
+//   return (
+//     <div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden">
+//       {/* Add thumbnail implementation */}
+//       <div className="absolute inset-0 bg-cover bg-center" 
+//            style={{ backgroundImage: `url(${thumbnailUrl})` }} />
+      
+//       <iframe
+//         src={videoUrl}
+//         title={title}
+//         className="absolute inset-0 w-full h-full"
+//         allowFullScreen
+//         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//         // style={{
+//         //   // filter: "contrast(1.5) saturate(1.4) brightness(1.2) hue-rotate(10deg)",
+//         //   filter: "contrast(1.5) saturate(1.7) brightness(1.4) hue-rotate(8deg)",
+
+//         // }}
+//         style={filterStyle}
+
+//       />
+//     </div>
+//   )
+// }
+
+
+
+"use client";
+
+import { useState } from "react";
 
 interface VideoPlayerProps {
-  videoUrl: string
-  thumbnailUrl: string  // Added missing prop
-  title: string
+  videoUrl: string;
+  videoUrl1?: string; // Made optional
+  thumbnailUrl: string;
+  title: string;
 }
 
-export function VideoPlayer({ videoUrl, thumbnailUrl, title }: VideoPlayerProps) {
+export function VideoPlayer({ videoUrl, videoUrl1, thumbnailUrl, title }: VideoPlayerProps) {
+  const [activeUrl, setActiveUrl] = useState(videoUrl); // Default to Player 1
+
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
-const filterStyle = {
-  filter: isMobile
-    // ? "contrast(1.4) saturate(1.5) brightness(1.3) hue-rotate(6deg)" // Softer for small screens
-    // : "contrast(1.5) saturate(1.7) brightness(1.4) hue-rotate(8deg)", // More vibrant on larger screens
- 
-    // ? "contrast(1.3) saturate(1.6) brightness(1.5) hue-rotate(6deg)" // Mobile: Softer and brighter
-    // : "contrast(1.4) saturate(1.7) brightness(1.6) hue-rotate(7deg)", // Desktop: Vibrant but not too dark
-
-    ? "contrast(1.1) saturate(1.4) brightness(1.6) hue-rotate(0deg)" // Mobile: Softer, lighter, and natural
-    : "contrast(1.1) saturate(1.5) brightness(1.7) hue-rotate(0deg)", // Desktop: Balanced vibrance, no harsh blacks
-
-    // ? "contrast(1.2) saturate(1.1) brightness(1.1) hue-rotate(-2deg)" // Mobile: Softer & slightly brighter
-    // : "contrast(1.3) saturate(1.2) brightness(1.0) hue-rotate(0deg)", // Desktop: Natural & balanced
-};
+  const filterStyle = {
+    filter: isMobile
+      ? "contrast(1.1) saturate(1.4) brightness(1.6) hue-rotate(0deg)" // Mobile
+      : "contrast(1.1) saturate(1.5) brightness(1.7) hue-rotate(0deg)", // Desktop
+  };
 
   return (
     <div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden">
-      {/* Add thumbnail implementation */}
-      <div className="absolute inset-0 bg-cover bg-center" 
-           style={{ backgroundImage: `url(${thumbnailUrl})` }} />
-      
+      {/* Player Switch Buttons - Only show if videoUrl1 exists */}
+      {videoUrl1 && (
+        <div className="absolute top-2 left-2 z-10 flex space-x-2">
+          <button
+            onClick={() => setActiveUrl(videoUrl)}
+            className={`px-4 py-1 text-sm font-semibold rounded-md ${
+              activeUrl === videoUrl ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
+            }`}
+          >
+            Player 1
+          </button>
+          <button
+            onClick={() => setActiveUrl(videoUrl1)}
+            className={`px-4 py-1 text-sm font-semibold rounded-md ${
+              activeUrl === videoUrl1 ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
+            }`}
+          >
+            Player 2
+          </button>
+        </div>
+      )}
+
+      {/* Background Thumbnail */}
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${thumbnailUrl})` }} />
+
+      {/* Video Player */}
       <iframe
-        src={videoUrl}
+        src={activeUrl}
         title={title}
         className="absolute inset-0 w-full h-full"
         allowFullScreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        // style={{
-        //   // filter: "contrast(1.5) saturate(1.4) brightness(1.2) hue-rotate(10deg)",
-        //   filter: "contrast(1.5) saturate(1.7) brightness(1.4) hue-rotate(8deg)",
-
-        // }}
         style={filterStyle}
-
       />
     </div>
-  )
+  );
 }
+
