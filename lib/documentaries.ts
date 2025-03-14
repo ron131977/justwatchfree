@@ -9,6 +9,8 @@ export interface Documentary {
   thumbnailUrl: string;
   videoUrl: string;
   videoUrl1: string;
+  videoUrl2: string;
+  videoUrl3: string;
   duration: number; // in seconds
   views: number;
   category: string;
@@ -30,8 +32,9 @@ const documentaries: Documentary[] = [
       "https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
     videoUrl:
       "https://short.icu/A0ebje9Jm?thumbnail=https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
-    videoUrl1:
-      "https://voe.sx/e/kcw004qv6itb",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt35836959",
+    videoUrl3: "",
     duration: 26940,
     views: 1903000,
     category: "Tvshow",
@@ -60,6 +63,9 @@ const documentaries: Documentary[] = [
       "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202502/suzhal-the-vortex-2-review-282416753-16x9_0.jpg?VersionId=CM.xr7iLikatTjYy.MjWd.LyZQhbwGze",
     videoUrl:
       "https://short.icu/wlsg4t9Os?thumbnail=https://images.justwatch.com/backdrop/273538563/s640/season-2",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt20873118",
+    videoUrl3: "",
     duration: 22080,
     views: 903000,
     category: "Tvshow",
@@ -88,6 +94,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/3Or802K9Ys8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAe0o5JnuUPYBkTMx7BPrL9NwFRVw",
     videoUrl:
       "https://short.icu/TfSsQpXl8?thumbnail=https://static.tnn.in/thumb/msid-117788538,thumbsize-149196,width-448,height-252,resizemode-75/117788538.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 20280,
     views: 803000,
     category: "Tvshow",
@@ -116,6 +125,10 @@ const documentaries: Documentary[] = [
       "https://www.tvguide.com/a/img/resize/c6d4c07def64a8638a23117ab4156cc39ad66e73/hub/2024/12/06/f8755a4f-451b-4ca1-b57b-e90c5229703d/reachie.jpg?auto=webp&width=1092",
     videoUrl:
       "https://short.icu/-s8i5FIUU?thumbnail=https://i.gadgets360cdn.com/large/image_3_F_1736408509883.jpg",
+    videoUrl1: "",
+    // videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt9288030",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt9288030",
+    videoUrl3: "",
     duration: 9000,
     views: 1603000,
     category: "Tvshow",
@@ -143,6 +156,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://files.spoilertv.com/headers/Running-Point.jpg",
     videoUrl:
       "https://short.icu/Ry9QLbJkFV?thumbnail=https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUl42L3rmzugRiNg_zNtjDp9mrpLOEkEsGScVYqpSjcQj69m6P9i6GlgAOK9ykBx8fuCfHROODHN7k6resZ7iuc61m7LpyTRVaKX.jpg?r=c68",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt14879018",
+    videoUrl3: "",
     duration: 18180,
     views: 903000,
     category: "Tvshow",
@@ -171,6 +187,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/f16598aea631ed06df4fef09f4f3637ecaeec0c796b5631c8ea0a81343b8d80a.jpg",
     videoUrl:
       "https://short.icu/ZCA7_5EB5?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/85317207ced9f518f0b70e19f5f1070231baa8776012ee3013b38a0c912db107._SX1080_FMjpg_.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 18420,
     views: 1203000,
     category: "Tvshow",
@@ -198,6 +217,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/RhCwkmNUV-s/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/O8a1H9M74?thumbnail=https://i.ytimg.com/vi/RhCwkmNUV-s/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt12805346",
+    videoUrl3: "",
     duration: 12180,
     views: 1953000,
     category: "Tvshow",
@@ -226,6 +248,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p28956879_b_h8_ab.jpg?w=1280&h=720",
     videoUrl:
       "https://short.icu/Ktsqa7wNk?thumbnail=https://blog.reelgood.com/wp-content/uploads/2025/01/Paradise-2025-scaled.webp",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt27444205",
+    videoUrl3: "",
     duration: 21660,
     views: 953000,
     category: "Tvshow",
@@ -254,6 +279,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/NTu61e7AD8gVbPdRCq1ZcYBvR4Q=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28798890_b_h9_ac.jpg",
     videoUrl:
       "https://short.icu/kP2UOqPwx?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/02/The-Hunting-Party-2025-Peacock-Review-1200x900.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt21906554",
+    videoUrl3: "",
     duration: 10200,
     views: 803000,
     category: "Tvshow",
@@ -281,6 +309,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/uX8eCqdC39o/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/K7Wlv7WLd?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/03e398facfb8c631ed25e9588bd02008fcdea16c437cff6643fe6e45f83fb7d4._SX1080_FMjpg_.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt9680440",
+    videoUrl3: "",
     duration: 21480,
     views: 603000,
     category: "Tvshow",
@@ -309,6 +340,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/688b870632daa68955867b4f2a2e0ae7959ee8e991334fe20fe0d212e7295786.jpg",
     videoUrl:
       "https://short.icu/34x84hCQQ?thumbnail=https://wwwimage-tve.cbsstatic.com/thumbnails/photos/w1920-q80/marquee/1048468/27/75/50/asset_marquee_f81e9dfd-f674-4c3e-b150-75496f097d8e.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt22475008",
+    videoUrl3: "",
     duration: 7740,
     views: 139000,
     category: "Tvshow",
@@ -337,6 +371,9 @@ const documentaries: Documentary[] = [
       "https://elcomercio.pe/resizer/v2/5QFX363F5VHHZPHFWYTN77Z5XQ.jpg?auth=00939b899ab425fac1c752378f876eceed8fd27c9049917480c0e80620a6e925&width=1200&height=810&quality=90&smart=true",
     videoUrl:
       "https://short.icu/PmFOUO4EW?thumbnail=https://www.hindustantimes.com/ht-img/img/2025/02/24/550x309/Suits_LA_1740400405418_1740400410107.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt31122751",
+    videoUrl3: "",
     duration: 2640,
     views: 250000,
     category: "Tvshow",
@@ -365,6 +402,9 @@ const documentaries: Documentary[] = [
       "https://imageio.forbes.com/specials-images/imageserve/65986a7cb7b40b71bbabcb2d/0x0.jpg?format=jpg&crop=2264,1274,x137,y355,safe&height=900&width=1600&fit=bounds",
     videoUrl:
       "https://short.icu/USy6fJLe2?thumbnail=https://i.ytimg.com/vi/Sp0thA4cDcM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCWseJmOxr2FUme29rGCPPj3Oav4A",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt13406094",
+    videoUrl3: "",
     duration: 7260,
     views: 39000,
     category: "Tvshow",
@@ -393,6 +433,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/5_3jl2kkA2c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCB2q9HlhsmIoUEs23JEpiDxaiPhQ",
     videoUrl:
       "https://short.icu/qXWy_ysD-?thumbnail=https://www.pinkvilla.com/pics/500x500/1626704445_school-friends_202502.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 19449,
     views: 759000,
     category: "Tvshow",
@@ -420,6 +463,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.imgur.com/IzzBsDg.png?myad",
     videoUrl:
       "https://short.icu/Qq5quTUnf?thumbnail=https://i.imgur.com/IzzBsDg.png?myad",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt21874900",
+    videoUrl3: "",
     duration: 18600,
     views: 259000,
     category: "Tvshow",
@@ -447,6 +493,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/aitcEOkQQvY/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/QkTqBJdRi?thumbnail=https://i.ytimg.com/vi/aitcEOkQQvY/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 14700,
     views: 659000,
     category: "Tvshow",
@@ -474,6 +523,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.imgur.com/Xf8qqXc.png?dtrcs",
     videoUrl:
       "https://short.icu/7VLd3Ag7G?thumbnail=https://i.imgur.com/Xf8qqXc.png?dtrcs",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt23872886",
+    videoUrl3: "",
     duration: 18480,
     views: 959000,
     category: "Tvshow",
@@ -502,6 +554,9 @@ const documentaries: Documentary[] = [
       "https://www.metacritic.com/a/img/catalog/provider/2/13/2-f2759c2435be315e65d327a9d051b005.jpg",
     videoUrl:
       "https://short.icu/EBrJD9ps2?thumbnail=https://www.metacritic.com/a/img/catalog/provider/2/13/2-f2759c2435be315e65d327a9d051b005.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt26748649",
+    videoUrl3: "",
     duration: 33300,
     views: 400000,
     category: "Tvshow",
@@ -530,6 +585,9 @@ const documentaries: Documentary[] = [
       "https://hs223eagleexpress.com/wp-content/uploads/2024/10/7.jpg",
     videoUrl:
       "https://short.icu/FBPA8_fBc?thumbnail=https://hs223eagleexpress.com/wp-content/uploads/2024/10/7.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt7221388",
+    videoUrl3: "",
     duration: 36360,
     views: 1500000,
     category: "Tvshow",
@@ -558,6 +616,9 @@ const documentaries: Documentary[] = [
       "https://gazettely.com/wp-content/uploads/2025/02/Virdee-Review-4-1024x576.webp",
     videoUrl:
       "https://short.icu/bk949evrt?thumbnail=https://images.justwatch.com/backdrop/324950607/s640/season-1",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29081720",
+    videoUrl3: "",
     duration: 20700,
     views: 390000,
     category: "Tvshow",
@@ -586,6 +647,9 @@ const documentaries: Documentary[] = [
       "https://gazettely.com/wp-content/uploads/2025/02/Invisible-Boys-Season-1-Review-1-1024x576.webp",
     videoUrl:
       "https://short.icu/nrz-ja9IR?thumbnail=https://images.justwatch.com/backdrop/324750546/s640/season-1",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29353885",
+    videoUrl3: "",
     duration: 17280,
     views: 1790000,
     category: "Tvshow",
@@ -613,6 +677,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/eTzopNGt3uo/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/zOFe2iqHC0?thumbnail=https://i.ytimg.com/vi/eTzopNGt3uo/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt4192812",
+    videoUrl3: "",
     duration: 16860,
     views: 790000,
     category: "Tvshow",
@@ -641,6 +708,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/x7sQ3hfRehwYfbyLZSdLOHwdNAQ=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29168277_b_h10_ab.jpg",
     videoUrl:
       "https://short.icu/n0H388-Bg?thumbnail=https://resizing.flixster.com/x7sQ3hfRehwYfbyLZSdLOHwdNAQ=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29168277_b_h10_ab.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt23664162",
+    videoUrl3: "",
     duration: 10860,
     views: 590000,
     category: "Tvshow",
@@ -669,6 +739,9 @@ const documentaries: Documentary[] = [
       "https://imageservice.disco.peacocktv.com/uuid/9aa28020-3836-3c9d-b661-b7cae930aa71/LAND_16_9/432/236?language=eng&territory=US&proposition=NBCUOTT&version=4eebca58-cd73-3aae-87d4-7ca89f693de2",
     videoUrl:
       "https://short.icu/80dwzgy73?thumbnail=https://i.gadgets360cdn.com/large/image_3_F_1740391175321.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt26748764",
+    videoUrl3: "",
     duration: 2520,
     views: 290000,
     category: "Tvshow",
@@ -696,6 +769,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/OKpGhZrnXdrmIXpv2UB15NCd0uE=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29477718_b_h10_aa.jpg",
     videoUrl:
       "https://short.icu/eBuSV-uMw?thumbnail=https://resizing.flixster.com/OKpGhZrnXdrmIXpv2UB15NCd0uE=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29477718_b_h10_aa.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt27191732",
+    videoUrl3: "",
     duration: 20220,
     views: 490000,
     category: "Tvshow",
@@ -724,6 +800,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/1AzdMOLIWfLtgreKSg6vti5ztxk=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29223127_b_h10_aa.jpg",
     videoUrl:
       "https://short.icu/sugwOHGmk?thumbnail=https://resizing.flixster.com/1AzdMOLIWfLtgreKSg6vti5ztxk=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29223127_b_h10_aa.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt31223067",
+    videoUrl3: "",
     duration: 13440,
     views: 850000,
     category: "Tvshow",
@@ -752,6 +831,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/SFE9lBUawrz-9l4VcjAN28MlzBo=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29163641_b_h10_ab.jpg",
     videoUrl:
       "https://short.icu/ye3mrVNl8?thumbnail=https://resizing.flixster.com/SFE9lBUawrz-9l4VcjAN28MlzBo=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29163641_b_h10_ab.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29632046",
+    videoUrl3: "",
     duration: 16140,
     views: 850000,
     category: "Tvshow",
@@ -780,6 +862,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/02/Cassandra-2025-Netflix-series-review.jpg",
     videoUrl:
       "https://short.icu/KTsi418-P?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/02/Cassandra-2025-Netflix-series-review.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt29135600",
+    videoUrl3: "",
     duration: 17760,
     views: 850000,
     category: "Tvshow",
@@ -808,6 +893,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/01/Hounds-Hill-Netflix-Series-Review-1200x720.jpg",
     videoUrl:
       "https://short.icu/XcZG2MtwTb?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/01/Hounds-Hill-Netflix-Series-Review-1200x720.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt34476674",
+    videoUrl3: "",
     duration: 19020,
     views: 850000,
     category: "Tvshow",
@@ -836,6 +924,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/5bcd825e5afb6b39d36c2acc26883f2cc120af6f3757334593aa87cdce837ad3.jpg",
     videoUrl:
       "https://short.icu/fLYvtdgZN?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/5bcd825e5afb6b39d36c2acc26883f2cc120af6f3757334593aa87cdce837ad3.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt29547746",
+    videoUrl3: "",
     duration: 25080,
     views: 850000,
     category: "Tvshow",
@@ -864,6 +955,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/368eff53f31a7cec3eccf4af8a63d32f08b4d87b595af1f48a602c0e9587bb3c.jpg",
     videoUrl:
       "https://short.icu/6GsIwm_4C?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/368eff53f31a7cec3eccf4af8a63d32f08b4d87b595af1f48a602c0e9587bb3c.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt14582876",
+    videoUrl3: "",
     duration: 14100,
     views: 550000,
     category: "Tvshow",
@@ -892,6 +986,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/jAVjNVYIIv4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDmIt8FY_58zKmr00mOWpk91yVYKg",
     videoUrl:
       "https://short.icu/oNbsKy1ug?thumbnail=https://i.ytimg.com/vi/jAVjNVYIIv4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDmIt8FY_58zKmr00mOWpk91yVYKg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt9077540",
+    videoUrl3: "",
     duration: 30240,
     views: 450000,
     category: "Tvshow",
@@ -920,6 +1017,9 @@ const documentaries: Documentary[] = [
       "https://blog.reelgood.com/wp-content/uploads/2025/02/sdqsdq.jpg?wsr",
     videoUrl:
       "https://short.icu/o08xRfJQh?thumbnail=https://blog.reelgood.com/wp-content/uploads/2025/02/sdqsdq.jpg?wsr",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 25980,
     views: 870000,
     category: "Tvshow",
@@ -948,6 +1048,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/M/MV5BNGEzZWNkNzMtYTE4Ni00ZGYxLTg5MTItNzkxZWRiOTJhNDAyXkEyXkFqcGc@._V1_.jpg",
     videoUrl:
       "https://short.icu/8RXKGRDJW?thumbnail=https://m.media-amazon.com/images/M/MV5BNGEzZWNkNzMtYTE4Ni00ZGYxLTg5MTItNzkxZWRiOTJhNDAyXkEyXkFqcGc@._V1_.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt30428143",
+    videoUrl3: "",
     duration: 22380,
     views: 670000,
     category: "Tvshow",
@@ -976,6 +1079,9 @@ const documentaries: Documentary[] = [
       "https://streamcoimg-a.akamaihd.net/000/153/075/153075-Banner-L2-82d05134ca03e394552ee213bb386d4b.jpg",
     videoUrl:
       "https://short.icu/6_yoAA4pk?thumbnail=https://streamcoimg-a.akamaihd.net/000/153/075/153075-Banner-L2-82d05134ca03e394552ee213bb386d4b.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt33305711",
+    videoUrl3: "",
     duration: 10320,
     views: 370000,
     category: "Tvshow",
@@ -1004,6 +1110,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/UZ9qkVXWH93exc270h68TLtq1x8=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29143494_b_h10_aa.jpg",
     videoUrl:
       "https://short.icu/ERw1MGmI6?thumbnail=https://resizing.flixster.com/UZ9qkVXWH93exc270h68TLtq1x8=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29143494_b_h10_aa.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt21096438",
+    videoUrl3: "",
     duration: 12660,
     views: 570000,
     category: "Tvshow",
@@ -1032,6 +1141,9 @@ const documentaries: Documentary[] = [
       "https://cdn.iview.abc.net.au/thumbs/i/X0_67566b108039f_3600.jpg",
     videoUrl:
       "https://short.icu/KHda7icmV?thumbnail=https://cdn.iview.abc.net.au/thumbs/i/X0_67566b108039f_3600.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt32903033",
+    videoUrl3: "",
     duration: 10380,
     views: 470000,
     category: "Tvshow",
@@ -1059,6 +1171,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/xxTfMsPfr9M/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/nK2K_yKAl?thumbnail=https://i.ytimg.com/vi/xxTfMsPfr9M/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 11880,
     views: 370000,
     category: "Tvshow",
@@ -1087,6 +1202,9 @@ const documentaries: Documentary[] = [
       "https://cdn.mos.cms.futurecdn.net/SDZFiMD9SX6CFfpDTjfJZn.jpg",
     videoUrl:
       "https://short.icu/_HOziCi4B?thumbnail=https://dvd-fever.co.uk/dvd-fever/wp-content/uploads/2025/01/brian-and-maggie.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt32499500",
+    videoUrl3: "",
     duration: 5520,
     views: 390000,
     category: "Tvshow",
@@ -1115,6 +1233,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/8343630afa4e00ea6178e9369927146bc36d7bad7fda5300405424cb968324ef.jpg",
     videoUrl:
       "https://short.icu/G4BEjJnlh?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/8343630afa4e00ea6178e9369927146bc36d7bad7fda5300405424cb968324ef.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt30135004",
+    videoUrl3: "",
     duration: 11460,
     views: 590000,
     category: "Tvshow",
@@ -1143,6 +1264,9 @@ const documentaries: Documentary[] = [
       "https://historyuk.s3.eu-west-2.amazonaws.com/s3fs-public/styles/768x432/public/2025-01/the_lost_women_spies-min_0.jpg?VersionId=qOS7yYoLD60gdQC0t_bLI5rPnEqEnYdC&itok=RBKOOiLm",
     videoUrl:
       "https://short.icu/iDLx08s1s?thumbnail=https://historyuk.s3.eu-west-2.amazonaws.com/s3fs-public/styles/768x432/public/2025-01/the_lost_women_spies-min_0.jpg?VersionId=qOS7yYoLD60gdQC0t_bLI5rPnEqEnYdC&itok=RBKOOiLm",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt31308365",
+    videoUrl3: "",
     duration: 17280,
     views: 690000,
     category: "Tvshow",
@@ -1171,6 +1295,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/4zrnTdQ1WT-8P_1PsFAj_Vfa_zI=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29215219_b_h9_ac.jpg",
     videoUrl:
       "https://short.icu/pfLMt5f_E?thumbnail=https://images.entertainment.ie/media/qNvL8eup1eTFeKXEG402mjxNAzU.jpg?w=1280&h=768&q=low",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt30063915",
+    videoUrl3: "",
     duration: 17640,
     views: 990000,
     category: "Tvshow",
@@ -1192,13 +1319,16 @@ const documentaries: Documentary[] = [
   {
     id: "T18",
     slug: "lockerbie-a-search-for-truth-s01",
-    title: "Lockerbie A Search For Truth (Season 1) Full Series",
+    title: "Lockerbie: A Search For Truth (Season 1) Full Series",
     description:
       "Pan Am Flight 103 explodes over Lockerbie 38 minutes after takeoff on Dec. 21, 1988, killing 259 on board and 11 on ground. Dr. Jim Swire loses daughter Flora and seeks justice with wife Jane.",
     thumbnailUrl:
       "https://www.peacocktv.com/dam/growth/assets/Originals/lockerbie/updated-trailer.jpg",
     videoUrl:
       "https://short.icu/EcTVyNZbF?thumbnail=https://www.peacocktv.com/dam/growth/assets/Originals/lockerbie/updated-trailer.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt31029686",
+    videoUrl3: "",
     duration: 16320,
     views: 690000,
     category: "Tvshow",
@@ -1227,6 +1357,9 @@ const documentaries: Documentary[] = [
       "https://akamaividz2.zee5.com/image/upload/w_1755,h_987,c_scale,f_webp,q_auto:eco/resources/0-6-4z5685473/list/1920x1080list69578814669f43ff84719ab86014cab1.jpg",
     videoUrl:
       "https://short.icu/yvrw229-6?thumbnail=https://akamaividz2.zee5.com/image/upload/w_1755,h_987,c_scale,f_webp,q_auto:eco/resources/0-6-4z5685473/list/1920x1080list69578814669f43ff84719ab86014cab1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 13260,
     views: 690000,
     category: "Tvshow",
@@ -1255,6 +1388,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/M/MV5BOTk5NWU5MjEtYzNlOC00ZGNiLWJmNGYtZjFkNjhlYzFmZWQzXkEyXkFqcGc@._V1_.jpg",
     videoUrl:
       "https://short.icu/G0SPpqJW6?thumbnail=https://m.media-amazon.com/images/M/MV5BOTk5NWU5MjEtYzNlOC00ZGNiLWJmNGYtZjFkNjhlYzFmZWQzXkEyXkFqcGc@._V1_.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 12840,
     views: 490000,
     category: "Tvshow",
@@ -1283,6 +1419,9 @@ const documentaries: Documentary[] = [
       "https://static.toiimg.com/thumb/msid-115296752,width-400,resizemode-4/115296752.jpg",
     videoUrl:
       "https://short.icu/483PB8ZgI?thumbnail=https://static.toiimg.com/thumb/msid-115296752,width-400,resizemode-4/115296752.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt13918776",
+    videoUrl3: "",
     duration: 30960,
     views: 1490000,
     category: "Tvshow",
@@ -1311,6 +1450,9 @@ const documentaries: Documentary[] = [
       "https://i1.wp.com/image.tmdb.org/t/p/w1280/gvUddLzXRbPPgrrXkNq5sJY3ynn.jpg?w=1280",
     videoUrl:
       "https://short.icu/_7OgC3doU?thumbnail=https://i1.wp.com/image.tmdb.org/t/p/w1280/gvUddLzXRbPPgrrXkNq5sJY3ynn.jpg?w=1280",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt31495377",
+    videoUrl3: "",
     duration: 16740,
     views: 490000,
     category: "Tvshow",
@@ -1339,6 +1481,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/01/American-Primeval-2025-Netflix-Series-Review.jpg",
     videoUrl:
       "https://short.icu/EJ0OJSXd8?thumbnail=https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQf1o_hOWd9Agg5F3exbPytvB4o1cIJTntQiKRU9A8eKj5aLUCEAK7QvsfGYjRZ9kfI7HkbYVPWzTx1On2iqbI8y5ml4_N73pbWz39pp07nCGAsJICfYuqRTHltbasnINvRQUmwZIjw33K3FAvQjx.jpg?r=534",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.cc/v3/embed/tv/tt24069848",
+    videoUrl3: "",
     duration: 18120,
     views: 290000,
     category: "Tvshow",
@@ -1367,6 +1512,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2024/12/Missing-You-2025-Netflix-series-review.jpg",
     videoUrl:
       "https://short.icu/CuYT-k9_a?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2024/12/Missing-You-2025-Netflix-series-review.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt31019484",
+    videoUrl3: "",
     duration: 13560,
     views: 590000,
     category: "Tvshow",
@@ -1395,6 +1543,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/e7de982a539e4caf8eb8e95bee3285bd3f57a8e3f61bcc32f289b99e5bda39d1.jpg",
     videoUrl:
       "https://short.icu/vHTR-LyV8?thumbnail=https://timesofindia.indiatimes.com/photo/117207723.cms",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 18420,
     views: 390000,
     category: "Tvshow",
@@ -1423,6 +1574,9 @@ const documentaries: Documentary[] = [
       "https://images.ottplay.com/images/media/gallery/black-warrant-teaser-out-1734598370.jpg",
     videoUrl:
       "https://short.icu/daJ2iAPuU?thumbnail=https://www.masala.com/cloud/2025/01/03/Black-Warrant.jpg",
+    videoUrl1: "",
+    videoUrl2: "https://vidsrc.net/embed/tv?imdb=tt35064818",
+    videoUrl3: "",
     duration: 20040,
     views: 390000,
     category: "Tvshow",
@@ -1450,6 +1604,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://static.toiimg.com/photo/msid-117059097.jpeg",
     videoUrl:
       "https://short.icu/daJ2iAPuU?thumbnail=https://static.toiimg.com/photo/msid-117059097.jpeg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9780,
     views: 490000,
     category: "Tvshow",
@@ -1477,6 +1634,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/qMST9Pmyewo/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/a6gFGvNLP?thumbnail=https://i.ytimg.com/vi/qMST9Pmyewo/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 13020,
     views: 690000,
     category: "Tvshow",
@@ -1507,8 +1667,9 @@ const documentaries: Documentary[] = [
       "https://desix11.com/wp-content/uploads/2025/03/Kolektor-2025-Tagalong-Hot-Movie-Vivamax.jpg",
     videoUrl:
       "https://short.icu/r6Cl5VZDe?thumbnail=https://desix11.com/wp-content/uploads/2025/03/Kolektor-2025-Tagalong-Hot-Movie-Vivamax.jpg",
-      videoUrl1:
-      "https://voe.sx/e/yvlkqqlinzq8",
+    videoUrl1: "https://voe.sx/e/yvlkqqlinzq8",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5760,
     views: 183100,
     category: "Adult",
@@ -1537,8 +1698,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/PyhSWkORcdo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAeVa_lqREaqNeOK42LzZT9_wSEhw",
     videoUrl:
       "https://short.icu/uQttB1FEr?thumbnail=https://i.ytimg.com/vi/PyhSWkORcdo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAeVa_lqREaqNeOK42LzZT9_wSEhw",
-      videoUrl1:
-      "https://voe.sx/e/z2e5fnokhsad",
+    videoUrl1: "https://voe.sx/e/z2e5fnokhsad",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6000,
     views: 83100,
     category: "Adult",
@@ -1567,6 +1729,9 @@ const documentaries: Documentary[] = [
       "https://pbs.twimg.com/media/GiYLHwVbAAAHJrT?format=jpg&name=large",
     videoUrl:
       "https://short.icu/Ljy7rJhHa?thumbnail=https://pbs.twimg.com/media/GiYLHwVbAAAHJrT?format=jpg&name=large",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4920,
     views: 53100,
     category: "Adult",
@@ -1594,6 +1759,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/201WiuY3uiw/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/tm5PGfBJL?thumbnail=https://i.ytimg.com/vi/201WiuY3uiw/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4080,
     views: 950000,
     category: "Adult",
@@ -1622,6 +1790,9 @@ const documentaries: Documentary[] = [
       "https://happy2hub.eu/wp-content/uploads/2025/02/Chirag-an-Hulchul-Web-Series-Starring-Neelam-Bhanushali-and-Mahi-Kaur.jpg",
     videoUrl:
       "https://short.icu/ncErS4lks?thumbnail=https://uncutfun.com/wp-content/uploads/2025/02/Chirag-1-640x360.webp",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4080,
     views: 650000,
     category: "Adult",
@@ -1650,6 +1821,9 @@ const documentaries: Documentary[] = [
       "https://res.cloudinary.com/dcrlnyd7n/image/upload/v1740530780/daman_on3f0v.jpg",
     videoUrl:
       "https://short.icu/CUYx0f7v1?thumbnail=https://res.cloudinary.com/dcrlnyd7n/image/upload/v1740530780/daman_on3f0v.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 2100,
     views: 250000,
     category: "Adult",
@@ -1677,6 +1851,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/IxPtOetIiSI/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/4r_dVDYck?thumbnail=https://i.ytimg.com/vi/IxPtOetIiSI/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5880,
     views: 790000,
     category: "Adult",
@@ -1705,6 +1882,9 @@ const documentaries: Documentary[] = [
       "https://i1.wp.com/s10.imagetwist.com/th/67733/714ctjmmpixr.jpg?w=1200&resize=1200,0&ssl=1",
     videoUrl:
       "https://short.icu/QSACmv0Wq?thumbnail=https://i1.wp.com/s10.imagetwist.com/th/67733/714ctjmmpixr.jpg?w=1200&resize=1200,0&ssl=1",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 3660,
     views: 490000,
     category: "Adult",
@@ -1733,6 +1913,9 @@ const documentaries: Documentary[] = [
       "https://altbalaji-new.multitvsolution.com/obs/source/jpg/1061_67af39c25a737_854x480.jpg",
     videoUrl:
       "https://short.icu/w3JIjtmP1?thumbnail=https://altbalaji-new.multitvsolution.com/obs/source/jpg/1061_67af39c25a737_854x480.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4920,
     views: 590000,
     category: "Adult",
@@ -1761,6 +1944,9 @@ const documentaries: Documentary[] = [
       "https://www.cinefry.co.in/wp-content/uploads/2025/02/Lene-Ke-Dene.jpg",
     videoUrl:
       "https://short.icu/h4VQ8s61_?thumbnail=https://www.cinefry.co.in/wp-content/uploads/2025/02/Lene-Ke-Dene.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 10800,
     views: 790000,
     category: "Adult",
@@ -1789,6 +1975,9 @@ const documentaries: Documentary[] = [
       "https://www.rioplus.in/media/posters/2025-02-0244e64ecb6862471aa62d724bb7540a9e.jpg",
     videoUrl:
       "https://short.icu/p-hbqHFPX?thumbnail=https://www.rioplus.in/media/posters/2025-02-0244e64ecb6862471aa62d724bb7540a9e.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5640,
     views: 390000,
     category: "Adult",
@@ -1817,6 +2006,9 @@ const documentaries: Documentary[] = [
       "https://images.justwatch.com/backdrop/326119035/s640/walker-2025",
     videoUrl:
       "https://short.icu/dBqXw7m3v?thumbnail=https://images.justwatch.com/backdrop/326119035/s640/walker-2025",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5100,
     views: 1000000,
     category: "Adult",
@@ -1844,6 +2036,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://simkl.in/fanart/17/17264507988160f787_w.jpg",
     videoUrl:
       "https://short.icu/2G3ONmNLe?thumbnail=https://simkl.in/fanart/17/17264507988160f787_w.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5340,
     views: 950000,
     category: "Adult",
@@ -1872,6 +2067,9 @@ const documentaries: Documentary[] = [
       "https://image.tmdb.org/t/p/w1280/LbRuVNpMYYlBBzXlG7Zcd2YCyb.jpg",
     videoUrl:
       "https://short.icu/A-9V660Ye?thumbnail=https://image.tmdb.org/t/p/w1280/LbRuVNpMYYlBBzXlG7Zcd2YCyb.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35544722",
     duration: 4200,
     views: 750000,
     category: "Adult",
@@ -1899,6 +2097,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/rvPT3W5sEBU/sddefault.jpg",
     videoUrl:
       "https://short.icu/SNT0oFuaz?thumbnail=https://i.ytimg.com/vi/rvPT3W5sEBU/sddefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4200,
     views: 850000,
     category: "Adult",
@@ -1927,6 +2128,9 @@ const documentaries: Documentary[] = [
       "https://i.ibb.co.com/SwsNyh8/Teachers-Pet-2024-Filipino-Hot-Short-Film-Vivamax.jpg",
     videoUrl:
       "https://short.icu/BPzayARiDj?thumbnail=https://i.ibb.co.com/SwsNyh8/Teachers-Pet-2024-Filipino-Hot-Short-Film-Vivamax.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35109626",
     duration: 3900,
     views: 850000,
     category: "Adult",
@@ -1954,6 +2158,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://simkl.in/fanart/17/1706376553a8d57816_w.jpg",
     videoUrl:
       "https://short.icu/zF-7RGENG?thumbnail=https://simkl.in/fanart/17/1706376553a8d57816_w.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 3900,
     views: 990000,
     category: "Adult",
@@ -1981,6 +2188,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://m3.imgdf.xyz/mm/Balam.Pichkari.Part01E01_Ullu.png",
     videoUrl:
       "https://short.icu/0og7-qZHT?thumbnail=https://m3.imgdf.xyz/mm/Balam.Pichkari.Part01E01_Ullu.png",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5400,
     views: 350000,
     category: "Adult",
@@ -2009,6 +2219,9 @@ const documentaries: Documentary[] = [
       "https://imb.rest/wp-content/uploads/2025/01/photo_2025-01-27_23-18-06.jpg",
     videoUrl:
       "https://short.icu/8tMPjYhpPJ?thumbnail=https://imb.rest/wp-content/uploads/2025/01/photo_2025-01-27_23-18-06.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6180,
     views: 950000,
     category: "Adult",
@@ -2036,6 +2249,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/ziM2PLaej5o/sddefault.jpg",
     videoUrl:
       "https://short.icu/Vp3U30R1M?thumbnail=https://i.ytimg.com/vi/ziM2PLaej5o/sddefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4740,
     views: 130000,
     category: "Adult",
@@ -2064,6 +2280,9 @@ const documentaries: Documentary[] = [
       "https://www.indianporn365.net/wp-content/uploads/2025/01/Rakhwala-2025-Hulchul-Hindi-Hot-Web-Series-Episode-6.jpg",
     videoUrl:
       "https://short.icu/8At1zNiNU?thumbnail=https://www.indianporn365.net/wp-content/uploads/2025/01/Rakhwala-2025-Hulchul-Hindi-Hot-Web-Series-Episode-6.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6240,
     views: 1250000,
     category: "Adult",
@@ -2092,6 +2311,9 @@ const documentaries: Documentary[] = [
       "https://www.mastram.app/media/posters/2025-01-0374c970efb0c842c6aad2a46026ad78cf.jpg",
     videoUrl:
       "https://short.icu/jJ7Skxhxl?thumbnail=https://www.mastram.app/media/posters/2025-01-0374c970efb0c842c6aad2a46026ad78cf.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6240,
     views: 1250000,
     category: "Adult",
@@ -2119,6 +2341,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://pbs.twimg.com/media/Gi9hUXba4AELDUh.jpg",
     videoUrl:
       "https://short.icu/7XJglZgBa?thumbnail=https://pbs.twimg.com/media/Gi9hUXba4AELDUh.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 1800,
     views: 250000,
     category: "Adult",
@@ -2147,6 +2372,9 @@ const documentaries: Documentary[] = [
       "https://altbalaji-new.multitvsolution.com/obs/source/jpg/1061_678a3a7d7d025_854x480.jpg",
     videoUrl:
       "https://short.icu/B8-Vo78j4?thumbnail=https://altbalaji-new.multitvsolution.com/obs/source/jpg/1061_678a3a7d7d025_854x480.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5700,
     views: 1550000,
     category: "Adult",
@@ -2175,6 +2403,9 @@ const documentaries: Documentary[] = [
       "https://altbalaji-new.multitvsolution.com/obs/source/jpg/1061_677fea3c76699_854x480.jpg",
     videoUrl:
       "https://short.icu/c5z9FLlZh?thumbnail=https://altbalaji-new.multitvsolution.com/obs/source/jpg/1061_677fea3c76699_854x480.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5220,
     views: 550000,
     category: "Adult",
@@ -2203,6 +2434,9 @@ const documentaries: Documentary[] = [
       "https://images.justwatch.com/backdrop/323430620/s640/las-ilusyunadas",
     videoUrl:
       "https://short.icu/xYSN2orsb?thumbnail=https://images.justwatch.com/backdrop/323430620/s640/las-ilusyunadas",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5400,
     views: 990000,
     category: "Adult",
@@ -2231,6 +2465,9 @@ const documentaries: Documentary[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMsLsM8fYbCexBBgN_4YnZHINuZoXsLJv3g&s",
     videoUrl:
       "https://short.icu/n-wx9Epy4?thumbnail=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMsLsM8fYbCexBBgN_4YnZHINuZoXsLJv3g&s",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 2280,
     views: 1300000,
     category: "Adult",
@@ -2259,6 +2496,9 @@ const documentaries: Documentary[] = [
       "https://i.ibb.co/CBYGQ4c/Wow-Mani-2025-S01-E01-Tagalong-VMAX-WEB-DL-H264-AAC-1080p-720p-Downloa.jpg",
     videoUrl:
       "https://short.icu/PI6VBfN32?thumbnail=https://i.ibb.co/CBYGQ4c/Wow-Mani-2025-S01-E01-Tagalong-VMAX-WEB-DL-H264-AAC-1080p-720p-Downloa.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 2460,
     views: 1300000,
     category: "Adult",
@@ -2287,6 +2527,9 @@ const documentaries: Documentary[] = [
       "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FzOSZpcgIdAjWZFfUQv4q5SK8ggh.jpg",
     videoUrl:
       "https://short.icu/RbGoUnb0U?thumbnail=https://img.youtube.com/vi/agkJRuuRLCw/mqdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7080,
     views: 400000,
     category: "Adult",
@@ -2315,6 +2558,9 @@ const documentaries: Documentary[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFiu-rwYn1lf0WeXtyEtE1gBsKVUsQBW5tA&s",
     videoUrl:
       "https://short.icu/u50OSSiZf?thumbnail=https://i.ytimg.com/vi/WmOTlcv-LFo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCVw6PFlhmfL3OwB0TUATN7Y8Ew3A",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6360,
     views: 1400000,
     category: "Adult",
@@ -2343,6 +2589,9 @@ const documentaries: Documentary[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgaR5i46Hxoih1VyxarOriSLhzazbBXwcokg&s",
     videoUrl:
       "https://short.icu/UfxvVQDjp?thumbnail=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgaR5i46Hxoih1VyxarOriSLhzazbBXwcokg&s",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 1440,
     views: 1400000,
     category: "Adult",
@@ -2370,6 +2619,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/hdbx-OnRRc0/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/OQvuUKMVr?thumbnail=https://i.ytimg.com/vi/hdbx-OnRRc0/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5820,
     views: 700000,
     category: "Adult",
@@ -2397,6 +2649,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://simkl.in/fanart/17/17101059cf6c2ce9cd_w.jpg",
     videoUrl:
       "https://short.icu/9S2GH7NMs?thumbnail=https://simkl.in/fanart/17/17101059cf6c2ce9cd_w.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4200,
     views: 850000,
     category: "Adult",
@@ -2424,6 +2679,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://m3.imgdf.xyz/mm/Murder.E04.Triflicks.jpg",
     videoUrl:
       "https://short.icu/X3t2iyboW?thumbnail=https://m3.imgdf.xyz/mm/Murder.E04.Triflicks.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7560,
     views: 250000,
     category: "Adult",
@@ -2452,6 +2710,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/wVjarK2zCpk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAnJzCva-5Lr5-tQkibXx8IyK3Vnw",
     videoUrl:
       "https://short.icu/jsdHrnzrF?thumbnail=https://i.ytimg.com/vi/wVjarK2zCpk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAnJzCva-5Lr5-tQkibXx8IyK3Vnw",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6000,
     views: 350000,
     category: "Adult",
@@ -2479,6 +2740,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://s10.imagetwist.com/th/67311/wwj527nphdvg.jpg",
     videoUrl:
       "https://short.icu/N2X9Bp5eS?thumbnail=https://s10.imagetwist.com/th/67311/wwj527nphdvg.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 12180,
     views: 1350000,
     category: "Adult",
@@ -2509,6 +2773,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/02/Squad-36-Netflix-2025-Thriller-Review.jpg",
     videoUrl:
       "https://short.icu/ssO-uEXZH?thumbnail=https://images.justwatch.com/backdrop/324851006/s640/squad-36",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7440,
     views: 155000,
     category: "Hindi-Dubbed",
@@ -2538,6 +2805,9 @@ const documentaries: Documentary[] = [
       "https://www.tvguide.com/a/img/resize/c6d4c07def64a8638a23117ab4156cc39ad66e73/hub/2024/12/06/f8755a4f-451b-4ca1-b57b-e90c5229703d/reachie.jpg?auto=webp&width=1092",
     videoUrl:
       "https://short.icu/eTHerEjO3?thumbnail=https://i.gadgets360cdn.com/large/image_3_F_1736408509883.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 12180,
     views: 1125000,
     category: "Hindi-Dubbed",
@@ -2566,6 +2836,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://files.spoilertv.com/headers/Running-Point.jpg",
     videoUrl:
       "https://short.icu/iBsDl6nek?thumbnail=https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUl42L3rmzugRiNg_zNtjDp9mrpLOEkEsGScVYqpSjcQj69m6P9i6GlgAOK9ykBx8fuCfHROODHN7k6resZ7iuc61m7LpyTRVaKX.jpg?r=c68",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5640,
     views: 125000,
     category: "Hindi-Dubbed",
@@ -2595,6 +2868,9 @@ const documentaries: Documentary[] = [
       "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcZkcFDn9vRvm4YycBXL2vNqHa9mikq3Qa_EsVZOaOfgss-NFpVNijrT6ylRlgaaX6dpRNNAsriqE4q77TSzliGktw-HOQ3NpYIXOBIBTJsZMqytMBumwrxqgo1kkGEhgqDV.jpg?r=dbe",
     videoUrl:
       "https://short.icu/iA2q80RWb?thumbnail=https://occ-0-8407-92.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVzd8Ohn4-pCqHnXEbIOET-BFCXz4jwGVQYCDvm0WcgSKsmERsYqaP8VJePAgqroGE3Wv3wa_xyyxCcxwZVajVbMQSzqhvYiWfY-.jpg?r=475",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5640,
     views: 125000,
     category: "Hindi-Dubbed",
@@ -2624,6 +2900,9 @@ const documentaries: Documentary[] = [
       "https://cdn.technadu.com/wp-content/uploads/2025/02/Sosyal-Climbers.jpg",
     videoUrl:
       "https://short.icu/cmSWtRA8O?thumbnail=https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTsD5dzRWGNhVxRAqABThVvi7CXBZMSYg4ERjKNk1TBPbIeVh0l_hI9-NSJ6XBO_d_MFexsWM6AxKiowKwd8P87AoUBSbET8voP8.jpg?r=c27",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6180,
     views: 195000,
     category: "Hindi-Dubbed",
@@ -2653,6 +2932,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/02/Demon-City-2025-Netflix-Review.jpg",
     videoUrl:
       "https://short.icu/WtV3XGR_m?thumbnail=https://www.chennaitop10.com/wp-content/uploads/2025/02/Demon-City.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6360,
     views: 195000,
     category: "Hindi-Dubbed",
@@ -2682,6 +2964,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/NTu61e7AD8gVbPdRCq1ZcYBvR4Q=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28798890_b_h9_ac.jpg",
     videoUrl:
       "https://short.icu/kjLJ3-MFT?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/02/The-Hunting-Party-2025-Peacock-Review-1200x900.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 10140,
     views: 75000,
     category: "Hindi-Dubbed",
@@ -2711,6 +2996,9 @@ const documentaries: Documentary[] = [
       "https://elcomercio.pe/resizer/v2/5QFX363F5VHHZPHFWYTN77Z5XQ.jpg?auth=00939b899ab425fac1c752378f876eceed8fd27c9049917480c0e80620a6e925&width=1200&height=810&quality=90&smart=true",
     videoUrl:
       "https://short.icu/H89k-y1mE?thumbnail=https://www.hindustantimes.com/ht-img/img/2025/02/24/550x309/Suits_LA_1740400405418_1740400410107.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 2700,
     views: 155000,
     category: "Hindi-Dubbed",
@@ -2740,6 +3028,9 @@ const documentaries: Documentary[] = [
       "https://www.midstlive.com/wp-content/uploads/2025/01/my-fault-london-culpa-mia-ott-release-1.png",
     videoUrl:
       "https://short.icu/lwixaE7MM?thumbnail=https://www.midstlive.com/wp-content/uploads/2025/01/my-fault-london-culpa-mia-ott-release-1.png",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7200,
     views: 555000,
     category: "Hindi-Dubbed",
@@ -2768,6 +3059,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/M15wyhE9yDw/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/mKrYwky4j?thumbnail=https://i.ytimg.com/vi/M15wyhE9yDw/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5700,
     views: 356000,
     category: "Hindi-Dubbed",
@@ -2797,6 +3091,9 @@ const documentaries: Documentary[] = [
       "https://img.nowrunning.com/content/movie/2025/den-o-30388/bg_den-of-thieves-2-pantera.jpg",
     videoUrl:
       "https://short.icu/5nmwZhOeU?thumbnail=https://img.nowrunning.com/content/movie/2025/den-o-30388/bg_den-of-thieves-2-pantera.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 8640,
     views: 450000,
     category: "Hindi-Dubbed",
@@ -2826,6 +3123,9 @@ const documentaries: Documentary[] = [
       "https://pacificsciencecenter.org/wp-content/uploads/2025/01/cap-america-web-1.jpg",
     videoUrl:
       "https://short.icu/WnKkJoBQ49?thumbnail=https://pacificsciencecenter.org/wp-content/uploads/2025/01/cap-america-web-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7080,
     views: 1750000,
     category: "Hindi-Dubbed",
@@ -2855,6 +3155,9 @@ const documentaries: Documentary[] = [
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXggBVnCCQXwgkpN-hCka-l2HF48yr4CHANAS-RHb-rgasdNcIfpALknHrW8NVtMU_Eq9xmGGX3NwvXflQZzo89Tv3qsR2zB4onAQNq56qPce35NOsoasVDJbMm01FG5YHHiZkEOc2U-AXjV35iQmVT0WGc5e4lIUgrOVDUog2QHOf2_mQOg/s1600/d512b1af-a840-11ef-9d42-12722d97%20%281%29.jpg",
     videoUrl:
       "https://short.icu/876otuE0H?thumbnail=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXggBVnCCQXwgkpN-hCka-l2HF48yr4CHANAS-RHb-rgasdNcIfpALknHrW8NVtMU_Eq9xmGGX3NwvXflQZzo89Tv3qsR2zB4onAQNq56qPce35NOsoasVDJbMm01FG5YHHiZkEOc2U-AXjV35iQmVT0WGc5e4lIUgrOVDUog2QHOf2_mQOg/s1600/d512b1af-a840-11ef-9d42-12722d97%20%281%29.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 24900,
     views: 750000,
     category: "Hindi-Dubbed",
@@ -2884,6 +3187,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/1lAPsz0sGZwfZUjMg9fHssaprDc=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29270534_b_h10_aa.jpg",
     videoUrl:
       "https://short.icu/9MzReADH8?thumbnail=https://resizing.flixster.com/1lAPsz0sGZwfZUjMg9fHssaprDc=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29270534_b_h10_aa.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 24900,
     views: 750000,
     category: "Hindi-Dubbed",
@@ -2913,6 +3219,9 @@ const documentaries: Documentary[] = [
       "https://static.toiimg.com/thumb/msid-115296752,width-400,resizemode-4/115296752.jpg",
     videoUrl:
       "https://short.icu/KmCMipR0w?thumbnail=https://static.toiimg.com/thumb/msid-115296752,width-400,resizemode-4/115296752.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 30960,
     views: 850000,
     category: "Hindi-Dubbed",
@@ -2942,6 +3251,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/02/Cassandra-2025-Netflix-series-review.jpg",
     videoUrl:
       "https://short.icu/qeH9nW4F8?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/02/Cassandra-2025-Netflix-series-review.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 17760,
     views: 350000,
     category: "Hindi-Dubbed",
@@ -2971,6 +3283,9 @@ const documentaries: Documentary[] = [
       "https://static.wixstatic.com/media/d56877_067128ab9826477ea779f152bb6e36c9~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,usm_0.66_1.00_0.01/d56877_067128ab9826477ea779f152bb6e36c9~mv2.png",
     videoUrl:
       "https://short.icu/_OhKrrP8I?thumbnail=https://deadline.com/wp-content/uploads/2023/02/HLD-THE-RIG.jpg?w=1024",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 18120,
     views: 550000,
     category: "Hindi-Dubbed",
@@ -3000,6 +3315,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/01/American-Primeval-2025-Netflix-Series-Review-1200x720.jpg",
     videoUrl:
       "https://short.icu/xlyioafWG?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/01/American-Primeval-2025-Netflix-Series-Review-1200x720.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 18120,
     views: 550000,
     category: "Hindi-Dubbed",
@@ -3029,6 +3347,9 @@ const documentaries: Documentary[] = [
       "https://www.filmofilia.com/wp-content/uploads/2025/01/Back-in-Action-1.jpg",
     videoUrl:
       "https://short.icu/AP4gomVgM?thumbnail=https://www.filmofilia.com/wp-content/uploads/2025/01/Back-in-Action-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6840,
     views: 550000,
     category: "Hindi-Dubbed",
@@ -3057,6 +3378,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://mp4moviez.ind.in/files/luccas-world.webp",
     videoUrl:
       "https://short.icu/YiXMC1reZ?thumbnail=https://occ-0-8407-1361.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa3Qo1KVTUQ37Bsp2IosTn7WUKCPycwk-1e0q1shYERx4HkCYwIkrjBJQOwkyH_DZjiLz0t34QI-85qyj4_pOyapfHnKWtZSCLvnQmlmHzcyyhWNjdG4LavOjdTOaz-RpC8p0uHbAQkh7B4LAcf9NU0Zj5Y_zVOH22YFXdpB7o7hOAptkCy2vkM1lYS6ciw.jpg?r=5b7",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5760,
     views: 850000,
     category: "Hindi-Dubbed",
@@ -3086,6 +3410,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/WkPWfYe_IX4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAiCTD5IfF8JZidvfctsYsy7EgW8w",
     videoUrl:
       "https://short.icu/vn3MawEwy?thumbnail=https://i.ytimg.com/vi/WkPWfYe_IX4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAiCTD5IfF8JZidvfctsYsy7EgW8w",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7200,
     views: 1212340,
     category: "Hindi-Dubbed",
@@ -3115,6 +3442,9 @@ const documentaries: Documentary[] = [
       "https://www.vitalthrills.com/wp-content/uploads/2025/01/companionmovieheader.jpg",
     videoUrl:
       "https://short.icu/1A4wE0qJs?thumbnail=https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/companion-et00414405-1737629384.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5820,
     views: 350023,
     category: "Hindi-Dubbed",
@@ -3144,6 +3474,9 @@ const documentaries: Documentary[] = [
       "https://i.gadgets360cdn.com/large/image_4_F_1738751563984.jpg",
     videoUrl:
       "https://short.icu/sVqkCnFjF?thumbnail=https://i.gadgets360cdn.com/large/image_4_F_1738751563984.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5820,
     views: 750000,
     category: "Hindi-Dubbed",
@@ -3173,6 +3506,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/01/Ad-Vitam-2025-Netflix-Thriller.jpg",
     videoUrl:
       "https://short.icu/nEdfZ8303?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/01/Ad-Vitam-2025-Netflix-Thriller.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5880,
     views: 750000,
     category: "Hindi-Dubbed",
@@ -3201,6 +3537,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/gEuPm4UcjHs/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/x28ZhrvQ8?thumbnail=https://occ-0-8407-1361.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbMCBe-H0oKbGvPDYjmGXoC7Mga09j51PW_l4nox_ZZKFFE2ROJQ1V37rXRk5R1n8ZgfcZpw72P_95bw9-IAF1h3VPtm67EoX22-.jpg?r=627",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6060,
     views: 550000,
     category: "Hindi-Dubbed",
@@ -3230,6 +3569,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/vUuFuMD7CXA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBOYZUhdsC-eB1Jb937R5gldZAscQ",
     videoUrl:
       "https://short.icu/938UOcUwW?thumbnail=https://i.ytimg.com/vi/vUuFuMD7CXA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBOYZUhdsC-eB1Jb937R5gldZAscQ",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6660,
     views: 550000,
     category: "Hindi-Dubbed",
@@ -3281,12 +3623,12 @@ const documentaries: Documentary[] = [
     title: "Promotion (2025)",
     description:
       "A young corporate employee, desperate to climb the career ladder, is presented with a shocking proposition by his ruthless boss: spend a night with his wife, and he'll be rewarded with a promotion and a doubled salary. Will the husband prioritize his ambition over his marriage, or will he find a way to",
-    thumbnailUrl:
-      "https://pbs.twimg.com/media/Gk9g-gqaEAAYsfn.jpg",
+    thumbnailUrl: "https://pbs.twimg.com/media/Gk9g-gqaEAAYsfn.jpg",
     videoUrl:
       "https://short.icu/Bx1dct126?thumbnail=https://pbs.twimg.com/media/Gk9g-gqaEAAYsfn.jpg",
-    videoUrl1:
-      "https://voe.sx/e/h53qrngiigdt",
+    videoUrl1: "https://voe.sx/e/h53qrngiigdt",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 3900,
     views: 526100,
     category: "Movie",
@@ -3315,8 +3657,9 @@ const documentaries: Documentary[] = [
       "https://www.mastram.app/media/posters/2025-03-06f66708b1dc9e428aa5153af58d15117d.jpg",
     videoUrl:
       "https://short.icu/KfHOO3Ghi3?thumbnail=https://www.mastram.app/media/posters/2025-03-06f66708b1dc9e428aa5153af58d15117d.jpg",
-    videoUrl1:
-      "https://voe.sx/e/kcw004qv6itb",
+    videoUrl1: "https://voe.sx/e/kcw004qv6itb",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 1500,
     views: 226100,
     category: "Movie",
@@ -3345,6 +3688,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/qupmreWFuW8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6ii8bBtjo-IxRoNf0bTh7Zi66uQ",
     videoUrl:
       "https://short.icu/33E_ByTe34?thumbnail=https://akm-img-a-in.tosshub.com/indiatoday/images/story/202502/vicky-kaushal--rashmika-mandanna--chhava-box-office-191923961-16x9_0.jpg?VersionId=e4yTxFLsu7cf8D8QmW8i7j_r8lQmFGeX&size=690:388",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9060,
     views: 1926100,
     category: "Movie",
@@ -3373,6 +3719,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/R-yr-dYpwCE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBSuki6QFiITYPIfW43RnbcvJNbBg",
     videoUrl:
       "https://short.icu/Ck9SsKvmr?thumbnail=https://variety.com/wp-content/uploads/2024/09/Superboys-of-Malegaon-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7620,
     views: 926100,
     category: "Movie",
@@ -3401,6 +3750,9 @@ const documentaries: Documentary[] = [
       "https://media.assettype.com/freepressjournal/2025-02-27/ti2jq8rm/Crazxy-Review.jpg",
     videoUrl:
       "https://short.icu/rJWAWA1IF?thumbnail=https://images.news18.com/ibnlive/uploads/2025/02/Sohum-Shah-Crazxy-2025-02-c8929cbe75bcf13efd59752dc036a906-16x9.jpg?impolicy=website&width=640&height=360",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5460,
     views: 26100,
     category: "Movie",
@@ -3429,6 +3781,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/J2RfczEiz8w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDCGbA4gGiXHfuWL_viA4ax8TknZQ",
     videoUrl:
       "https://short.icu/qw9KfuAGdr?thumbnail=https://i.ytimg.com/vi/J2RfczEiz8w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDCGbA4gGiXHfuWL_viA4ax8TknZQ",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt29603375",
     duration: 6240,
     views: 806100,
     category: "Movie",
@@ -3457,6 +3812,9 @@ const documentaries: Documentary[] = [
       "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcZkcFDn9vRvm4YycBXL2vNqHa9mikq3Qa_EsVZOaOfgss-NFpVNijrT6ylRlgaaX6dpRNNAsriqE4q77TSzliGktw-HOQ3NpYIXOBIBTJsZMqytMBumwrxqgo1kkGEhgqDV.jpg?r=dbe",
     videoUrl:
       "https://short.icu/jdV-iXoEy?thumbnail=https://occ-0-8407-92.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVzd8Ohn4-pCqHnXEbIOET-BFCXz4jwGVQYCDvm0WcgSKsmERsYqaP8VJePAgqroGE3Wv3wa_xyyxCcxwZVajVbMQSzqhvYiWfY-.jpg?r=475",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.net/embed/movie/tt31828532",
     duration: 5640,
     views: 306100,
     category: "Movie",
@@ -3485,6 +3843,9 @@ const documentaries: Documentary[] = [
       "https://cdn.technadu.com/wp-content/uploads/2025/02/Sosyal-Climbers.jpg",
     videoUrl:
       "https://short.icu/BqkWgLgsB?thumbnail=https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTsD5dzRWGNhVxRAqABThVvi7CXBZMSYg4ERjKNk1TBPbIeVh0l_hI9-NSJ6XBO_d_MFexsWM6AxKiowKwd8P87AoUBSbET8voP8.jpg?r=c27",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.net/embed/movie/tt35624097",
     duration: 6180,
     views: 106100,
     category: "Movie",
@@ -3513,6 +3874,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/02/Demon-City-2025-Netflix-Review.jpg",
     videoUrl:
       "https://short.icu/ACMnroTob?thumbnail=https://www.chennaitop10.com/wp-content/uploads/2025/02/Demon-City.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35111035",
     duration: 6360,
     views: 1106100,
     category: "Movie",
@@ -3541,6 +3905,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/nBc1-XWMjKA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLClyCCi7LWU-jrPd-2CSJrKTWJB5A",
     videoUrl:
       "https://short.icu/EOetiIeUR?thumbnail=https://m.media-amazon.com/images/M/MV5BYWVmMzE4ZGEtZWY0Yi00MzA3LWEyZDItZTRlZTQxNjk0NzAwXkEyXkFqcGc@._V1_.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6060,
     views: 706100,
     category: "Movie",
@@ -3569,6 +3936,9 @@ const documentaries: Documentary[] = [
       "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F7%2Fgracenote%2F779d6665b868607b72bca5d923b9ed5c.jpg",
     videoUrl:
       "https://short.icu/1jR5M71Sm?thumbnail=https://images.squarespace-cdn.com/content/v1/53d8f450e4b0ddeb5ce066e5/7b3522e6-7a5d-4aaa-9e3c-b278f508bf80/ReturnToOffice.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5040,
     views: 406100,
     category: "Movie",
@@ -3597,6 +3967,9 @@ const documentaries: Documentary[] = [
       "https://bossip.com/wp-content/uploads/sites/28/2025/01/17358257628352.jpg?w=1024&strip=all&quality=80",
     videoUrl:
       "https://short.icu/aWlzrTQ1E?thumbnail=https://canvas-lb.tubitv.com/opts/gbjTfJ-OoUGnjw==/6f3e10f8-9bbe-4451-a4d6-9368385265a3/CIAPELgIOgUxLjEuNg==",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt32315693",
     duration: 5640,
     views: 206100,
     category: "Movie",
@@ -3625,6 +3998,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/466bee34853d35f7baff161daae21bdbf893cf24982904a3e7ab1c76e256d22c.jpg",
     videoUrl:
       "https://short.icu/SKPweY7GX?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/466bee34853d35f7baff161daae21bdbf893cf24982904a3e7ab1c76e256d22c.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt34434989",
     duration: 5040,
     views: 176100,
     category: "Movie",
@@ -3653,6 +4029,9 @@ const documentaries: Documentary[] = [
       "https://i0.wp.com/fzmovies.com.ng/wp-content/uploads/2025/02/Bone-Face-2025.jpg?resize=678%2C381&ssl=1",
     videoUrl:
       "https://short.icu/_tXQOn3eJ?thumbnail=https://i0.wp.com/fzmovies.com.ng/wp-content/uploads/2025/02/Bone-Face-2025.jpg?resize=678%2C381&ssl=1",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9240,
     views: 106100,
     category: "Movie",
@@ -3681,6 +4060,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/Fcdd6_QJLv8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA5WdwuZaKy1UbT4fVFg8X398eQsA",
     videoUrl:
       "https://short.icu/exrWS4af7?thumbnail=https://assets-in.bmscdn.com/discovery-catalog/events/et00408788-hqkcdlqwcj-landscape.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9240,
     views: 956100,
     category: "Movie",
@@ -3709,6 +4091,9 @@ const documentaries: Documentary[] = [
       "https://assets-in.bmscdn.com/discovery-catalog/events/et00420885-snqvbfbarh-landscape.jpg",
     videoUrl:
       "https://short.icu/goR10ggLe?thumbnail=https://assets-in.bmscdn.com/discovery-catalog/events/et00420885-snqvbfbarh-landscape.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 3720,
     views: 256100,
     category: "Movie",
@@ -3737,6 +4122,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p28990405_v_h8_aa.jpg?w=960&h=540",
     videoUrl:
       "https://short.icu/qjmHfT1CF?thumbnail=https://ntvb.tmsimg.com/assets/p28990405_v_h8_aa.jpg?w=960&h=540",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt27812086",
     duration: 5820,
     views: 656100,
     category: "Movie",
@@ -3764,6 +4152,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/8pGDA9To3AA/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/V9dTk7zGh?thumbnail=https://i.ytimg.com/vi/8pGDA9To3AA/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt27714946",
     duration: 5940,
     views: 256100,
     category: "Movie",
@@ -3792,6 +4183,9 @@ const documentaries: Documentary[] = [
       "https://www.midstlive.com/wp-content/uploads/2025/02/Mere-Husband-Ki-Biwi-1-585x390.png",
     videoUrl:
       "https://short.icu/afRrEoX41?thumbnail=https://www.bollywoodhungama.com/wp-content/uploads/2025/02/Mere-Husband-Ki-Biwi-18.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 8520,
     views: 499100,
     category: "Movie",
@@ -3820,6 +4214,9 @@ const documentaries: Documentary[] = [
       "https://i.gadgets360cdn.com/large/image_3_F_1738658719275.jpg",
     videoUrl:
       "https://short.icu/43sCWJ1fCK?thumbnail=https://i.gadgets360cdn.com/large/image_3_F_1738658719275.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9840,
     views: 359100,
     category: "Movie",
@@ -3848,6 +4245,9 @@ const documentaries: Documentary[] = [
       "https://images.angelstudios.com/image/upload/f_auto/q_auto/v1735840872/brave-the-dark-horiz-img-01.png",
     videoUrl:
       "https://short.icu/6HJtD6_by?thumbnail=https://images.angelstudios.com/image/upload/f_auto/q_auto/v1735840872/brave-the-dark-horiz-img-01.png",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt10381102",
     duration: 6720,
     views: 859100,
     category: "Movie",
@@ -3875,6 +4275,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/M15wyhE9yDw/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/YRJWBS2mP?thumbnail=https://occ-0-8407-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABSYpafGV0y5Pi4iPvdlgSqbEbt7hi9NgqTkXy5ZF7w2jT-KPHv8e13klmGSHT3RmkqGm1-c8X1jTnH1SkopUFBDE-9IagAA2ADvH.jpg?r=999",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35300972",
     duration: 5580,
     views: 767100,
     category: "Movie",
@@ -3903,6 +4306,9 @@ const documentaries: Documentary[] = [
       "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/loveyapa-et00427632-1738580822.jpg",
     videoUrl:
       "https://short.icu/T1keok7kb8?thumbnail=https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/loveyapa-et00427632-1738580822.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 8229,
     views: 367100,
     category: "Movie",
@@ -3931,6 +4337,9 @@ const documentaries: Documentary[] = [
       "https://resizing.flixster.com/lf37LQjMEnOQpZomm7zl-mOZy6w=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29386127_v_h9_aa.jpg",
     videoUrl:
       "https://short.icu/vrWapt4Sy?thumbnail=https://resizing.flixster.com/lf37LQjMEnOQpZomm7zl-mOZy6w=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29386127_v_h9_aa.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6480,
     views: 559100,
     category: "Movie",
@@ -3959,6 +4368,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/ihwhmu7X3Vk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCmM3qnk3qN6aHelEDzli2L6s4g_Q",
     videoUrl:
       "https://short.icu/gNV6B53l_?thumbnail=https://i.ytimg.com/vi/ihwhmu7X3Vk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCmM3qnk3qN6aHelEDzli2L6s4g_Q",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5829,
     views: 753100,
     category: "Movie",
@@ -3987,6 +4399,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/6ARFCVioU_s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAvZMSld0k8jdhaab8vRRm4Um-qxw",
     videoUrl:
       "https://short.icu/Ze397fI1V?thumbnail=https://i.ytimg.com/vi/6ARFCVioU_s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAvZMSld0k8jdhaab8vRRm4Um-qxw",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9960,
     views: 513100,
     category: "Movie",
@@ -4015,6 +4430,9 @@ const documentaries: Documentary[] = [
       "https://4kwallpapers.com/images/wallpapers/the-gorge-2025-5120x2880-20243.jpg",
     videoUrl:
       "https://short.icu/pi-hb_wGS?thumbnail=https://4kwallpapers.com/images/wallpapers/the-gorge-2025-5120x2880-20243.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt13654226",
     duration: 7620,
     views: 813100,
     category: "Movie",
@@ -4043,6 +4461,9 @@ const documentaries: Documentary[] = [
       "https://www.midstlive.com/wp-content/uploads/2025/01/my-fault-london-culpa-mia-ott-release-1.png",
     videoUrl:
       "https://short.icu/u1PaNdGxd?thumbnail=https://www.midstlive.com/wp-content/uploads/2025/01/my-fault-london-culpa-mia-ott-release-1.png",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt32434379",
     duration: 7200,
     views: 513100,
     category: "Movie",
@@ -4071,6 +4492,9 @@ const documentaries: Documentary[] = [
       "https://pacificsciencecenter.org/wp-content/uploads/2025/01/cap-america-web-1.jpg",
     videoUrl:
       "https://short.icu/tAUn18bzY?thumbnail=https://pacificsciencecenter.org/wp-content/uploads/2025/01/cap-america-web-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt14513804",
     duration: 7080,
     views: 1213100,
     category: "Movie",
@@ -4099,6 +4523,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/StbJiumDNOA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDFCgUzubJGnRE6CFvp0RJoyMNpBA",
     videoUrl:
       "https://short.icu/0Fxr1iISy?thumbnail=https://i.ytimg.com/vi/StbJiumDNOA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDFCgUzubJGnRE6CFvp0RJoyMNpBA",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt32221196",
     duration: 5820,
     views: 13100,
     category: "Movie",
@@ -4127,6 +4554,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p27860692_v_h8_ab.jpg?w=1280&h=720",
     videoUrl:
       "https://short.icu/TOWfW7xlW?thumbnail=https://ntvb.tmsimg.com/assets/p27860692_v_h8_ab.jpg?w=1280&h=720",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt26452781",
     duration: 5580,
     views: 73100,
     category: "Movie",
@@ -4155,6 +4585,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p29138741_v_h8_aa.jpg?w=1280&h=720",
     videoUrl:
       "https://short.icu/GlYZdc5Mm?thumbnail=https://ntvb.tmsimg.com/assets/p29138741_v_h8_aa.jpg?w=1280&h=720",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt34748584",
     duration: 5040,
     views: 36100,
     category: "Movie",
@@ -4183,6 +4616,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/S/pv-target-images/210717c5919098216dc44babd5700089b7d8b7544c317ca1cce33b72007506fc.jpg",
     videoUrl:
       "https://short.icu/AXWB-SIyI?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/210717c5919098216dc44babd5700089b7d8b7544c317ca1cce33b72007506fc.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt21065274",
     duration: 5340,
     views: 43100,
     category: "Movie",
@@ -4211,6 +4647,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p28926371_v_h8_aa.jpg?w=960&h=540",
     videoUrl:
       "https://short.icu/CRkla3Qzb?thumbnail=https://ntvb.tmsimg.com/assets/p28926371_v_h8_aa.jpg?w=960&h=540",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt34783302",
     duration: 5040,
     views: 73100,
     category: "Movie",
@@ -4238,6 +4677,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/cIYZ5rWQNtg/maxresdefault.jpg",
     videoUrl:
       "https://short.icu/4wNHuP4KO?thumbnail=https://i.ytimg.com/vi/cIYZ5rWQNtg/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt15143042",
     duration: 5460,
     views: 33100,
     category: "Movie",
@@ -4266,6 +4708,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/gcqiVzKnkWA/hq720.jpg?sqp=-/&rs=AOn4CLBl0_C5bWuQnwpzZBODkTJ5YY5aDg",
     videoUrl:
       "https://short.icu/-8myjPwzi?thumbnail=https://i.ytimg.com/vi/gcqiVzKnkWA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBl0_C5bWuQnwpzZBODkTJ5YY5aDg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt34910018",
     duration: 5940,
     views: 73100,
     category: "Movie",
@@ -4294,6 +4739,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p29045819_v_h8_ab.jpg?w=1280&h=720",
     videoUrl:
       "https://short.icu/lrMArwkGe?thumbnail=https://ntvb.tmsimg.com/assets/p29045819_v_h8_ab.jpg?w=1280&h=720",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt14893438",
     duration: 5940,
     views: 73100,
     category: "Movie",
@@ -4322,6 +4770,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/vUuFuMD7CXA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBOYZUhdsC-eB1Jb937R5gldZAscQ  ",
     videoUrl:
       "https://short.icu/WgYcsGCK3?thumbnail=https://i.ytimg.com/vi/vUuFuMD7CXA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBOYZUhdsC-eB1Jb937R5gldZAscQ",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt21227864",
     duration: 6540,
     views: 53100,
     category: "Movie",
@@ -4350,6 +4801,9 @@ const documentaries: Documentary[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKg_LkwAakgZhR79jsXslJxw5gR6hahLoHrw&s",
     videoUrl:
       "https://short.icu/ferW2LJKL?thumbnail=https://dx35vtwkllhj9.cloudfront.net/briarcliffentertainment/valiant-one/images/regions/us/share.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt21442114",
     duration: 5160,
     views: 73100,
     category: "Movie",
@@ -4378,6 +4832,9 @@ const documentaries: Documentary[] = [
       "https://www.chennaitop10.com/wp-content/uploads/2025/01/Companion-2025-movie-review-1.jpg",
     videoUrl:
       "https://short.icu/cnnbaV0sV?thumbnail=https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/companion-et00414405-1737629384.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt26584495",
     duration: 5820,
     views: 43100,
     category: "Movie",
@@ -4406,6 +4863,9 @@ const documentaries: Documentary[] = [
       "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2Ff%2Fplex%2Ffd75ad50-f5ff-45d3-b42b-cfcc71f8696b.jpg",
     videoUrl:
       "https://short.icu/AZUyKwJxX?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/5023f642358520314d5ef2ccb3ada61ca7f1c301a4959d13efe21e815e446f0a.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt23709040",
     duration: 5700,
     views: 23100,
     category: "Movie",
@@ -4434,6 +4894,9 @@ const documentaries: Documentary[] = [
       "https://www.voicesfromthebalcony.com/wp-content/uploads/2025/01/Piglet-Banner.jpg",
     videoUrl:
       "https://short.icu/yE-djVuzh?thumbnail=https://www.voicesfromthebalcony.com/wp-content/uploads/2025/01/Piglet-Banner.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt33050292",
     duration: 4920,
     views: 53100,
     category: "Movie",
@@ -4462,6 +4925,9 @@ const documentaries: Documentary[] = [
       "https://www.heavenofhorror.com/wp-content/uploads/2025/01/Into-the-deep-2025-shark-thriller-review-1200x720.jpg",
     videoUrl:
       "https://short.icu/CAhPQvbrV?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/01/Into-the-deep-2025-shark-thriller-review-1200x720.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt28637027",
     duration: 5340,
     views: 103100,
     category: "Movie",
@@ -4490,6 +4956,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/WxmVAtUmSiw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAYl3hxXoOdJ8sde8BO-8ek2IE43A",
     videoUrl:
       "https://short.icu/sTAVXl2rT?thumbnail=https://i.ytimg.com/vi/WxmVAtUmSiw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAYl3hxXoOdJ8sde8BO-8ek2IE43A",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt31456973",
     duration: 5640,
     views: 503100,
     category: "Movie",
@@ -4518,6 +4987,9 @@ const documentaries: Documentary[] = [
       "https://weliveentertainment.com/wp-content/uploads/2025/01/https-3A-2F-2Fcdn.evbuc_.com-2Fimages-2F924038513-2F575655774365-2F1-2Foriginal.20241228-023925.jpg",
     videoUrl:
       "https://short.icu/ivlmoChtA?thumbnail=https://weliveentertainment.com/wp-content/uploads/2025/01/https-3A-2F-2Fcdn.evbuc_.com-2Fimages-2F924038513-2F575655774365-2F1-2Foriginal.20241228-023925.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt8008948",
     duration: 6540,
     views: 303100,
     category: "Movie",
@@ -4546,6 +5018,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/ZLrAVWhRDh0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDZ1Vq_Om_wO0lWpXk9wUHAfYguuA",
     videoUrl:
       "https://short.icu/v52QrwiEV?thumbnail=https://i.ytimg.com/vi/ZLrAVWhRDh0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDZ1Vq_Om_wO0lWpXk9wUHAfYguuA",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt30973842",
     duration: 6540,
     views: 903100,
     category: "Movie",
@@ -4574,6 +5049,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p29052225_b_h8_aa.jpg?w=1280&h=720",
     videoUrl:
       "https://short.icu/fsOwx0iC0?thumbnail=https://ntvb.tmsimg.com/assets/p29052225_b_h8_aa.jpg?w=1280&h=720",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt34937026",
     duration: 5040,
     views: 403100,
     category: "Movie",
@@ -4602,6 +5080,9 @@ const documentaries: Documentary[] = [
       "https://www.filmofilia.com/wp-content/uploads/2025/01/Back-in-Action-1.jpg",
     videoUrl:
       "https://short.icu/rbH28i_2e?thumbnail=https://www.filmofilia.com/wp-content/uploads/2025/01/Back-in-Action-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt21191806",
     duration: 6840,
     views: 703100,
     category: "Movie",
@@ -4630,6 +5111,9 @@ const documentaries: Documentary[] = [
       "https://www.chennaitop10.com/wp-content/uploads/2025/01/et00371539-rmgsshjdlz-landscape.jpg",
     videoUrl:
       "https://short.icu/dsGrOMVze?thumbnail=https://img.mensxp.com/media/content/2025/Jan/header_67931f6768aa6.jpeg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7320,
     views: 403100,
     category: "Movie",
@@ -4658,6 +5142,9 @@ const documentaries: Documentary[] = [
       "https://indieentertainmentmedia.com/wp-content/uploads/2025/01/wolfmanbanner-599x330-1.jpg",
     videoUrl:
       "https://short.icu/G7Gpsn03L?thumbnail=https://indieentertainmentmedia.com/wp-content/uploads/2025/01/wolfmanbanner-599x330-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt4216984",
     duration: 6300,
     views: 1303100,
     category: "Movie",
@@ -4686,6 +5173,9 @@ const documentaries: Documentary[] = [
       "https://i0.wp.com/lifetimeuncorked.com/wp-content/uploads/2025/01/p28991091_v_h8_aa-1.jpg",
     videoUrl:
       "https://short.icu/BAdYSd-bs?thumbnail=https://i0.wp.com/lifetimeuncorked.com/wp-content/uploads/2025/01/p28991091_v_h8_aa-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt33338927",
     duration: 5220,
     views: 903100,
     category: "Movie",
@@ -4714,6 +5204,9 @@ const documentaries: Documentary[] = [
       "https://ntvb.tmsimg.com/assets/p28031079_v_h8_aa.jpg?w=1280&h=720",
     videoUrl:
       "https://short.icu/e4E37sNA4?thumbnail=https://ntvb.tmsimg.com/assets/p28031079_v_h8_aa.jpg?w=1280&h=720",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt3864060",
     duration: 6960,
     views: 303100,
     category: "Movie",
@@ -4742,6 +5235,9 @@ const documentaries: Documentary[] = [
       "https://vmndims.binge.com.au/api/v2/img/677dac55e4b01289960a7dae-1736289426130?location=tile&imwidth=1280",
     videoUrl:
       "https://short.icu/zOPjqeq-T?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/a97d39aaf923893231bd25b76284269e7b637a38355bc67fe8a6eef06b46a682._SX1080_FMjpg_.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35257732",
     duration: 5460,
     views: 103100,
     category: "Movie",
@@ -4770,6 +5266,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/M/MV5BN2ZkM2MwNGItZjA2MS00MmNkLTlhZWUtOGI1ZDA3ODhkYjgyXkEyXkFqcGc@._V1_.jpg",
     videoUrl:
       "https://short.icu/PTkIN1rfO?thumbnail=https://m.media-amazon.com/images/M/MV5BN2ZkM2MwNGItZjA2MS00MmNkLTlhZWUtOGI1ZDA3ODhkYjgyXkEyXkFqcGc@._V1_.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt34937354",
     duration: 5040,
     views: 503100,
     category: "Movie",
@@ -4798,6 +5297,9 @@ const documentaries: Documentary[] = [
       "https://www.geeksandgamers.com/wp-content/uploads/2025/01/Flight-Risk-Cover.jpg",
     videoUrl:
       "https://short.icu/WLM5gP-vt?thumbnail=https://www.geeksandgamers.com/wp-content/uploads/2025/01/Flight-Risk-Cover.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt10078772",
     duration: 5460,
     views: 703100,
     category: "Movie",
@@ -4825,6 +5327,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/WkPWfYe_IX4/mqdefault.jpg",
     videoUrl:
       "https://short.icu/2132U9YM9?thumbnail=https://i.ytimg.com/vi/WkPWfYe_IX4/mqdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt28249919",
     duration: 5040,
     views: 303100,
     category: "Movie",
@@ -4853,6 +5358,9 @@ const documentaries: Documentary[] = [
       "https://blog.trekcore.com/wp-content/uploads/2024/12/tw-s31-trailer.jpg",
     videoUrl:
       "https://short.icu/K4oEMO_B_?thumbnail=https://blog.trekcore.com/wp-content/uploads/2024/12/tw-s31-trailer.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt9603060",
     duration: 5700,
     views: 193100,
     category: "Movie",
@@ -4881,6 +5389,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/H9Buj12s7SM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAcjb7LvEvQGrEICg98XE7Zwjnmbg",
     videoUrl:
       "https://short.icu/MwBH5Rb35?thumbnail=https://i.ytimg.com/vi/H9Buj12s7SM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAcjb7LvEvQGrEICg98XE7Zwjnmbg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35433415",
     duration: 6420,
     views: 123100,
     category: "Movie",
@@ -4909,6 +5420,9 @@ const documentaries: Documentary[] = [
       "https://assets-in.bmscdn.com/discovery-catalog/events/et00416594-wtbswakdhv-landscape.jpg",
     videoUrl:
       "https://short.icu/9tPlcpndm?thumbnail=https://assets-in.bmscdn.com/discovery-catalog/events/et00416594-wtbswakdhv-landscape.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 8760,
     views: 893100,
     category: "Movie",
@@ -4937,6 +5451,9 @@ const documentaries: Documentary[] = [
       "https://images.moneycontrol.com/static-mcnews/2025/01/20250109094725_IMG_7182.png?impolicy=website&width=770&height=431",
     videoUrl:
       "https://short.icu/AOs6_QWOo?thumbnail=https://imgeng.jagran.com/images/2024/08/29/article/image/Emergency%20OTT%20Release-1724913313837.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 8760,
     views: 563100,
     category: "Movie",
@@ -4965,6 +5482,9 @@ const documentaries: Documentary[] = [
       "https://pimwp.s3-accelerate.amazonaws.com/2025/01/Untitled-design-2025-01-29T195340.696.jpg",
     videoUrl:
       "https://short.icu/qzExMsMvCy?thumbnail=https://pimwp.s3-accelerate.amazonaws.com/2025/01/Untitled-design-2025-01-29T195340.696.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6960,
     views: 920000,
     category: "Movie",
@@ -4993,6 +5513,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/lfrv4fwEHyE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABzIyef19tx_5x52uARmGDaYIbCg",
     videoUrl:
       "https://short.icu/oRwA5Jpvp?thumbnail=https://i.ytimg.com/vi/lfrv4fwEHyE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABzIyef19tx_5x52uARmGDaYIbCg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt13652286",
     duration: 5820,
     views: 1500000,
     category: "Movie",
@@ -5021,6 +5544,9 @@ const documentaries: Documentary[] = [
       "https://i0.wp.com/thefutureoftheforce.com/wp-content/uploads/2025/02/Heart-Eyes-2025-Review-Future-of-the-Force.jpg?fit=1024%2C576&ssl=1",
     videoUrl:
       "https://short.icu/eU7x4cuxu?thumbnail=https://i0.wp.com/thefutureoftheforce.com/wp-content/uploads/2025/02/Heart-Eyes-2025-Review-Future-of-the-Force.jpg?fit=1024%2C576&ssl=1",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt32558992",
     duration: 5340,
     views: 2300000,
     category: "Movie",
@@ -5049,6 +5575,9 @@ const documentaries: Documentary[] = [
       "https://movies.universalpictures.com/media/04-lh-dm-mobile-banner-1080x745-fri-rr-f01-012825-67a29d839d774-1.jpg",
     videoUrl:
       "https://short.icu/b3O26PZpO?thumbnail=https://movies.universalpictures.com/media/04-lh-dm-mobile-banner-1080x745-fri-rr-f01-012825-67a29d839d774-1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt30788842",
     duration: 4980,
     views: 1800000,
     category: "Movie",
@@ -5077,6 +5606,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/RISVGV9SbDM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAQBehFhS8tv7iQldoG7kZ6v80Dng",
     videoUrl:
       "https://short.icu/ANVm_UPed?thumbnail=https://i.ytimg.com/vi/RISVGV9SbDM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAQBehFhS8tv7iQldoG7kZ6v80Dng",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt7787524",
     duration: 5160,
     views: 1200000,
     category: "Movie",
@@ -5105,6 +5637,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/NrY4GuKoQwc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA7h3zp9SJjPgUxqT_Su7JR1cpY-w",
     videoUrl:
       "https://short.icu/B7RKfbMdr?thumbnail=https://i.ytimg.com/vi/NrY4GuKoQwc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA7h3zp9SJjPgUxqT_Su7JR1cpY-w",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt31974129",
     duration: 6120,
     views: 950000,
     category: "Movie",
@@ -5133,6 +5668,9 @@ const documentaries: Documentary[] = [
       "https://image.tmdb.org/t/p/w1280/tHv9oYcVel8KG9Eb0B39VxMSEmV.jpg",
     videoUrl:
       "https://short.icu/PHvOGMaBo?thumbnail=https://image.tmdb.org/t/p/w1280/tHv9oYcVel8KG9Eb0B39VxMSEmV.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt21955520",
     duration: 5340,
     views: 780000,
     category: "Movie",
@@ -5160,6 +5698,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://mp4moviez.ind.in/files/luccas-world.webp",
     videoUrl:
       "https://short.icu/MeZeLdPLx?thumbnail=https://occ-0-8407-1361.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa3Qo1KVTUQ37Bsp2IosTn7WUKCPycwk-1e0q1shYERx4HkCYwIkrjBJQOwkyH_DZjiLz0t34QI-85qyj4_pOyapfHnKWtZSCLvnQmlmHzcyyhWNjdG4LavOjdTOaz-RpC8p0uHbAQkh7B4LAcf9NU0Zj5Y_zVOH22YFXdpB7o7hOAptkCy2vkM1lYS6ciw.jpg?r=5b7",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt28657879",
     duration: 5760,
     views: 1100000,
     category: "Movie",
@@ -5188,6 +5729,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/BxnCNl9KE6E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDCYRzId7eIl5Z3B4MUN2RYI0DSIA",
     videoUrl:
       "https://short.icu/GA8J8O9jz?thumbnail=https://i.ytimg.com/vi/BxnCNl9KE6E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDCYRzId7eIl5Z3B4MUN2RYI0DSIA",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6360,
     views: 1300000,
     category: "Movie",
@@ -5216,6 +5760,9 @@ const documentaries: Documentary[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkD7fzHHhGAw8ZWqLLoSNuCeKst0C-11wUwg&s",
     videoUrl:
       "https://short.icu/cYe80l2VX?thumbnail=https://static.toiimg.com/thumb/msid-115765023,width-400,resizemode-4/115765023.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9360,
     views: 850000,
     category: "Movie",
@@ -5244,6 +5791,9 @@ const documentaries: Documentary[] = [
       "https://assets.gadgets360cdn.com/pricee/assets/product/202501/Saale_Aashiq_1_1737030430.jpg?downsize=400:*",
     videoUrl:
       "https://short.icu/Mlg2yErs7?thumbnail=https://assets.gadgets360cdn.com/pricee/assets/product/202501/Saale_Aashiq_1_1737030430.jpg?downsize=400:*",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7200,
     views: 971234,
     category: "Movie",
@@ -5272,6 +5822,9 @@ const documentaries: Documentary[] = [
       "https://m.media-amazon.com/images/M/MV5BNWEwOWM1YTItMzkyNi00NDY4LWE5ZjQtZmQxMjFiOGJjYWRhXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
     videoUrl:
       "https://short.icu/DXV_PiBCQ?thumbnail=https://i.ytimg.com/vi/o1ICE7ukEEE/maxresdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 9420,
     views: 603000,
     category: "Movie",
@@ -5300,6 +5853,9 @@ const documentaries: Documentary[] = [
       "https://www.mastram.app/media/posters/2025-01-30e836ce76bdda40acb4238210382322ea.jpg",
     videoUrl:
       "https://short.icu/EIkznxb3R?thumbnail=https://www.mastram.app/media/posters/2025-01-30e836ce76bdda40acb4238210382322ea.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 1260,
     views: 203000,
     category: "Movie",
@@ -5328,6 +5884,9 @@ const documentaries: Documentary[] = [
       "https://i.ytimg.com/vi/aM8rXa15u-U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCMS0FUq2z-RvzpzDSzedI9CpvCw",
     videoUrl:
       "https://short.icu/5r0qpsvZ-?thumbnail=https://i.ytimg.com/vi/aM8rXa15u-U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCMS0FUq2z-RvzpzDSzedI9CpvCw",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6960,
     views: 403000,
     category: "Movie",
@@ -5356,6 +5915,9 @@ const documentaries: Documentary[] = [
       "https://filminformation.com/wp-content/uploads/2025/01/hisab-barabar.jpg",
     videoUrl:
       "https://short.icu/TrRlfszyY?thumbnail=https://filminformation.com/wp-content/uploads/2025/01/hisab-barabar.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 6720,
     views: 503000,
     category: "Movie",
@@ -5384,6 +5946,9 @@ const documentaries: Documentary[] = [
       "https://images1.hungama.com/tr:n-a_169_m/c/1/101/6d3/123652799/123652799_1920x1080.jpg?version=23_16",
     videoUrl:
       "https://short.icu/XujxF_ze6?thumbnail=https://i.ytimg.com/vi/yQlTfnZkPns/hqdefault.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7140,
     views: 303100,
     category: "Movie",
@@ -5412,6 +5977,9 @@ const documentaries: Documentary[] = [
       "https://media-files.atrangii.in/media-metadata/677487d73db97806fe6bfd99",
     videoUrl:
       "https://short.icu/2bcLgjcra?thumbnail=https://media-files.atrangii.in/media-metadata/676da1873db97806fe6979b5",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 4740,
     views: 603100,
     category: "Movie",
@@ -5439,6 +6007,9 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://static.digit.in/product/fateh-dba8cb908f.jpeg",
     videoUrl:
       "https://short.icu/ayaCQqVXg?thumbnail=https://static.digit.in/product/fateh-dba8cb908f.jpeg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7620,
     views: 303100,
     category: "Movie",
@@ -5467,6 +6038,9 @@ const documentaries: Documentary[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDweQ85tfhpCXZTI4wqkDoaIVmKLrCYxcEA&s",
     videoUrl:
       "https://short.icu/2Nb5WhS9i?thumbnail=https://cineru.lk/wp-content/uploads/2025/02/ek-anchahi-jalan-660x330.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 5220,
     views: 33100,
     category: "Movie",
@@ -5495,6 +6069,9 @@ const documentaries: Documentary[] = [
       "https://assets-in.bmscdn.com/discovery-catalog/events/et00426221-jnrndsrqau-landscape.jpg",
     videoUrl:
       "https://short.icu/7tAka12yN?thumbnail=https://assets-in.bmscdn.com/discovery-catalog/events/et00426221-jnrndsrqau-landscape.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
     duration: 7080,
     views: 63100,
     category: "Movie",

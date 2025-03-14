@@ -668,13 +668,15 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
               thumbnailUrl={documentary.thumbnailUrl}
               title={documentary.title}
             /> */}
-            <div className="lg:col-span-2">
-              <VideoPlayer
-                videoUrl={documentary.videoUrl}
-                videoUrl1={documentary.videoUrl1}
-                thumbnailUrl={documentary.thumbnailUrl}
-                title={documentary.title}
-              />
+               <div className="lg:col-span-2">
+            <VideoPlayer
+              videoUrl={documentary.videoUrl}
+              videoUrl1={documentary.videoUrl1}
+              videoUrl2={documentary.videoUrl2} // Player 3
+              videoUrl3={documentary.videoUrl3} // Player 4
+              thumbnailUrl={documentary.thumbnailUrl}
+              title={documentary.title}
+            />
               <div className="mt-6">
                 <h1 className="text-3xl font-bold mb-2">{documentary.title}</h1>
                 <DocumentaryMeta

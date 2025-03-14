@@ -8,6 +8,8 @@ import { Footer } from "@/components/footer"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { Suspense } from 'react'
+import Head from "next/head";
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -88,6 +90,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="referrer" content="origin" />
+      </head>
+
       <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -144,8 +150,8 @@ export default function RootLayout({
           })('vemtoutcheeg.com',8640330,document.createElement('script'))`}
               </Script> */}
               {/* Clicky Analytics Scripts */}
-              <Script async data-id="101480127" src="//static.getclicky.com/js" />
-              <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" />
+              {/* <Script async data-id="101480127" src="//static.getclicky.com/js" />
+              <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" /> */}
             </div>
             <Toaster />
             <Analytics />

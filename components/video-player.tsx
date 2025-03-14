@@ -279,59 +279,89 @@ import { useState } from "react";
 
 interface VideoPlayerProps {
   videoUrl: string;
-  videoUrl1?: string; // Made optional
+  videoUrl1?: string; // Player 2
+  videoUrl2?: string; // Player 3
+  videoUrl3?: string; // Player 4 (vidsrc.cc)
   thumbnailUrl: string;
   title: string;
 }
 
-export function VideoPlayer({ videoUrl, videoUrl1, thumbnailUrl, title }: VideoPlayerProps) {
-  const [activeUrl, setActiveUrl] = useState(videoUrl); // Default to Player 1
+export function VideoPlayer({ videoUrl, videoUrl1, videoUrl2, videoUrl3, thumbnailUrl, title }: VideoPlayerProps) {
+  const [activeUrl, setActiveUrl] = useState(videoUrl); // Default Player 1
+  const [isBlocked, setIsBlocked] = useState(false);
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const filterStyle = {
     filter: isMobile
-      ? "contrast(1.1) saturate(1.4) brightness(1.6) hue-rotate(0deg)" // Mobile
-      : "contrast(1.1) saturate(1.5) brightness(1.7) hue-rotate(0deg)", // Desktop
+      ? "contrast(1.1) saturate(1.4) brightness(1.6) hue-rotate(0deg)"
+      : "contrast(1.1) saturate(1.5) brightness(1.7) hue-rotate(0deg)",
   };
 
   return (
     <div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden">
-      {/* Player Switch Buttons - Only show if videoUrl1 exists */}
-      {videoUrl1 && (
-        <div className="absolute top-2 left-2 z-10 flex space-x-2">
+      {/* Player Switch Buttons - Centered */}
+      <div className="absolute top-2 left-0 w-full flex justify-center space-x-2 z-10">
+        <button
+          onClick={() => { setActiveUrl(videoUrl); setIsBlocked(false); }}
+          className={`px-4 py-1 text-sm font-semibold rounded-md ${
+            activeUrl === videoUrl ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
+          }`}
+        >
+          Player 1
+        </button>
+        {videoUrl1 && (
           <button
-            onClick={() => setActiveUrl(videoUrl)}
-            className={`px-4 py-1 text-sm font-semibold rounded-md ${
-              activeUrl === videoUrl ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
-            }`}
-          >
-            Player 1
-          </button>
-          <button
-            onClick={() => setActiveUrl(videoUrl1)}
+            onClick={() => { setActiveUrl(videoUrl1); setIsBlocked(false); }}
             className={`px-4 py-1 text-sm font-semibold rounded-md ${
               activeUrl === videoUrl1 ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
             }`}
           >
             Player 2
           </button>
-        </div>
-      )}
+        )}
+        {videoUrl2 && (
+          <button
+            onClick={() => { setActiveUrl(videoUrl2); setIsBlocked(false); }}
+            className={`px-4 py-1 text-sm font-semibold rounded-md ${
+              activeUrl === videoUrl2 ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
+            }`}
+          >
+            Player 3
+          </button>
+        )}
+        {videoUrl3 && (
+          <button
+            onClick={() => { setActiveUrl(videoUrl3); setIsBlocked(false); }}
+            className={`px-4 py-1 text-sm font-semibold rounded-md ${
+              activeUrl === videoUrl3 ? "bg-blue-600 text-white" : "bg-gray-500 text-black"
+            }`}
+          >
+            Player 4
+          </button>
+        )}
+      </div>
 
       {/* Background Thumbnail */}
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${thumbnailUrl})` }} />
 
       {/* Video Player */}
-      <iframe
-        src={activeUrl}
-        title={title}
-        className="absolute inset-0 w-full h-full"
-        allowFullScreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        style={filterStyle}
-      />
+      {isBlocked ? (
+        <div className="absolute inset-0 flex items-center justify-center bg-black text-white">
+          ❌ This player is blocked! Try another one.
+        </div>
+      ) : (
+        <iframe
+          src={activeUrl}
+          title={title}
+          className="absolute inset-0 w-full h-full"
+          referrerPolicy="origin"
+          allowFullScreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          style={filterStyle}
+          onError={() => setIsBlocked(true)} // Detects if iframe fails to load
+        />
+      )}
     </div>
   );
 }
-
