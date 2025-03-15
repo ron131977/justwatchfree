@@ -23,6 +23,132 @@ export interface Documentary {
 const documentaries: Documentary[] = [
   //TV SHOW SECTION
   {
+    id: "T58",
+    slug: "the-waking-of-a-nation-s01-2025",
+    title: "The Waking Of A Nation (Season 1) Full Series",
+    description:
+      "Waking of a Nation: Jallianwala Bagh is a web series that explores the frictions and triggers behind the Jallianwala Bagh massacre through the eyes of Kantilal Sahni, a fictitious member of the Hunter Commission.",
+    thumbnailUrl:
+      "https://jiotvimages.cdn.jio.com/imagespublic/51/82/f4144b9c0ca652aaae2c353bd43f2f5d_1739896393329_l_medium.jpg",
+    videoUrl:
+      "https://short.icu/-LANcPlmM?thumbnail=https://jiotvimages.cdn.jio.com/imagespublic/51/82/f4144b9c0ca652aaae2c353bd43f2f5d_1739896393329_l_medium.jpg ",
+    videoUrl1: "https://voe.sx/e/ovw9fcf5yf8e",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 18480,
+    views: 349100,
+    category: "Tvshow",
+    tags: [
+      "the waking of a nation",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-07",
+    director: "Ram Madhvani",
+    featured: false,
+  },
+  {
+    id: "T57",
+    slug: "the-au-pair-s01-2025",
+    title: "The Au Pair (Season 1) Full Series",
+    description:
+      "Zoe Dalton has it all-a thriving business, happy marriage, two beloved stepchildren, and a dream home. But a mysterious Au Pair's hidden agenda pulls her into a web of secrets that could shatter everything.",
+    thumbnailUrl:
+      "https://cdn.technadu.com/wp-content/uploads/2025/03/The-Au-Pair-775x436.jpg",
+    videoUrl:
+      "https://short.icu/7-tpk9D7T?thumbnail=https://cdn.technadu.com/wp-content/uploads/2025/03/The-Au-Pair-775x436.jpg",
+    videoUrl1: "https://voe.sx/e/jdivnf1gqm33",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 10680,
+    views: 69100,
+    category: "Tvshow",
+    tags: [
+      "the au pair",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-10",
+    director: "Oonagh Kearney",
+    featured: false,
+  },
+  {
+    id: "T56",
+    slug: "towards-zero-s01-2025",
+    title: "Towards Zero (Season 1) Full Series",
+    description:
+      "Superintendent Battle and Inspector Leach probe the killing of a widow in Gull's Point. A failed suicide, a false theft charge, and a tennis star's love life surprisingly connect, culminating in the revelation of a murder plot.",
+    thumbnailUrl:
+      "https://www.vitalthrills.com/wp-content/uploads/2025/02/zerotowards1.jpg",
+    videoUrl:
+      "https://short.icu/UZO5Q8wQr?thumbnail=https://ichef.bbci.co.uk/images/ic/1920x1080/p0ks61ss.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 10320,
+    views: 89100,
+    category: "Tvshow",
+    tags: [
+      "towards zero",
+      "kudi yedamaithe",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-02",
+    director: "Sam Yates",
+    featured: false,
+  },
+  {
+    id: "T55",
+    slug: "fear-s01-2025",
+    title: "Fear (Season 1) Full Series",
+    description:
+      "Couple Martyn and Rebecca relocate with kids from London to Glasgow. Neighbour Jan's unsettling remarks hint at a sinister situation unfolding around their new home.",
+    thumbnailUrl:
+      "https://gazettely.com/wp-content/uploads/2025/03/Fear-Review-1-1024x576.webp",
+    videoUrl:
+      "https://short.icu/nEH5aKmRQ?thumbnail=https://gazettely.com/wp-content/uploads/2025/03/Fear-Review-1-1024x576.webp",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 9600,
+    views: 49100,
+    category: "Tvshow",
+    tags: [
+      "fear",
+      "kudi yedamaithe",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-04",
+    director: "Justin Chadwick",
+    featured: false,
+  },
+  {
     id: "T54",
     slug: "29-february-kudi-yedamaithe-2025",
     title: "29 February (Kudi Yedamaithe) (2025)",
@@ -59,7 +185,8 @@ const documentaries: Documentary[] = [
     title: "Love Under Construction (Season 1) Full Series",
     description:
       "Vinod is ready to build his dream house. But is he ready to face the hurdles in his path?",
-    thumbnailUrl: "https://i.gadgets360cdn.com/large/image_2_F_1739265597080.jpg",
+    thumbnailUrl:
+      "https://i.gadgets360cdn.com/large/image_2_F_1739265597080.jpg",
     videoUrl:
       "https://short.icu/z793t61Nk?thumbnail=https://i.gadgets360cdn.com/large/image_2_F_1739265597080.jpg",
     videoUrl1: "https://voe.sx/e/1xkfgrf6zguc",
@@ -168,7 +295,7 @@ const documentaries: Documentary[] = [
       "online",
       "download",
       "watch",
-      "free", 
+      "free",
       "justwatch",
       "movie",
     ],
@@ -1717,6 +1844,99 @@ const documentaries: Documentary[] = [
   },
 
   //ADULT SECTION
+
+  {
+    id: "A39",
+    slug: "malagkit-2025",
+    title: "Malagkit - Tagalog Movie",
+    description:
+      "When a man proposes marriage to his girlfriend, she wants to find out first if they are ready for a lifetime commitment. She meets her friend and her husband that will open up desires they are not aware of for a long time.",
+    thumbnailUrl:
+      "https://images.plex.tv/photo?size=large-1920&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FaexEwlNOXZtXX9hzRZ8PhvWnsqD.jpg",
+    videoUrl:
+      "https://short.icu/MrcFkVOWb?thumbnail=https://hotbazi.sbs/wp-content/uploads/2025/03/Malagkit-2025-Vivamax-Tagalog-Hot-Movies.jpg",
+    videoUrl1: "https://voe.sx/e/f5lxes9qewhg",
+    videoUrl2: "https://www.2embed.cc/embed/tt35682199",
+    videoUrl3: "",
+    duration: 4320,
+    views: 98190,
+    category: "Adult",
+    tags: [
+      "malagkit",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-11",
+    director: "Bobby Bonifacio Jr.",
+    featured: false,
+  },
+  {
+    id: "A38",
+    slug: "celestina-burlesk-dancer-2025",
+    title: "Celestina Burlesk Dancer - Tagalog Movie",
+    description:
+      "Look at the interesting perspective on the claim to fame of Celestina, who works at a strict and prestigious burlesque house.",
+    thumbnailUrl:
+      "https://imgr.cineserie.com/2025/03/6799906.jpg?imgeng=/f_jpg/cmpr_0/w_198/h_110/m_cropbox&ver=1",
+    videoUrl:
+      "https://short.icu/hlVUA0RG1?thumbnail=https://imgr.cineserie.com/2025/03/6799906.jpg?imgeng=/f_jpg/cmpr_0/w_198/h_110/m_cropbox&ver=1",
+    videoUrl1: "https://voe.sx/e/qhzlfs2timcw",
+    videoUrl2: "https://www.2embed.cc/embed/tt34526586",
+    videoUrl3: "",
+    duration: 7140,
+    views: 58190,
+    category: "Adult",
+    tags: [
+      "celestina burlesk dancer",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-04",
+    director: "Mac Alejandre",
+    featured: false,
+  },
+  {
+    id: "A37",
+    slug: "elevator-lady-2025",
+    title: "Elevator Lady - Tagalog Movie",
+    description:
+      "VMX's newest crush Aliya Raymundo will turn the heat up as an elevator lady who uses her body to earn more money. She falls for a wealthy married man without her knowing that this will soon lead to her downfall.",
+    thumbnailUrl: "https://simkl.in/fanart/17/17365321120c5e485d_w.jpg",
+    videoUrl:
+      "https://short.icu/GB_T6UWH4?thumbnail=https://simkl.in/fanart/17/17365321120c5e485d_w.jpg",
+    videoUrl1: "https://voe.sx/e/ibsolci4epuy",
+    videoUrl2: "https://www.2embed.cc/embed/tt35889144",
+    videoUrl3: "",
+    duration: 4380,
+    views: 75100,
+    category: "Adult",
+    tags: [
+      "elevator lady",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-03-14",
+    director: "Roe Pajemna",
+    featured: false,
+  },
   {
     id: "A36",
     slug: "kolektor-2025",
@@ -1728,7 +1948,7 @@ const documentaries: Documentary[] = [
     videoUrl:
       "https://short.icu/r6Cl5VZDe?thumbnail=https://desix11.com/wp-content/uploads/2025/03/Kolektor-2025-Tagalong-Hot-Movie-Vivamax.jpg",
     videoUrl1: "https://voe.sx/e/yvlkqqlinzq8",
-    videoUrl2: "",
+    videoUrl2: "https://www.2embed.cc/embed/tt35889122",
     videoUrl3: "",
     duration: 5760,
     views: 183100,
@@ -1745,7 +1965,7 @@ const documentaries: Documentary[] = [
       "movie",
     ],
     releaseDate: "2025-03-07",
-    director: "NA",
+    director: "Carlo Alvarez",
     featured: false,
   },
   {
@@ -2066,7 +2286,7 @@ const documentaries: Documentary[] = [
       "https://images.justwatch.com/backdrop/326119035/s640/walker-2025",
     videoUrl:
       "https://short.icu/dBqXw7m3v?thumbnail=https://images.justwatch.com/backdrop/326119035/s640/walker-2025",
-    videoUrl1: "",
+    videoUrl1: "https://www.2embed.cc/embed/tt35544996",
     videoUrl2: "",
     videoUrl3: "",
     duration: 5100,
@@ -2096,7 +2316,7 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://simkl.in/fanart/17/17264507988160f787_w.jpg",
     videoUrl:
       "https://short.icu/2G3ONmNLe?thumbnail=https://simkl.in/fanart/17/17264507988160f787_w.jpg",
-    videoUrl1: "",
+    videoUrl1: "https://www.2embed.cc/embed/tt35544985",
     videoUrl2: "",
     videoUrl3: "",
     duration: 5340,
@@ -2127,9 +2347,9 @@ const documentaries: Documentary[] = [
       "https://image.tmdb.org/t/p/w1280/LbRuVNpMYYlBBzXlG7Zcd2YCyb.jpg",
     videoUrl:
       "https://short.icu/A-9V660Ye?thumbnail=https://image.tmdb.org/t/p/w1280/LbRuVNpMYYlBBzXlG7Zcd2YCyb.jpg",
-    videoUrl1: "",
-    videoUrl2: "",
-    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35544722",
+    videoUrl1: "https://www.2embed.cc/embed/tt35544722",
+    videoUrl2: "https://vidsrc.cc/v2/embed/movie/tt35544722",
+    videoUrl3: "",
     duration: 4200,
     views: 750000,
     category: "Adult",
@@ -2157,7 +2377,7 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://i.ytimg.com/vi/rvPT3W5sEBU/sddefault.jpg",
     videoUrl:
       "https://short.icu/SNT0oFuaz?thumbnail=https://i.ytimg.com/vi/rvPT3W5sEBU/sddefault.jpg",
-    videoUrl1: "",
+    videoUrl1: "https://www.2embed.cc/embed/tt35544307",
     videoUrl2: "",
     videoUrl3: "",
     duration: 4200,
@@ -2188,9 +2408,9 @@ const documentaries: Documentary[] = [
       "https://i.ibb.co.com/SwsNyh8/Teachers-Pet-2024-Filipino-Hot-Short-Film-Vivamax.jpg",
     videoUrl:
       "https://short.icu/BPzayARiDj?thumbnail=https://i.ibb.co.com/SwsNyh8/Teachers-Pet-2024-Filipino-Hot-Short-Film-Vivamax.jpg",
-    videoUrl1: "",
-    videoUrl2: "",
-    videoUrl3: "https://vidsrc.cc/v2/embed/movie/tt35109626",
+    videoUrl1: "https://www.2embed.cc/embed/tt35109626",
+    videoUrl2: "https://vidsrc.cc/v2/embed/movie/tt35109626",
+    videoUrl3: "",
     duration: 3900,
     views: 850000,
     category: "Adult",
@@ -2218,7 +2438,7 @@ const documentaries: Documentary[] = [
     thumbnailUrl: "https://simkl.in/fanart/17/1706376553a8d57816_w.jpg",
     videoUrl:
       "https://short.icu/zF-7RGENG?thumbnail=https://simkl.in/fanart/17/1706376553a8d57816_w.jpg",
-    videoUrl1: "",
+    videoUrl1: "https://www.2embed.cc/embed/tt35401814",
     videoUrl2: "",
     videoUrl3: "",
     duration: 3900,
@@ -2494,7 +2714,7 @@ const documentaries: Documentary[] = [
       "https://images.justwatch.com/backdrop/323430620/s640/las-ilusyunadas",
     videoUrl:
       "https://short.icu/xYSN2orsb?thumbnail=https://images.justwatch.com/backdrop/323430620/s640/las-ilusyunadas",
-    videoUrl1: "",
+    videoUrl1: "https://www.2embed.cc/embed/tt35230858",
     videoUrl2: "",
     videoUrl3: "",
     duration: 5400,
@@ -2524,8 +2744,8 @@ const documentaries: Documentary[] = [
     thumbnailUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMsLsM8fYbCexBBgN_4YnZHINuZoXsLJv3g&s",
     videoUrl:
-      "https://short.icu/n-wx9Epy4?thumbnail=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNMsLsM8fYbCexBBgN_4YnZHINuZoXsLJv3g&s",
-    videoUrl1: "",
+      "https://short.icu/n-wx9Epy4?thumbnail=https://simkl.in/fanart/17/172501651d369546fd_w.jpg",
+    videoUrl1: "https://www.2embed.cc/embed/tt35681085",
     videoUrl2: "",
     videoUrl3: "",
     duration: 2280,
@@ -2587,7 +2807,7 @@ const documentaries: Documentary[] = [
       "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FzOSZpcgIdAjWZFfUQv4q5SK8ggh.jpg",
     videoUrl:
       "https://short.icu/RbGoUnb0U?thumbnail=https://img.youtube.com/vi/agkJRuuRLCw/mqdefault.jpg",
-    videoUrl1: "",
+    videoUrl1: "https://www.2embed.cc/embed/tt35544250",
     videoUrl2: "",
     videoUrl3: "",
     duration: 7080,
@@ -2823,6 +3043,165 @@ const documentaries: Documentary[] = [
   },
 
   //Hindi SECTION
+  {
+    id: "H31",
+    slug: "toxic-town-hindi-dubbed-2025",
+    title: "टॉक्सिक टाउन हिंदी (2025)",
+    description:
+      "ईस्ट मिडलैंड्स में हुए दुखद विषाक्त अपशिष्ट मामले और कॉर्बी में जन्मे शिशुओं में ऊपरी अंग दोषों की दर के लिए न्याय की लड़ाई लड़ रही तीन माताओं की जांच के बाद यह पाया गया कि यह दर राष्ट्रीय औसत से तीन गुना अधिक है।",
+    thumbnailUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAUl_MptTx12pQnP6cMqR1ks_dQ8ExpzBIMw&s",
+    videoUrl:
+      "https://short.icu/mx9cS38_m?thumbnail=https://www.whats-on-netflix.com/wp-content/uploads/2025/01/toxic-town-first-look.jpg",
+    videoUrl1: "https://voe.sx/e/2njfze6gokgv",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 13140,
+    views: 905100,
+    category: "Hindi-Dubbed",
+    tags: [
+      "टॉक्सिक टाउन",
+      "हिंदी",
+      "2025",
+      "स्ट्रीमिंग",
+      "ऑनलाइन",
+      "डाउनलोड",
+      "देखें",
+      "मुफ़्त",
+      "जस्टवॉच",
+      "फ़िल्म",
+    ],
+    releaseDate: "2025-03-06",
+    director: "प्रार्थना मोहन",
+    featured: false,
+  },
+  {
+    id: "H30",
+    slug: "picture-this-hindi-dubbed-2025",
+    title: "पिक्चर दिस हिंदी (2025)",
+    description:
+      "पिया, एक संघर्षशील फोटोग्राफर, को एक भविष्यवाणी मिलती है: उसकी अगली पांच डेट्स में सच्चा प्यार उसका इंतजार कर रहा है। उसकी बहन की शादी होने वाली है और उसका परिवार मैचमेकर की भूमिका निभा रहा है, उसका पूर्व प्रेमी फिर से प्रकट होता है, जिससे उसका प्रेम जीवन अस्त-व्यस्त हो जाता है",
+    thumbnailUrl:
+      "https://www.vitalthrills.com/wp-content/uploads/2025/02/pictureprime1.jpg",
+    videoUrl:
+      "https://short.icu/id5UJAh5J?thumbnail=https://www.vitalthrills.com/wp-content/uploads/2025/02/pictureprime1.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 6060,
+    views: 55100,
+    category: "Hindi-Dubbed",
+    tags: [
+      "पिक्चर दिस",
+      "हिंदी",
+      "2025",
+      "स्ट्रीमिंग",
+      "ऑनलाइन",
+      "डाउनलोड",
+      "देखें",
+      "मुफ़्त",
+      "जस्टवॉच",
+      "फ़िल्म",
+    ],
+    releaseDate: "2025-03-06",
+    director: "प्रार्थना मोहन",
+    featured: false,
+  },
+  {
+    id: "H29",
+    slug: "zero-day-hindi-dubbed-2025",
+    title: "जीरो डे हिंदी (2025)",
+    description:
+      "संकट के बीच में: हम सच्चाई का पता कैसे लगा सकते हैं जब ऐसा लगता है कि दुनिया अनियंत्रित ताकतों द्वारा नष्ट की जा रही है? साथ ही, षड्यंत्र के सिद्धांत किस हद तक हमारे अपने आविष्कार या हमारी कल्पना की उपज हैं?",
+    thumbnailUrl: "https://i.imgur.com/Xf8qqXc.png?dtrcs",
+    videoUrl:
+      "https://short.icu/F0mbpQZNx?thumbnail=https://i.imgur.com/Xf8qqXc.png?dtrcs",
+    videoUrl1: "https://voe.sx/e/z8kpgohrc6hx",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 18480,
+    views: 959000,
+    category: "Hindi-Dubbed",
+    tags: [
+      "जीरो डे",
+      "हिंदी",
+      "2025",
+      "स्ट्रीमिंग",
+      "ऑनलाइन",
+      "डाउनलोड",
+      "देखें",
+      "मुफ़्त",
+      "जस्टवॉच",
+      "फ़िल्म",
+    ],
+    releaseDate: "2025-02-20",
+    director: "लेस्ली लिंका ग्लैटर",
+    featured: false,
+  },
+  {
+    id: "H28",
+    slug: "medusa-hindi-dubbed-2025",
+    title: "मेडुसा हिंदी (2025)",
+    description:
+      "कोई सीईओ बारबरा हिडाल्गो को मारना चाहता है। क्या वह अपराधी को पकड़ पाएगी, जबकि उसका परिवार अपने कोलंबियाई व्यापार साम्राज्य पर नियंत्रण के लिए बेरहमी से योजना बना रहा है?",
+    thumbnailUrl:
+      "https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
+    videoUrl:
+      "https://short.icu/MgkA6HuNU?thumbnail=https://imgmedia.libero.pe/652x365/libero/original/2025/03/05/67c90a7baf11e120b571a2f7.webp",
+    videoUrl1: "https://voe.sx/e/jkxqjppu4cnn",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 26940,
+    views: 1903000,
+    category: "Hindi-Dubbed",
+    tags: [
+      "मेडुसा",
+      "हिंदी",
+      "2025",
+      "स्ट्रीमिंग",
+      "ऑनलाइन",
+      "डाउनलोड",
+      "देखें",
+      "मुफ़्त",
+      "जस्टवॉच",
+      "फ़िल्म",
+    ],
+    releaseDate: "2025-05-05",
+    director: "जुआन फ़ेलिप कैनो, मारिया गंबाओ",
+    featured: false,
+  },
+  {
+    id: "H27",
+    slug: "delicious-hindi-dubbed-2025",
+    title: "स्वादिष्ट हिंदी (2025)",
+    description:
+      "एक फ्रांसीसी विला में छुट्टियां मना रहे एक जर्मन परिवार को एक रहस्यमयी घायल महिला का सामना करना पड़ता है और वे उसे अपने घर ले आते हैं, जिसके परिणामस्वरूप अप्रत्याशित परिणाम सामने आते हैं।",
+    thumbnailUrl:
+      "https://www.heavenofhorror.com/wp-content/uploads/2025/03/delicious-2025-Netflix-Review.jpg",
+    videoUrl:
+      "https://short.icu/DGu8aHllW?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/03/delicious-2025-Netflix-Review.jpg",
+    videoUrl1: "",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 6120,
+    views: 105000,
+    category: "Hindi-Dubbed",
+    tags: [
+      "स्वादिष्ट",
+      "हिंदी",
+      "2025",
+      "स्ट्रीमिंग",
+      "ऑनलाइन",
+      "डाउनलोड",
+      "देखें",
+      "मुफ़्त",
+      "जस्टवॉच",
+      "फ़िल्म",
+    ],
+    releaseDate: "2025-03-07",
+    director: "नेले म्यूएलर-स्टोफेन",
+    featured: false,
+  },
   {
     id: "H26",
     slug: "squad-36-hindi-dubbed-2025",
@@ -3675,17 +4054,47 @@ const documentaries: Documentary[] = [
   //   featured: false,
   // },
 
-
-
   //xvwb9e2G7 Coming Soon Video
-                                                  //MOVIES SECTION
+  //MOVIES SECTION
+  {
+    id: "M98",
+    slug: "scissors-2025",
+    title: "Scissors (2025)",
+    description:
+      "Scissors is a thrilling tribute to slasher movies from the 70s and 80s that follows the terrifying journey of college student Courtney and her friends as they are hunted by the serial clown killer known as 'Scissors.'",
+    thumbnailUrl:
+      "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,f_auto,h_630,w_1200/v1681250280/lk3ar9pgixxpnksvs38v.jpg",
+    videoUrl:
+      "https://short.icu/bytcPOHQK?thumbnail=https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,f_auto,h_630,w_1200/v1681250280/lk3ar9pgixxpnksvs38v.jpg",
+    videoUrl1: "https://www.2embed.cc/embed/tt27493378",
+    videoUrl2: "",
+    videoUrl3: "",
+    duration: 3780,
+    views: 75100,
+    category: "Movie",
+    tags: [
+      "scissors",
+      "2025",
+      "streaming",
+      "online",
+      "download",
+      "watch",
+      "free",
+      "justwatch",
+      "movie",
+    ],
+    releaseDate: "2025-01-01",
+    director: "Harry Sparks",
+    featured: false,
+  },
   {
     id: "M97",
     slug: "aachari-baa-2025",
     title: "Aachari Baa (2025)",
     description:
       "An elderly Gujarati grandmother reconnects with her family through her cherished pickle-making tradition, bringing warmth and flavor to her community.",
-    thumbnailUrl: "https://i.ytimg.com/vi/KE8gzvqUbwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDxah_b2VLeVL2cVBwB994tHw7u_w",
+    thumbnailUrl:
+      "https://i.ytimg.com/vi/KE8gzvqUbwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDxah_b2VLeVL2cVBwB994tHw7u_w",
     videoUrl:
       "https://short.icu/eau6L_eQn?thumbnail=https://i.ytimg.com/vi/KE8gzvqUbwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDxah_b2VLeVL2cVBwB994tHw7u_w",
     videoUrl1: "https://voe.sx/e/9lrf16ywro29",
@@ -3715,7 +4124,8 @@ const documentaries: Documentary[] = [
     title: "Be Happy (2025)",
     description:
       "The journey of a single father and his talented daughter who aspire to perform on the country's biggest dance reality show.",
-    thumbnailUrl: "https://cdn.123telugu.com/content/wp-content/uploads/2025/03/Be-Happy-feat.jpg",
+    thumbnailUrl:
+      "https://cdn.123telugu.com/content/wp-content/uploads/2025/03/Be-Happy-feat.jpg",
     videoUrl:
       "https://short.icu/qatqJq_Ox?thumbnail=https://cdn.123telugu.com/content/wp-content/uploads/2025/03/Be-Happy-feat.jpg",
     videoUrl1: "https://voe.sx/e/o9e2jlddeamd",
@@ -3745,7 +4155,8 @@ const documentaries: Documentary[] = [
     title: "The Diplomat (2025)",
     description:
       "An Indian diplomat who tries to repatriate an Indian girl from Pakistan, where she was presumably forced and deceived into marrying against her will.",
-    thumbnailUrl: "https://filminformation.com/wp-content/uploads/2025/03/the-diplomat-final.jpg",
+    thumbnailUrl:
+      "https://filminformation.com/wp-content/uploads/2025/03/the-diplomat-final.jpg",
     videoUrl:
       "https://short.icu/89dLFG9WX?thumbnail=https://filminformation.com/wp-content/uploads/2025/03/the-diplomat-final.jpg",
     videoUrl1: "https://voe.sx/e/4usglvy4f0im",
@@ -3775,7 +4186,8 @@ const documentaries: Documentary[] = [
     title: "The Parenting (2025)",
     description:
       "A couple rents a countryside house for a weekend with their parents and then discover it's inhabited by a 400-year-old poltergeist.",
-    thumbnailUrl: "https://www.heavenofhorror.com/wp-content/uploads/2025/03/The-Parenting-2025-Max-Review.jpg",
+    thumbnailUrl:
+      "https://www.heavenofhorror.com/wp-content/uploads/2025/03/The-Parenting-2025-Max-Review.jpg",
     videoUrl:
       "https://short.icu/6qQ0gL7wY?thumbnail=https://www.heavenofhorror.com/wp-content/uploads/2025/03/The-Parenting-2025-Max-Review.jpg",
     videoUrl1: "https://voe.sx/e/jvf2fololukx",
@@ -3805,7 +4217,8 @@ const documentaries: Documentary[] = [
     title: "Silent Zone (2025)",
     description:
       "In a zombie-ravaged world, a resourceful teen and her protector fight for survival, facing relentless dangers and testing the limits of hope and loyalty.",
-    thumbnailUrl: "https://cdn.filmtotaal.nl/images/thumbnails/ft-1104243-580x326.jpg",
+    thumbnailUrl:
+      "https://cdn.filmtotaal.nl/images/thumbnails/ft-1104243-580x326.jpg",
     videoUrl:
       "https://short.icu/3CF4RWqrhE?thumbnail=https://cdn.filmtotaal.nl/images/thumbnails/ft-1104243-580x326.jpg",
     videoUrl1: "https://voe.sx/e/cdfmtpjmzyag",
@@ -3835,7 +4248,8 @@ const documentaries: Documentary[] = [
     title: "The Electric State (2025)",
     description:
       "An orphaned teen hits the road with a mysterious robot to find her long-lost brother, teaming up with a smuggler and his wisecracking sidekick.",
-    thumbnailUrl: "https://i.ytimg.com/vi/wSJm-p0zgpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCbIY2kT0Iy5zPn0rJa7tWjRBUadQ",
+    thumbnailUrl:
+      "https://i.ytimg.com/vi/wSJm-p0zgpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCbIY2kT0Iy5zPn0rJa7tWjRBUadQ",
     videoUrl:
       "https://short.icu/xHytVPO7O?thumbnail=https://i.ytimg.com/vi/wSJm-p0zgpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCbIY2kT0Iy5zPn0rJa7tWjRBUadQ",
     videoUrl1: "https://voe.sx/e/o3xh9vxgm63i",
@@ -3865,7 +4279,8 @@ const documentaries: Documentary[] = [
     title: "High Rollers (2025)",
     description:
       "Master thief Mason (John Travolta) is living the criminal's dream: island-hopping with his crew and the love of his life, Decker (Gina Gershon), while floating on a sea of stolen cash. But his dream is shattered when his nemesis, the ruthless Salazar, kidnaps Decker and forces Mason and his crew to attempt a near-impossible casino heist in exchange for her return. Hedged in by Salazar's equally ruthless rivals, and with the FBI on his tail, Mason gambles everything in pursuit of both the big score and the ultimate jackpot: Decker's life.",
-    thumbnailUrl: "https://image.tmdb.org/t/p/original/o4onk5Khih3vnZeHI2Rf2zyMWN6.jpg",
+    thumbnailUrl:
+      "https://image.tmdb.org/t/p/original/o4onk5Khih3vnZeHI2Rf2zyMWN6.jpg",
     videoUrl:
       "https://short.icu/c_F-XfhZz?thumbnail=https://image.tmdb.org/t/p/original/o4onk5Khih3vnZeHI2Rf2zyMWN6.jpg",
     videoUrl1: "https://voe.sx/e/6rpvtu7vdk1s",
@@ -3895,7 +4310,8 @@ const documentaries: Documentary[] = [
     title: "Chasing The Wind (2025)",
     description:
       "A focused city worker and a laid-back surfer - both heirs to the same company - find they have plenty in common when they join forces in the boardroom.",
-    thumbnailUrl: "https://www.netflix-news.com/app/uploads/2025/02/Capture-decran-2025-02-15-a-08.13.42-600x321.webp",
+    thumbnailUrl:
+      "https://www.netflix-news.com/app/uploads/2025/02/Capture-decran-2025-02-15-a-08.13.42-600x321.webp",
     videoUrl:
       "https://short.icu/1By-2f-VU?thumbnail=https://www.netflix-news.com/app/uploads/2025/02/Capture-decran-2025-02-15-a-08.13.42-600x321.webp",
     videoUrl1: "https://voe.sx/e/9psfrcahup8u",
@@ -3925,7 +4341,8 @@ const documentaries: Documentary[] = [
     title: "American Scream (2025)",
     description:
       "Two would be killers get more than they bargained for when dead bodies turn up at a warehouse that they've never encountered before. As their work day drags on, they start questioning each other, and are driven to sci-fi madness.",
-    thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BZTEwMzE3NTUtMzFkZC00MGY2LWFjODMtYTFkMDViNmU3NmY2XkEyXkFqcGc@._V1_.jpg",
+    thumbnailUrl:
+      "https://m.media-amazon.com/images/M/MV5BZTEwMzE3NTUtMzFkZC00MGY2LWFjODMtYTFkMDViNmU3NmY2XkEyXkFqcGc@._V1_.jpg",
     videoUrl:
       "https://short.icu/HvhOniUOv?thumbnail=https://m.media-amazon.com/images/M/MV5BZTEwMzE3NTUtMzFkZC00MGY2LWFjODMtYTFkMDViNmU3NmY2XkEyXkFqcGc@._V1_.jpg",
     videoUrl1: "https://voe.sx/e/d9jiw0mvfxzs",
@@ -3955,7 +4372,8 @@ const documentaries: Documentary[] = [
     title: "Popeyes Revenge (2025)",
     description:
       "The legend of Popeye haunts a group of councilors as they intend to open a summer camp.",
-    thumbnailUrl: "https://m.media-amazon.com/images/S/pv-target-images/cbdac83948a6c47fb71cee96303518cd3cd4a628259cf0019123a96dcbc10a19.jpg",
+    thumbnailUrl:
+      "https://m.media-amazon.com/images/S/pv-target-images/cbdac83948a6c47fb71cee96303518cd3cd4a628259cf0019123a96dcbc10a19.jpg",
     videoUrl:
       "https://short.icu/O11aEGpyC?thumbnail=https://assets-prd.ignimgs.com/2025/02/19/popeye-thumb223-1740003521749.jpg?width=1280",
     videoUrl1: "https://vidsrc.cc/v2/embed/movie/tt33362807",
@@ -3985,7 +4403,8 @@ const documentaries: Documentary[] = [
     title: "The Bayou (2025)",
     description:
       "Vacation turns disaster when Houston grad, Kyle and her friends escape a plane crash in the desolate Louisiana everglades, only to discover there's something way more dangerous lurking in the shallows.",
-    thumbnailUrl: "https://i0.wp.com/teaser-trailer.com/wp-content/uploads/2025/02/The-Bayou-Movie-2025.jpg?ssl=1",
+    thumbnailUrl:
+      "https://i0.wp.com/teaser-trailer.com/wp-content/uploads/2025/02/The-Bayou-Movie-2025.jpg?ssl=1",
     videoUrl:
       "https://short.icu/BLpysbMBo?thumbnail=https://i0.wp.com/teaser-trailer.com/wp-content/uploads/2025/02/The-Bayou-Movie-2025.jpg?ssl=1",
     videoUrl1: "https://vidsrc.cc/v2/embed/movie/tt29343289",
@@ -4015,7 +4434,8 @@ const documentaries: Documentary[] = [
     title: "Picture This (2025)",
     description:
       "Pia, a struggling photographer, receives a prediction: true love awaits in her next five dates. With her sister's wedding looming and her family playing matchmaker, her ex re-appears, throwing her love life into chaos",
-    thumbnailUrl: "https://www.vitalthrills.com/wp-content/uploads/2025/02/pictureprime1.jpg",
+    thumbnailUrl:
+      "https://www.vitalthrills.com/wp-content/uploads/2025/02/pictureprime1.jpg",
     videoUrl:
       "https://short.icu/G5ZzxyqxC?thumbnail=https://www.vitalthrills.com/wp-content/uploads/2025/02/pictureprime1.jpg",
     videoUrl1: "https://www.2embed.cc/embed/tt29471733",
@@ -4045,7 +4465,8 @@ const documentaries: Documentary[] = [
     title: "Nadaaniyan (2025)",
     description:
       "A privileged Delhi socialite hires a middle-class student to pose as her boyfriend to maintain her social status. Their pretense becomes complicated when genuine feelings develop between them.",
-    thumbnailUrl: "https://downloads.ctfassets.net/4cd45et68cgf/61DZf0cI7JUy0DkukvG8t/8127e0b5c75072040995c5e1796ea157/EN_IN_NADAANIYAN_KA1_Horizontal_RGB_Pre.jpg",
+    thumbnailUrl:
+      "https://downloads.ctfassets.net/4cd45et68cgf/61DZf0cI7JUy0DkukvG8t/8127e0b5c75072040995c5e1796ea157/EN_IN_NADAANIYAN_KA1_Horizontal_RGB_Pre.jpg",
     videoUrl:
       "https://short.icu/V9usw9BrT?thumbnail=https://downloads.ctfassets.net/4cd45et68cgf/61DZf0cI7JUy0DkukvG8t/8127e0b5c75072040995c5e1796ea157/EN_IN_NADAANIYAN_KA1_Horizontal_RGB_Pre.jpg",
     videoUrl1: "https://www.2embed.cc/embed/tt30422937",
@@ -4075,7 +4496,8 @@ const documentaries: Documentary[] = [
     title: "Fight Or Flight (2025)",
     description:
       "A mercenary takes on the job of tracking down a target on a plane but must protect her when they're surrounded by people trying to kill both of them.",
-    thumbnailUrl: "https://assets.myket.ir/movies/lands/xxlarge/3d76b7c3-5679-48f2-85d7-5e560b8fe737.jpg",
+    thumbnailUrl:
+      "https://assets.myket.ir/movies/lands/xxlarge/3d76b7c3-5679-48f2-85d7-5e560b8fe737.jpg",
     videoUrl:
       "https://short.icu/oRwA5Jpvp?thumbnail=https://static1.moviewebimages.com/wordpress/wp-content/uploads/2025/01/ggjv9eyw4aagevj.jpeg",
     videoUrl1: "https://vidsrc.cc/v2/embed/movie/tt13652286",
@@ -4105,7 +4527,8 @@ const documentaries: Documentary[] = [
     title: "The Royal We (2025)",
     description:
       "When her older sister elopes with a non-royal, Princess Bea who has lived her life away from her royal duties must now step in and honor the arranged marriage to a small kingdom prince.",
-    thumbnailUrl: "https://i.ytimg.com/vi/ezfKH9KvqbI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAG9hgEyhLPsfDtyxJhZVrnj__MVw",
+    thumbnailUrl:
+      "https://i.ytimg.com/vi/ezfKH9KvqbI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAG9hgEyhLPsfDtyxJhZVrnj__MVw",
     videoUrl:
       "https://short.icu/5Nc92HnPn?thumbnail=https://i.ytimg.com/vi/ezfKH9KvqbI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAG9hgEyhLPsfDtyxJhZVrnj__MVw",
     videoUrl1: "https://vidsrc.cc/v2/embed/movie/tt35558973",
@@ -4135,7 +4558,8 @@ const documentaries: Documentary[] = [
     title: "Chasing Light (2025)",
     description:
       "After a fall wipes his memory, 13-year-old Max embarks on a journey to uncover his identity. But as memories resurface, he questions: are they his, or has someone shaped his past? Max's search may reveal a truth he's not ready to face.",
-    thumbnailUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSJVPRs942mk_ruRxWXTbGiviLYIC6JBSNow&s",
+    thumbnailUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSJVPRs942mk_ruRxWXTbGiviLYIC6JBSNow&s",
     videoUrl:
       "https://short.icu/Yw76Irbj0?thumbnail=https://m.media-amazon.com/images/M/MV5BMGM1ZjBjYTUtOTcyNS00NzY3LTk3ZDItNmRjYWQzYTgwZWNiXkEyXkFqcGc@._V1_QL75_UX392_.jpg",
     videoUrl1: "",
@@ -4165,7 +4589,8 @@ const documentaries: Documentary[] = [
     title: "A Knights War (2025)",
     description:
       "A fearless knight braves a deadly realm to save the Chosen One's soul. Facing witches, demons, and brutal foes, he discovers her return could ignite chaos and doom humanity.",
-    thumbnailUrl: "https://m.media-amazon.com/images/S/pv-target-images/9b5b575ec7584c820c43c4cf1a4c3f398817d07e1d3de7e939ad6d2075b7fcf8.jpg",
+    thumbnailUrl:
+      "https://m.media-amazon.com/images/S/pv-target-images/9b5b575ec7584c820c43c4cf1a4c3f398817d07e1d3de7e939ad6d2075b7fcf8.jpg",
     videoUrl:
       "https://short.icu/O8hKVje8_?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/9b5b575ec7584c820c43c4cf1a4c3f398817d07e1d3de7e939ad6d2075b7fcf8.jpg",
     videoUrl1: "",
@@ -4195,7 +4620,8 @@ const documentaries: Documentary[] = [
     title: "The Most Beautiful Girl in the World (2025)",
     description:
       "A playboy stages a dating show to earn his inheritance by granting his father's last wish: for his son to marry the most beautiful girl in the world.",
-    thumbnailUrl: "https://cdn.technadu.com/wp-content/uploads/2025/02/The-Most-Beautiful-Girl-in-the-World.jpg",
+    thumbnailUrl:
+      "https://cdn.technadu.com/wp-content/uploads/2025/02/The-Most-Beautiful-Girl-in-the-World.jpg",
     videoUrl:
       "https://short.icu/uSl8hz6l1?thumbnail=https://cdn.technadu.com/wp-content/uploads/2025/02/The-Most-Beautiful-Girl-in-the-World.jpg",
     videoUrl1: "https://vidsrc.cc/v2/embed/movie/tt34749630",
@@ -4225,7 +4651,8 @@ const documentaries: Documentary[] = [
     title: "We Kill Them All (2025)",
     description:
       "A woman visits her criminal father at a secluded resort, bringing her girlfriend along. Their reunion takes a dark turn as dangerous figures from the father's past emerge, forcing the women into a desperate struggle for survival.",
-    thumbnailUrl: "https://m.media-amazon.com/images/S/pv-target-images/e9f3a91c860b5c95716405d6e99631a15d45e6d25bba36c5d474838558556625.jpg",
+    thumbnailUrl:
+      "https://m.media-amazon.com/images/S/pv-target-images/e9f3a91c860b5c95716405d6e99631a15d45e6d25bba36c5d474838558556625.jpg",
     videoUrl:
       "https://short.icu/lbRXfdO3k?thumbnail=https://m.media-amazon.com/images/S/pv-target-images/e9f3a91c860b5c95716405d6e99631a15d45e6d25bba36c5d474838558556625.jpg",
     videoUrl1: "https://vidsrc.cc/v2/embed/movie/tt21158338",
