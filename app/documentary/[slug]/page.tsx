@@ -628,7 +628,7 @@ export default async function DocumentaryPage({ params }: { params: { slug: stri
     "name": documentary.title,
     "description": documentary.description,
     "thumbnailUrl": documentary.thumbnailUrl,
-    "uploadDate": documentary.releaseDate,
+    "uploadDate": `${documentary.releaseDate}T12:00:00Z`,
     "duration": `PT${documentary.duration}M`,
     "embedUrl": documentary.videoUrl,
     "contentUrl": documentary.videoUrl,
