@@ -150,8 +150,8 @@ export default function RootLayout({
           })('vemtoutcheeg.com',8640330,document.createElement('script'))`}
               </Script> */}
               {/* Clicky Analytics Scripts */}
-              {/* <Script async data-id="101480127" src="//static.getclicky.com/js" />
-              <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" /> */}
+              <Script async data-id="101480127" src="//static.getclicky.com/js" />
+              <Script async data-id="101480127" src="/69e4fc5642f327d1b.js" />
             </div>
             <Toaster />
             <Analytics />
