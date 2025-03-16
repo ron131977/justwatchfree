@@ -51,7 +51,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-07",
     director: "Ram Madhvani",
-    featured: false,
+    featured: true,
   },
   {
     id: "T57",
@@ -1874,7 +1874,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-11",
     director: "Bobby Bonifacio Jr.",
-    featured: false,
+    featured: true,
   },
   {
     id: "A38",
@@ -1905,7 +1905,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-04",
     director: "Mac Alejandre",
-    featured: false,
+    featured: true,
   },
   {
     id: "A37",
@@ -1935,7 +1935,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-14",
     director: "Roe Pajemna",
-    featured: false,
+    featured: true,
   },
   {
     id: "A36",
@@ -3073,7 +3073,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-06",
     director: "प्रार्थना मोहन",
-    featured: false,
+    featured: true,
   },
   {
     id: "H30",
@@ -3136,7 +3136,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-02-20",
     director: "लेस्ली लिंका ग्लैटर",
-    featured: false,
+    featured: true,
   },
   {
     id: "H28",
@@ -3232,7 +3232,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-02-27",
     director: "ओलिवियर मार्शल",
-    featured: false,
+    featured: true,
   },
   {
     id: "H25",
@@ -4178,7 +4178,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-14",
     director: "Shivam Nair",
-    featured: false,
+    featured: true,
   },
   {
     id: "M94",
@@ -4271,7 +4271,7 @@ const documentaries: Documentary[] = [
     ],
     releaseDate: "2025-03-14",
     director: "Anthony Russo, Joe Russo",
-    featured: false,
+    featured: true,
   },
   {
     id: "M91",
