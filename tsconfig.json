@@ -25,9 +25,51 @@
 //   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
 //   "exclude": ["node_modules"]
 // }
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": [
+//       "dom",
+//       "dom.iterable",
+//       "esnext"
+//     ],
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "esModuleInterop": true,
+//     "module": "esnext",
+//     "moduleResolution": "bundler",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "jsx": "preserve",
+//     "incremental": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": [
+//         "./*"
+//       ]
+//     },
+//     "plugins": [
+//       {
+//         "name": "next"
+//       }
+//     ],
+//     "allowJs": true
+//   },
+//   "include": [
+//     "next-env.d.ts",
+//     "**/*.ts",
+//     "**/*.tsx",
+//     ".next/types/**/*.ts"
+//   ],
+//   "exclude": [
+//     "node_modules"
+//   ]
+// }
+
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2016",
     "lib": [
       "dom",
       "dom.iterable",
@@ -54,7 +96,8 @@
         "name": "next"
       }
     ],
-    "allowJs": true
+    "allowJs": true,
+    "downlevelIteration": true
   },
   "include": [
     "next-env.d.ts",
