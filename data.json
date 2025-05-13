@@ -1,6 +1,30 @@
 {
   "movie": [
     {
+      "id": "1197306",
+      "videoUrl": "https://short.icu/7f-4DDeIl?thumbnail=https://www.factsmostly.com/wp-content/uploads/2025/01/A-Working-Man.webp"
+    },
+    {
+      "id": "1020414",
+      "videoUrl": "https://short.icu/yRz5QvLLQ?thumbnail=https://www.voicesfromthebalcony.com/wp-content/uploads/2025/01/Peter-Pans-Neverland-Nightmare-Banner.jpg"
+    },
+    {
+      "id": "1174128",
+      "videoUrl": "https://short.icu/pyZWS873-?thumbnail=https://i.ytimg.com/vi/Vs3UI8Ii--4/maxresdefault.jpg"
+    },
+    {
+      "id": "1233575",
+      "videoUrl": "https://short.icu/tHJd_yHbL?thumbnail=https://tomindia.s3.ap-south-1.amazonaws.com/prod/post/ogImage/1740485642326_b0ab768fc17d447f80f36bd7d8642428_Black-Bag-Holywood-movies-tomorrowsindia.jpg"
+    },
+    {
+      "id": "1153714",
+      "videoUrl": "https://short.icu/XoE_sTsFr?thumbnail=https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2024/12/untitled-design-4.png"
+    },
+    {
+      "id": "1461258",
+      "videoUrl": "https://short.icu/O0KtD6AUF?thumbnail=https://blog.reelgood.com/wp-content/uploads/2025/04/Kaafir-2025-1024x576.webp"
+    },
+    {
       "id": "1257960",
       "videoUrl": "https://short.icu/4wFDm1pbu?thumbnail=https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/sikandar-et00394804-1742451123.jpg"
     },
@@ -303,6 +327,12 @@
   ],
   "tv": [
     {
+      "id": "229711",
+      "season1": "https://short.icu/8P4TFPzmO?thumbnail=https://resizing.flixster.com/PiQrTulz6HGFulDOAvo9a6TUdew=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p29566919_b_h10_ab.jpg",
+      "season2": "",
+      "season3": ""
+    },
+    {
       "id": "108978",
       "season1": "",
       "season2": "",
@@ -437,11 +467,41 @@
   ],
   "adult": [
     {
+      "id": "A51",
+      "slug": "tere-mere-beech-mein-part1",
+      "title": "Tere Mere Beech Mein - Part 1 - Webseries",
+      "description": "A gripping tale of love and betrayal, this series explores the complexities of relationships and the emotional turmoil that comes with them. Its engaging storyline keeps viewers hooked till the end.",
+      "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYifHFLyGGbiqbciKH151Zsl8_6Ryrq5N-w&s",
+      "videoUrl": "https://short.icu/F60DOvt4i?thumbnail=https://i.ytimg.com/vi/nv-MOaC6G7o/hqdefault.jpg",
+      "videoUrl1": "https://voe.sx/e/i8nsl4qywnbc",
+      "videoUrl2": "https://vidoza.net/embed-32p5tvx9q4hh.html",
+      "duration": 3900,
+      "views": 135190,
+      "category": "Adult",
+      "releaseDate": "2025-04-11",
+      "director": "Artemio Abad"
+    },
+    {
+      "id": "A50",
+      "slug": "bangkera",
+      "title": "Bangkera - Tagalog Movie",
+      "description": "A determined young woman defies her father's wishes to become a river guide, finding unexpected connections when a travel vlogger books her services for a challenging downstream journey.",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BNTI0Mjc4ZWMtMWFjZC00MGQ3LWJjZWYtOTNhODk4ZmFmZTgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "videoUrl": "https://short.icu/F60DOvt4i?thumbnail=https://images.justwatch.com/backdrop/328584501/s640/bangkera",
+      "videoUrl1": "https://voe.sx/e/drw26wnoxwjp",
+      "videoUrl2": "https://vidoza.net/embed-unup9h4hrc0u.html",
+      "duration": 3900,
+      "views": 135190,
+      "category": "Adult",
+      "releaseDate": "2025-04-11",
+      "director": "Artemio Abad"
+    },
+    {
       "id": "A49",
       "slug": "Chaashni-part-2",
       "title": "Chaashni Part 2 - Webseries",
       "description": "Ullu dropped a new trailer for Chaashni Part 2 alongside its release date. It is set to premiere on March 28, a week after the premiere of first part. The lesbian romantic series revolving around forbidden love will also available to watch on OTTplay Premium just like the other Ullu web series.",
-      "thumbnailUrl": "https://vgamovies8.rodeo/wp-content/uploads/2025/03/Chaashni-%E2%80%93-Part-2-2025-UllU-Original-185x278.jpg",
+      "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXq54OTTT9ur0tfRwlJQ6Y2m7h-rZYtGa8hw6MVYe6lFllYImtMErV43KTn03IZBU-3Ew&usqp=CAU",
       "videoUrl": "https://short.icu/AhivDuIdY?thumbnail=https://uncutmaza.co.in/wp-content/uploads/2025/03/Chaashni-ep1.jpg",
       "videoUrl1": "https://voe.sx/e/ufkgsktbh8hi",
       "videoUrl2": "https://vidoza.net/embed-og0j6cgyshof.html",
