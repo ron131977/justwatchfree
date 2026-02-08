@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+Sitemap: https://justwatchfree.vercel.app/sitemap.xml
+
