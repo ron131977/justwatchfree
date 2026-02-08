@@ -503,13 +503,22 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           maxBufferLength: 30,
           maxMaxBufferLength: 60,
           maxBufferSize: 60 * 1000 * 1000,
+          autoStartLoad: true,
         });
         hlsRef.current = hls;
         hls.loadSource(current.url);
         hls.attachMedia(videoRef.current);
         hls.on(Hls.Events.MANIFEST_PARSED, () => { 
           setIsLoading(false); 
-          videoRef.current?.play().catch(() => {});
+          // Force play multiple times to ensure autoplay
+          if (videoRef.current) {
+            videoRef.current.play().catch(() => {
+              // If autoplay fails, try again after a short delay
+              setTimeout(() => {
+                videoRef.current?.play().catch(e => console.log('Autoplay prevented:', e));
+              }, 100);
+            });
+          }
         });
         hls.on(Hls.Events.ERROR, (event, data) => { 
           console.error('HLS Error:', data);
@@ -520,7 +529,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         videoRef.current.src = current.url;
         videoRef.current.onloadedmetadata = () => { 
           setIsLoading(false); 
-          videoRef.current?.play().catch(() => {}); 
+          // Force play on Safari/iOS
+          videoRef.current?.play().catch(() => {
+            setTimeout(() => {
+              videoRef.current?.play().catch(e => console.log('Autoplay prevented:', e));
+            }, 100);
+          }); 
         };
         videoRef.current.onerror = () => {
           setPlayerError(true);
@@ -823,13 +837,26 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               controls 
               playsInline 
               autoPlay
+              muted={false}
               crossOrigin="anonymous"
               preload="auto"
               style={{ filter: filterPresets[videoFilter] }} 
               onWaiting={() => setIsLoading(true)} 
               onPlaying={() => setIsLoading(false)}
-              onCanPlay={() => setIsLoading(false)}
-              onLoadedData={() => setIsLoading(false)}
+              onCanPlay={() => {
+                setIsLoading(false);
+                // Force play when ready
+                if (videoRef.current) {
+                  videoRef.current.play().catch(err => console.log('Autoplay blocked:', err));
+                }
+              }}
+              onLoadedData={() => {
+                setIsLoading(false);
+                // Force play when loaded
+                if (videoRef.current) {
+                  videoRef.current.play().catch(err => console.log('Autoplay blocked:', err));
+                }
+              }}
               onError={(e) => {
                 console.error('Video error:', e);
                 setPlayerError(true);
