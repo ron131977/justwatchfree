@@ -415,7 +415,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const handleUserActivity = () => {
     setShowControls(true);
     if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-    controlsTimeoutRef.current = setTimeout(() => setShowControls(false), 3500);
+    controlsTimeoutRef.current = setTimeout(() => {
+      // Only hide if not in fullscreen on mobile - keep visible in fullscreen
+      if (!isFullscreen || window.innerWidth > 768) {
+        setShowControls(false);
+      }
+    }, 4000);
   };
 
   const streams = useMemo(() => {
@@ -766,30 +771,39 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         onTouchMove={handleUserActivity}
         onClick={handleUserActivity}
       >
-        {/* Fullscreen Button - Production Ready with Touch Support */}
+        {/* Fullscreen Button - ALWAYS CENTERED, ALWAYS VISIBLE */}
         <div 
-          className={`absolute ${
-            isFullscreen 
-              ? 'top-4 right-4 sm:top-6 sm:right-6' 
-              : 'top-3 sm:top-4 left-1/2 -translate-x-1/2'
-          } z-50 pointer-events-auto transition-all duration-300 ${
-            showControls ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="absolute top-4 left-1/2 -translate-x-1/2 z-[9999] pointer-events-auto"
+          onTouchStart={(e) => {
+            e.stopPropagation();
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
         >
           <button 
-            onClick={toggleFullscreen}
-            onTouchEnd={(e) => {
+            onClick={(e) => {
               e.preventDefault();
+              e.stopPropagation();
               toggleFullscreen();
             }}
-            className="p-2 sm:p-2.5 bg-black/80 backdrop-blur-md rounded-full border-2 border-white/40 hover:border-miraj-gold hover:text-miraj-gold text-white transition-all duration-300 shadow-2xl hover:bg-black/90 hover:scale-110 active:scale-95 touch-manipulation min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] flex items-center justify-center"
+            onTouchStart={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            onTouchEnd={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              toggleFullscreen();
+            }}
+            className="p-3 sm:p-4 bg-black/90 backdrop-blur-md rounded-full border-2 border-white/60 hover:border-miraj-gold hover:text-miraj-gold text-white transition-all duration-200 shadow-[0_0_30px_rgba(0,0,0,0.8)] hover:bg-black active:scale-95 touch-manipulation min-h-[56px] min-w-[56px] sm:min-h-[64px] sm:min-w-[64px] flex items-center justify-center"
             aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
             type="button"
           >
             {isFullscreen ? (
-              <Minimize2 size={20} className="sm:w-6 sm:h-6 transition-transform duration-300"/>
+              <Minimize2 size={24} className="sm:w-7 sm:h-7 transition-transform duration-300"/>
             ) : (
-              <Maximize2 size={20} className="sm:w-6 sm:h-6 transition-transform duration-300"/>
+              <Maximize2 size={24} className="sm:w-7 sm:h-7 transition-transform duration-300"/>
             )}
           </button>
         </div>
