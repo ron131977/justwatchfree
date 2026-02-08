@@ -341,9 +341,7 @@
 // export default VideoPlayer;
 
 
-
-
-import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { AlertCircle, ChevronDown, ArrowLeft, Maximize2, Minimize2 } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { StreamSource } from '../types';
@@ -375,13 +373,11 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [videoFilter, setVideoFilter] = useState<string>('standard');
   const [playerError, setPlayerError] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
+  const [isLandscape, setIsLandscape] = useState(false);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const hlsRef = useRef<Hls | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const fullscreenButtonRef = useRef<HTMLButtonElement>(null);
 
   const filterPresets: Record<string, string> = {
     standard: 'brightness(1.0) contrast(1.0) saturate(1.0) sepia(0) hue-rotate(0deg)',
@@ -398,62 +394,11 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     dream: 'blur(0.5px) brightness(1.1) saturate(1.2)',
   };
 
-  // Detect mobile device and orientation
-  useEffect(() => {
-    const checkMobile = () => {
-      const userAgent = navigator.userAgent || navigator.vendor;
-      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
-      setIsMobile(isMobileDevice);
-    };
-
-    const checkOrientation = () => {
-      if (window.innerWidth > window.innerHeight) {
-        setOrientation('landscape');
-      } else {
-        setOrientation('portrait');
-      }
-    };
-
-    checkMobile();
-    checkOrientation();
-
-    window.addEventListener('resize', checkOrientation);
-    window.addEventListener('orientationchange', checkOrientation);
-
-    return () => {
-      window.removeEventListener('resize', checkOrientation);
-      window.removeEventListener('orientationchange', checkOrientation);
-    };
-  }, []);
-
-  const handleUserActivity = useCallback(() => {
+  const handleUserActivity = () => {
     setShowControls(true);
     if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-    // Shorter timeout for mobile, longer for desktop
-    const timeoutDuration = isMobile ? 5000 : 3500;
-    controlsTimeoutRef.current = setTimeout(() => setShowControls(false), timeoutDuration);
-  }, [isMobile]);
-
-  // Enhanced touch handling for mobile
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    handleUserActivity();
-    
-    // Double tap for fullscreen on mobile (right side)
-    if (isMobile && e.touches.length === 1) {
-      const touch = e.touches[0];
-      const containerRect = containerRef.current?.getBoundingClientRect();
-      if (containerRect) {
-        const tapX = touch.clientX - containerRect.left;
-        const containerWidth = containerRect.width;
-        
-        // Double tap on right side toggles fullscreen
-        if (tapX > containerWidth * 0.7) {
-          e.preventDefault();
-          toggleFullscreen();
-        }
-      }
-    }
-  }, [handleUserActivity, isMobile]);
+    controlsTimeoutRef.current = setTimeout(() => setShowControls(false), 3500);
+  };
 
   const streams = useMemo(() => {
     const format = (raw: any): StreamSource[] => {
@@ -494,6 +439,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         { id: 'f-3', name: 'Server 3', url: `https://www.vidking.net/embed/movie/${tmdbId}?autoPlay=true&nextEpisode=true&episodeSelector=true`, quality: 'HD', type: 'iframe' },
         { id: 'f-4', name: 'Server 4', url: `https://vidsrc-embed.ru/embed/movie/${tmdbId}`, quality: 'HD', type: 'iframe' },
         { id: 'f-5', name: 'Server 5', url: `https://api.cinezo.net/embed/tmdb-movie-${tmdbId}`, quality: 'HD', type: 'iframe' },
+        // { id: 'f-6', name: 'Server 6 - Multi-Lang', url: `https://zxcstream.xyz/player/movie/${tmdbId}/hindi?autoplay=false&back=true&server=0`, quality: 'HD', type: 'iframe' },
       ];
     }
     
@@ -566,140 +512,163 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     };
   }, [activeServer, streams]);
 
-  // Enhanced fullscreen toggle with proper mobile support
-  const toggleFullscreen = useCallback(() => {
+  // ROBUST FULLSCREEN IMPLEMENTATION - PRODUCTION READY
+  const toggleFullscreen = async () => {
     if (!containerRef.current) return;
-    
-    const elem = containerRef.current;
-    
-    // Check for various fullscreen APIs
-    const doc = document as any;
-    const requestFullscreen = 
-      elem.requestFullscreen ||
-      elem.webkitRequestFullscreen ||
-      elem.mozRequestFullScreen ||
-      elem.msRequestFullscreen;
-    
-    const exitFullscreen = 
-      document.exitFullscreen ||
-      doc.webkitExitFullscreen ||
-      doc.mozCancelFullScreen ||
-      doc.msExitFullscreen;
-    
-    const fullscreenElement = 
-      document.fullscreenElement ||
-      doc.webkitFullscreenElement ||
-      doc.mozFullScreenElement ||
-      doc.msFullscreenElement;
 
-    if (!fullscreenElement) {
-      // Enter fullscreen
-      if (requestFullscreen) {
-        requestFullscreen.call(elem).catch((e: Error) => {
-          console.error('Error attempting to enable fullscreen:', e);
-          // Fallback for iOS Safari
-          if (isMobile && elem.classList.contains('video-container')) {
-            elem.classList.add('fullscreen-fallback');
-            setIsFullscreen(true);
+    try {
+      // Check if already in fullscreen
+      const isCurrentlyFullscreen = !!(
+        document.fullscreenElement ||
+        (document as any).webkitFullscreenElement ||
+        (document as any).mozFullScreenElement ||
+        (document as any).msFullscreenElement
+      );
+
+      if (!isCurrentlyFullscreen) {
+        // Enter fullscreen with cross-browser support
+        const element = containerRef.current;
+        
+        if (element.requestFullscreen) {
+          await element.requestFullscreen();
+        } else if ((element as any).webkitRequestFullscreen) {
+          // Safari/iOS
+          await (element as any).webkitRequestFullscreen();
+        } else if ((element as any).webkitEnterFullscreen) {
+          // iOS Safari video element
+          await (element as any).webkitEnterFullscreen();
+        } else if ((element as any).mozRequestFullScreen) {
+          // Firefox
+          await (element as any).mozRequestFullScreen();
+        } else if ((element as any).msRequestFullscreen) {
+          // IE/Edge
+          await (element as any).msRequestFullscreen();
+        }
+
+        // Lock orientation to landscape on mobile if supported
+        if (screen.orientation && screen.orientation.lock) {
+          try {
+            await screen.orientation.lock('landscape').catch(() => {
+              // Orientation lock failed, continue without it
+              console.log('Orientation lock not supported or failed');
+            });
+          } catch (err) {
+            // Silently handle orientation lock errors
           }
-        });
+        }
+      } else {
+        // Exit fullscreen with cross-browser support
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if ((document as any).webkitExitFullscreen) {
+          await (document as any).webkitExitFullscreen();
+        } else if ((document as any).mozCancelFullScreen) {
+          await (document as any).mozCancelFullScreen();
+        } else if ((document as any).msExitFullscreen) {
+          await (document as any).msExitFullscreen();
+        }
+
+        // Unlock orientation
+        if (screen.orientation && screen.orientation.unlock) {
+          try {
+            screen.orientation.unlock();
+          } catch (err) {
+            // Silently handle orientation unlock errors
+          }
+        }
       }
-    } else {
-      // Exit fullscreen
-      if (exitFullscreen) {
-        exitFullscreen.call(document);
-      }
-      // Remove fallback class if exists
-      if (elem.classList.contains('fullscreen-fallback')) {
-        elem.classList.remove('fullscreen-fallback');
-        setIsFullscreen(false);
+    } catch (error) {
+      console.error('Fullscreen error:', error);
+      // Fallback: try alternative fullscreen method
+      try {
+        if (videoRef.current && (videoRef.current as any).webkitEnterFullscreen) {
+          (videoRef.current as any).webkitEnterFullscreen();
+        }
+      } catch (fallbackError) {
+        console.error('Fallback fullscreen failed:', fallbackError);
       }
     }
-  }, [isMobile]);
+  };
 
-  // Fullscreen change handler
+  // Monitor fullscreen state changes with cross-browser support
   useEffect(() => {
     const handleFullscreenChange = () => {
-      const doc = document as any;
-      const fullscreenElement = 
+      const isCurrentlyFullscreen = !!(
         document.fullscreenElement ||
-        doc.webkitFullscreenElement ||
-        doc.mozFullScreenElement ||
-        doc.msFullscreenElement;
-      
-      setIsFullscreen(!!fullscreenElement);
-      
-      // Force controls to show when entering fullscreen
-      if (fullscreenElement) {
-        setShowControls(true);
-        if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-        controlsTimeoutRef.current = setTimeout(() => setShowControls(false), 5000);
-      }
+        (document as any).webkitFullscreenElement ||
+        (document as any).mozFullScreenElement ||
+        (document as any).msFullscreenElement
+      );
+      setIsFullscreen(isCurrentlyFullscreen);
     };
 
-    const events = [
-      'fullscreenchange',
-      'webkitfullscreenchange',
-      'mozfullscreenchange',
-      'MSFullscreenChange'
-    ];
-
-    events.forEach(event => {
-      document.addEventListener(event, handleFullscreenChange);
-    });
+    // Add event listeners for all browser variants
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
 
     return () => {
-      events.forEach(event => {
-        document.removeEventListener(event, handleFullscreenChange);
-      });
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
     };
   }, []);
 
-  // Add CSS for fallback fullscreen
+  // Monitor orientation changes for landscape mode
   useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .fullscreen-fallback {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: 9999 !important;
-        background: black !important;
-        margin: 0 !important;
-        border: none !important;
-        border-radius: 0 !important;
+    const handleOrientationChange = () => {
+      if (window.matchMedia('(orientation: landscape)').matches) {
+        setIsLandscape(true);
+      } else {
+        setIsLandscape(false);
       }
-      
-      /* Hide scrollbars in fullscreen */
-      .fullscreen-fallback body {
-        overflow: hidden !important;
-      }
-    `;
-    document.head.appendChild(style);
-    
+    };
+
+    // Initial check
+    handleOrientationChange();
+
+    // Listen for orientation changes
+    window.addEventListener('orientationchange', handleOrientationChange);
+    window.addEventListener('resize', handleOrientationChange);
+
+    // Modern API
+    if (screen.orientation) {
+      screen.orientation.addEventListener('change', handleOrientationChange);
+    }
+
     return () => {
-      document.head.removeChild(style);
+      window.removeEventListener('orientationchange', handleOrientationChange);
+      window.removeEventListener('resize', handleOrientationChange);
+      if (screen.orientation) {
+        screen.orientation.removeEventListener('change', handleOrientationChange);
+      }
     };
   }, []);
 
-  // Handle escape key to exit fullscreen
+  // Auto-hide controls in fullscreen after inactivity
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isFullscreen) {
-        toggleFullscreen();
-      }
-      // Space bar to show/hide controls
-      if (e.key === ' ') {
-        e.preventDefault();
-        handleUserActivity();
-      }
-    };
+    if (isFullscreen) {
+      handleUserActivity();
+    }
+  }, [isFullscreen]);
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isFullscreen, toggleFullscreen, handleUserActivity]);
+  // Prevent body scroll when in fullscreen
+  useEffect(() => {
+    if (isFullscreen) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [isFullscreen]);
 
   if (!streams.length) return (
     <div className="aspect-video bg-miraj-gray rounded-xl flex flex-col items-center justify-center p-6 text-center border border-white/5">
@@ -713,7 +682,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   return (
     <div className="relative w-full mt-8 sm:mt-0">
-      {/* Back Button */}
+      {/* Back Button - Repositioned below navbar with proper spacing */}
       <div className="mb-3 sm:mb-4">
         <button 
           onClick={() => router.back()} 
@@ -725,7 +694,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </button>
       </div>
 
-      {/* Floating Controls Bar */}
+      {/* Floating Controls Bar - Outside and above player, centered */}
       <div className="mb-3 sm:mb-4 flex justify-center">
         <div className="flex items-center gap-0.5 xs:gap-1 sm:gap-1.5 bg-black/70 backdrop-blur-xl px-1.5 xs:px-2 py-1 xs:py-1.5 sm:py-2 rounded-full border border-white/30 shadow-2xl max-w-[95vw] landscape:max-w-none overflow-x-auto">
           {streams.length > 1 && (
@@ -766,54 +735,45 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </div>
       </div>
 
-      {/* Player Container */}
+      {/* Player Container - Clean player without floating controls inside */}
       <div 
-        ref={containerRef}
-        className={`relative bg-black group w-full overflow-hidden transition-all duration-500 ${isFullscreen ? 'fixed inset-0 z-[100] video-container' : 'aspect-video rounded-xl border border-white/10 shadow-2xl'}`}
+        ref={containerRef} 
+        className={`relative bg-black group w-full overflow-hidden transition-all duration-500 ${
+          isFullscreen 
+            ? 'fixed inset-0 z-[100] w-screen h-screen' 
+            : 'aspect-video rounded-xl border border-white/10 shadow-2xl'
+        } ${isFullscreen && isLandscape ? 'landscape:w-screen landscape:h-screen' : ''}`}
         onMouseMove={handleUserActivity}
-        onTouchStart={handleTouchStart}
+        onTouchStart={handleUserActivity}
+        onTouchMove={handleUserActivity}
         onClick={handleUserActivity}
       >
-        {/* Enhanced Fullscreen Button - Positioned based on device and orientation */}
+        {/* Fullscreen Button - Production Ready with Touch Support */}
         <div 
-          className={`absolute z-50 pointer-events-auto transition-all duration-300 ${
+          className={`absolute ${
+            isFullscreen 
+              ? 'top-4 right-4 sm:top-6 sm:right-6' 
+              : 'top-3 sm:top-4 left-1/2 -translate-x-1/2'
+          } z-50 pointer-events-auto transition-all duration-300 ${
             showControls ? 'opacity-100' : 'opacity-0'
-          } ${
-            isMobile && orientation === 'landscape' 
-              ? 'top-3 right-3' 
-              : isMobile 
-                ? 'top-3 right-3' 
-                : 'top-3 sm:top-4 left-1/2 -translate-x-1/2'
           }`}
         >
           <button 
-            ref={fullscreenButtonRef}
             onClick={toggleFullscreen}
-            className={`
-              p-2 sm:p-2.5 bg-black/80 backdrop-blur-md rounded-full border-2 
-              ${isFullscreen ? 'border-miraj-gold text-miraj-gold' : 'border-white/40 text-white'} 
-              hover:border-miraj-gold hover:text-miraj-gold transition-all duration-300 
-              shadow-2xl hover:bg-black/90 active:scale-95 touch-manipulation 
-              ${isMobile ? 'min-h-[44px] min-w-[44px]' : 'min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px]'}
-              flex items-center justify-center
-            `}
+            onTouchEnd={(e) => {
+              e.preventDefault();
+              toggleFullscreen();
+            }}
+            className="p-2 sm:p-2.5 bg-black/80 backdrop-blur-md rounded-full border-2 border-white/40 hover:border-miraj-gold hover:text-miraj-gold text-white transition-all duration-300 shadow-2xl hover:bg-black/90 hover:scale-110 active:scale-95 touch-manipulation min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] flex items-center justify-center"
             aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-            onTouchStart={(e) => e.stopPropagation()}
-            onTouchEnd={(e) => e.stopPropagation()}
+            type="button"
           >
             {isFullscreen ? (
-              <Minimize2 size={isMobile ? 20 : 24} className="sm:w-6 sm:h-6 transition-transform duration-300" />
+              <Minimize2 size={20} className="sm:w-6 sm:h-6 transition-transform duration-300"/>
             ) : (
-              <Maximize2 size={isMobile ? 20 : 24} className="sm:w-6 sm:h-6 transition-transform duration-300" />
+              <Maximize2 size={20} className="sm:w-6 sm:h-6 transition-transform duration-300"/>
             )}
           </button>
-          
-          {/* Mobile hint for double-tap fullscreen */}
-          {isMobile && !isFullscreen && showControls && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-black/80 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap pointer-events-none">
-              Double-tap right side for fullscreen
-            </div>
-          )}
         </div>
 
         {/* Loading Spinner */}
@@ -847,25 +807,24 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         )}
 
         {/* Player Render */}
-        <div className="w-full h-full flex items-center justify-center">
+        <div className={`w-full h-full flex items-center justify-center ${isFullscreen ? 'bg-black' : ''}`}>
           {currentStream.type === 'iframe' ? (
             <iframe 
               key={currentStream.url} 
               src={currentStream.url} 
-              className="w-full h-full border-0" 
+              className={`w-full h-full border-0 ${isFullscreen && isLandscape ? 'landscape:w-full landscape:h-full' : ''}`}
               allowFullScreen 
               style={{ filter: filterPresets[videoFilter] }} 
               onLoad={() => setIsLoading(false)}
               title={`${title} Player`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen={true}
             />
           ) : (
             <video 
               ref={videoRef} 
-              className="w-full h-full bg-black" 
-              controls={!isMobile} // Hide native controls on mobile for better UX
+              className={`w-full h-full bg-black ${isFullscreen && isLandscape ? 'landscape:w-full landscape:h-full object-contain' : ''}`}
+              controls 
               playsInline 
               autoPlay 
               style={{ filter: filterPresets[videoFilter] }} 
@@ -877,25 +836,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               }}
               poster="/video-poster.jpg"
               aria-label={`${title} video player`}
-              // iOS specific attributes
-              webkit-playsinline="true"
-              x5-playsinline="true"
-              x5-video-player-type="h5-page"
-              x5-video-player-fullscreen="true"
-              x5-video-orientation="landscape|portrait"
             />
           )}
         </div>
-        
-        {/* Mobile fullscreen overlay hint */}
-        {isMobile && !isFullscreen && (
-          <div className="absolute bottom-4 right-4 z-30 pointer-events-none">
-            <div className="bg-black/60 text-white text-[10px] px-2 py-1 rounded flex items-center gap-1">
-              <Maximize2 size={12} />
-              <span>Tap button or double-tap right side</span>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
