@@ -950,7 +950,14 @@
 
 
 
-import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+
+
+
+
+
+
+
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { AlertCircle, ChevronDown, ArrowLeft, Maximize2, Minimize2 } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { StreamSource } from '../types';
@@ -1221,37 +1228,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           </button>
         </div>
 
-        {/* Loading Spinner */}
-        {isLoading && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 z-20 pointer-events-none">
-            <div className="w-10 h-10 sm:w-10 sm:h-10 border-4 border-white/5 border-t-miraj-gold rounded-full animate-spin mb-3"/>
-            <span className="text-miraj-gold text-[11px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] animate-pulse px-4 text-center">
-              {type === 'sports' ? 'LOADING LIVE SPORTS...' : 
-               type === 'tv_live' ? 'CONNECTING TO LIVE TV...' : 'LOADING STREAM...'}
-            </span>
-          </div>
-        )}
-        
-        {/* Error State */}
-        {playerError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/95 z-40 p-4 sm:p-6 text-center">
-            <AlertCircle size={40} className="sm:w-10 sm:h-10 text-miraj-red mb-3" />
-            <h3 className="text-lg sm:text-lg font-bold text-white mb-2">Stream Unavailable</h3>
-            <p className="text-gray-400 mb-4 max-w-md text-sm sm:text-sm px-4">
-              This server might be temporarily offline. Please try another server or check back later.
-            </p>
-            {streams.length > 1 && (
-              <button 
-                onClick={() => setActiveServer(s => (s + 1) % streams.length)} 
-                className="bg-miraj-gold text-black px-6 sm:px-6 py-2.5 sm:py-2.5 rounded-full font-bold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 active:scale-95 text-sm sm:text-sm"
-              >
-                Try Next Server ({streams.length - 1} remaining)
-              </button>
-            )}
-          </div>
-        )}
-
-        {/* Player Render */}
+        {/* Player Render - Clean and Simple */}
         <div className="w-full h-full flex items-center justify-center">
           {currentStream.type === 'iframe' ? (
             <iframe 
@@ -1266,15 +1243,21 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               referrerPolicy="strict-origin-when-cross-origin"
             />
           ) : (
-            <video 
-              ref={videoRef} 
-              className="w-full h-full bg-black" 
-              controls 
-              playsInline 
+            <video
+              ref={videoRef}
+              className="w-full h-full bg-black object-contain"
+              style={{ filter: filterPresets[videoFilter] }}
+              controls
+              playsInline
               autoPlay
               crossOrigin="anonymous"
-              style={{ filter: filterPresets[videoFilter] }} 
-              />
+              onWaiting={() => setIsLoading(true)}
+              onPlaying={() => setIsLoading(false)}
+              onError={() => {
+                setPlayerError(true);
+                setIsLoading(false);
+              }}
+            />
           )}
         </div>
       </div>
