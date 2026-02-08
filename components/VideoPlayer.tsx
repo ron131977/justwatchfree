@@ -1119,139 +1119,20 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     };
   }, [activeServer, streams]);
 
-  // Type-safe fullscreen function
-  const toggleFullscreen = useCallback(() => {
+  const toggleFullscreen = () => {
     if (!containerRef.current) return;
-    
-    const elem = containerRef.current;
-    
-    // Use type assertion for browser-specific APIs
-    const doc = document as any;
-    const requestFullscreen = 
-      elem.requestFullscreen ||
-      (elem as any).webkitRequestFullscreen ||
-      (elem as any).mozRequestFullScreen ||
-      (elem as any).msRequestFullscreen;
-    
-    const exitFullscreen = 
-      doc.exitFullscreen ||
-      doc.webkitExitFullscreen ||
-      doc.mozCancelFullScreen ||
-      doc.msExitFullscreen;
-    
-    const fullscreenElement = 
-      doc.fullscreenElement ||
-      doc.webkitFullscreenElement ||
-      doc.mozFullScreenElement ||
-      doc.msFullscreenElement;
-
-    if (!fullscreenElement) {
-      // Enter fullscreen
-      if (requestFullscreen) {
-        requestFullscreen.call(elem).catch((e: Error) => {
-          console.error('Error attempting to enable fullscreen:', e);
-          // Fallback for browsers that don't support fullscreen API
-          if (elem.classList.contains('video-container')) {
-            elem.classList.add('fullscreen-fallback');
-            setIsFullscreen(true);
-          }
-        });
-      }
+    if (!document.fullscreenElement) {
+      containerRef.current.requestFullscreen().catch(e => console.error(e));
     } else {
-      // Exit fullscreen
-      if (exitFullscreen) {
-        exitFullscreen.call(doc);
-      }
-      // Remove fallback class if exists
-      if (elem.classList.contains('fullscreen-fallback')) {
-        elem.classList.remove('fullscreen-fallback');
-        setIsFullscreen(false);
-      }
+      document.exitFullscreen();
     }
-  }, []);
+  };
 
-  // Fullscreen change handler
   useEffect(() => {
-    const handleFullscreenChange = () => {
-      const doc = document as any;
-      const fullscreenElement = 
-        doc.fullscreenElement ||
-        doc.webkitFullscreenElement ||
-        doc.mozFullScreenElement ||
-        doc.msFullscreenElement;
-      
-      setIsFullscreen(!!fullscreenElement);
-      
-      // Force controls to show when entering fullscreen
-      if (fullscreenElement) {
-        setShowControls(true);
-        if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-        controlsTimeoutRef.current = setTimeout(() => setShowControls(false), 5000);
-      }
-    };
-
-    const events = [
-      'fullscreenchange',
-      'webkitfullscreenchange',
-      'mozfullscreenchange',
-      'MSFullscreenChange'
-    ];
-
-    events.forEach(event => {
-      document.addEventListener(event, handleFullscreenChange);
-    });
-
-    return () => {
-      events.forEach(event => {
-        document.removeEventListener(event, handleFullscreenChange);
-      });
-    };
+    const handleFS = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', handleFS);
+    return () => document.removeEventListener('fullscreenchange', handleFS);
   }, []);
-
-  // Add CSS for fallback fullscreen
-  useEffect(() => {
-    if (typeof document === 'undefined') return;
-    
-    const style = document.createElement('style');
-    style.textContent = `
-      .fullscreen-fallback {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: 9999 !important;
-        background: black !important;
-        margin: 0 !important;
-        border: none !important;
-        border-radius: 0 !important;
-      }
-      
-      /* Hide scrollbars in fullscreen */
-      body:has(.fullscreen-fallback) {
-        overflow: hidden !important;
-      }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      if (style.parentNode) {
-        document.head.removeChild(style);
-      }
-    };
-  }, []);
-
-  // Handle escape key to exit fullscreen
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isFullscreen) {
-        toggleFullscreen();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isFullscreen, toggleFullscreen]);
 
   if (!streams.length) return (
     <div className="aspect-video bg-miraj-gray rounded-xl flex flex-col items-center justify-center p-6 text-center border border-white/5">
@@ -1320,16 +1201,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
       {/* Player Container */}
       <div 
-        ref={containerRef}
-        className={`relative bg-black group w-full overflow-hidden transition-all duration-500 video-container ${isFullscreen ? 'fixed inset-0 z-[100]' : 'aspect-video rounded-xl border border-white/10 shadow-2xl'}`}
+        ref={containerRef} 
+        className={`relative bg-black group w-full overflow-hidden transition-all duration-500 ${isFullscreen ? 'fixed inset-0 z-[100]' : 'aspect-video rounded-xl border border-white/10 shadow-2xl'}`}
         onMouseMove={handleUserActivity}
         onTouchStart={handleUserActivity}
-        onClick={handleUserActivity}
       >
-        {/* Fullscreen Button - Floating at center top of player, appears on hover */}
+        {/* Fullscreen Button */}
         <div className={`absolute top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 pointer-events-auto transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
           <button 
-            onClick={toggleFullscreen}
+            onClick={toggleFullscreen} 
             className="p-2 sm:p-2.5 bg-black/80 backdrop-blur-md rounded-full border-2 border-white/40 hover:border-miraj-gold hover:text-miraj-gold text-white transition-all duration-300 shadow-2xl hover:bg-black/90 hover:scale-110 active:scale-95 touch-manipulation min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] flex items-center justify-center"
             aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
           >
@@ -1391,27 +1271,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               className="w-full h-full bg-black" 
               controls 
               playsInline 
-              autoPlay 
+              autoPlay
+              crossOrigin="anonymous"
               style={{ filter: filterPresets[videoFilter] }} 
-              onWaiting={() => setIsLoading(true)} 
-              onPlaying={() => setIsLoading(false)}
-              onError={() => {
-                setPlayerError(true);
-                setIsLoading(false);
-              }}
-              poster="/og-image.jpg"
-              aria-label={`${title} video player`}
-            />
+              />
           )}
         </div>
-        
-        {/* Touch hint for mobile */}
-        {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-70">
-          <div className="bg-black/60 text-white text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1">
-            <Maximize2 size={12} />
-            <span>Tap center to toggle fullscreen</span>
-          </div>
-        </div> */}
       </div>
     </div>
   );
