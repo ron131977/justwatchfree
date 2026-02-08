@@ -849,46 +849,16 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               referrerPolicy="strict-origin-when-cross-origin"
             />
           ) : (
-            <video 
-              ref={videoRef} 
-              className="w-full h-full bg-black object-contain"
-              controls 
-              playsInline 
-              autoPlay
-              muted
-              crossOrigin="anonymous"
-              preload="auto"
-              style={{ filter: filterPresets[videoFilter] }} 
-              onWaiting={() => setIsLoading(true)} 
-              onPlaying={() => {
-                setIsLoading(false);
-                // Unmute after playing starts
-                if (videoRef.current && videoRef.current.muted) {
-                  videoRef.current.muted = false;
-                }
-              }}
-              onCanPlay={() => {
-                setIsLoading(false);
-                // Force play when ready
-                if (videoRef.current) {
-                  videoRef.current.play().catch(err => console.log('Autoplay blocked:', err));
-                }
-              }}
-              onLoadedData={() => {
-                setIsLoading(false);
-                // Force play when loaded
-                if (videoRef.current) {
-                  videoRef.current.play().catch(err => console.log('Autoplay blocked:', err));
-                }
-              }}
-              onError={(e) => {
-                console.error('Video error:', e);
-                setPlayerError(true);
-                setIsLoading(false);
-              }}
-              poster="/og-image.jpg"
-              aria-label={`${title} video player`}
-            />
+          <video
+          ref={videoRef}
+          className="w-full h-full bg-black object-contain"
+          style={filterStyle}
+          controls
+          playsInline
+          autoPlay
+          crossOrigin="anonymous"
+        />
+
           )}
         </div>
       </div>
