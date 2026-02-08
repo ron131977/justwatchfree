@@ -1406,12 +1406,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </div>
         
         {/* Touch hint for mobile */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-70">
+        {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-70">
           <div className="bg-black/60 text-white text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1">
             <Maximize2 size={12} />
             <span>Tap center to toggle fullscreen</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
