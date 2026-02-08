@@ -348,6 +348,24 @@ import { StreamSource } from '../types';
 import { UNIQUE_MOVIES, UNIQUE_TV_SHOWS, UNIQUE_SPORTS, UNIQUE_TV_LIVE } from '../services/tmdb';
 import Hls from 'hls.js';
 
+// TypeScript declarations for Screen Orientation API
+declare global {
+  interface ScreenOrientation extends EventTarget {
+    lock(orientation: OrientationLockType): Promise<void>;
+    unlock(): void;
+  }
+}
+
+type OrientationLockType = 
+  | 'any'
+  | 'natural'
+  | 'landscape'
+  | 'portrait'
+  | 'portrait-primary'
+  | 'portrait-secondary'
+  | 'landscape-primary'
+  | 'landscape-secondary';
+
 interface VideoPlayerProps {
   tmdbId?: string | number;
   type?: 'movie' | 'tv' | 'sports' | 'tv_live';
@@ -546,9 +564,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         }
 
         // Lock orientation to landscape on mobile if supported
-        if (screen.orientation && screen.orientation.lock) {
+        if (screen.orientation && typeof (screen.orientation as any).lock === 'function') {
           try {
-            await screen.orientation.lock('landscape').catch(() => {
+            await (screen.orientation as any).lock('landscape').catch(() => {
               // Orientation lock failed, continue without it
               console.log('Orientation lock not supported or failed');
             });
@@ -569,9 +587,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         }
 
         // Unlock orientation
-        if (screen.orientation && screen.orientation.unlock) {
+        if (screen.orientation && typeof (screen.orientation as any).unlock === 'function') {
           try {
-            screen.orientation.unlock();
+            (screen.orientation as any).unlock();
           } catch (err) {
             // Silently handle orientation unlock errors
           }
@@ -834,7 +852,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 setPlayerError(true);
                 setIsLoading(false);
               }}
-              poster="/video-poster.jpg"
+              poster="/og-image.jpg"
               aria-label={`${title} video player`}
             />
           )}
