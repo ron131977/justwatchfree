@@ -508,14 +508,27 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         hlsRef.current = hls;
         hls.loadSource(current.url);
         hls.attachMedia(videoRef.current);
+        
+        // Mute initially to allow autoplay
+        if (videoRef.current) {
+          videoRef.current.muted = true;
+        }
+        
         hls.on(Hls.Events.MANIFEST_PARSED, () => { 
           setIsLoading(false); 
-          // Force play multiple times to ensure autoplay
+          // Force play muted, then unmute
           if (videoRef.current) {
-            videoRef.current.play().catch(() => {
+            videoRef.current.play().then(() => {
+              // Unmute after playing starts
+              if (videoRef.current) {
+                videoRef.current.muted = false;
+              }
+            }).catch(() => {
               // If autoplay fails, try again after a short delay
               setTimeout(() => {
-                videoRef.current?.play().catch(e => console.log('Autoplay prevented:', e));
+                videoRef.current?.play().then(() => {
+                  if (videoRef.current) videoRef.current.muted = false;
+                }).catch(e => console.log('Autoplay prevented:', e));
               }, 100);
             });
           }
@@ -527,12 +540,17 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         });
       } else if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
         videoRef.current.src = current.url;
+        videoRef.current.muted = true;
         videoRef.current.onloadedmetadata = () => { 
           setIsLoading(false); 
           // Force play on Safari/iOS
-          videoRef.current?.play().catch(() => {
+          videoRef.current?.play().then(() => {
+            if (videoRef.current) videoRef.current.muted = false;
+          }).catch(() => {
             setTimeout(() => {
-              videoRef.current?.play().catch(e => console.log('Autoplay prevented:', e));
+              videoRef.current?.play().then(() => {
+                if (videoRef.current) videoRef.current.muted = false;
+              }).catch(e => console.log('Autoplay prevented:', e));
             }, 100);
           }); 
         };
@@ -837,12 +855,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               controls 
               playsInline 
               autoPlay
-              muted={false}
+              muted
               crossOrigin="anonymous"
               preload="auto"
               style={{ filter: filterPresets[videoFilter] }} 
               onWaiting={() => setIsLoading(true)} 
-              onPlaying={() => setIsLoading(false)}
+              onPlaying={() => {
+                setIsLoading(false);
+                // Unmute after playing starts
+                if (videoRef.current && videoRef.current.muted) {
+                  videoRef.current.muted = false;
+                }
+              }}
               onCanPlay={() => {
                 setIsLoading(false);
                 // Force play when ready
