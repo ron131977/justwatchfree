@@ -391,7 +391,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [videoFilter, setVideoFilter] = useState<string>('standard');
   const [playerError, setPlayerError] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isLandscape, setIsLandscape] = useState(false);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const hlsRef = useRef<Hls | null>(null);
@@ -639,37 +638,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     };
   }, []);
 
-  // Monitor orientation changes for landscape mode
-  useEffect(() => {
-    const handleOrientationChange = () => {
-      if (window.matchMedia('(orientation: landscape)').matches) {
-        setIsLandscape(true);
-      } else {
-        setIsLandscape(false);
-      }
-    };
-
-    // Initial check
-    handleOrientationChange();
-
-    // Listen for orientation changes
-    window.addEventListener('orientationchange', handleOrientationChange);
-    window.addEventListener('resize', handleOrientationChange);
-
-    // Modern API
-    if (screen.orientation) {
-      screen.orientation.addEventListener('change', handleOrientationChange);
-    }
-
-    return () => {
-      window.removeEventListener('orientationchange', handleOrientationChange);
-      window.removeEventListener('resize', handleOrientationChange);
-      if (screen.orientation) {
-        screen.orientation.removeEventListener('change', handleOrientationChange);
-      }
-    };
-  }, []);
-
   // Auto-hide controls in fullscreen after inactivity
   useEffect(() => {
     if (isFullscreen) {
@@ -765,7 +733,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           isFullscreen 
             ? 'fixed inset-0 z-[100] w-screen h-screen' 
             : 'aspect-video rounded-xl border border-white/10 shadow-2xl'
-        } ${isFullscreen && isLandscape ? 'landscape:w-screen landscape:h-screen' : ''}`}
+        }`}
         onMouseMove={handleUserActivity}
         onTouchStart={handleUserActivity}
         onTouchMove={handleUserActivity}
@@ -773,23 +741,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       >
         {/* Fullscreen Button - ALWAYS CENTERED, ALWAYS VISIBLE */}
         <div 
-          className="absolute top-4 left-1/2 -translate-x-1/2 z-[9999] pointer-events-auto"
-          onTouchStart={(e) => {
-            e.stopPropagation();
-          }}
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
+          className="absolute top-4 left-1/2 -translate-x-1/2 z-50"
+          style={{ pointerEvents: 'auto' }}
         >
           <button 
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
               toggleFullscreen();
-            }}
-            onTouchStart={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
             }}
             onTouchEnd={(e) => {
               e.preventDefault();
@@ -801,9 +760,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
             type="button"
           >
             {isFullscreen ? (
-              <Minimize2 size={24} className="sm:w-7 sm:h-7 transition-transform duration-300"/>
+              <Minimize2 size={24} className="sm:w-7 sm:h-7"/>
             ) : (
-              <Maximize2 size={24} className="sm:w-7 sm:h-7 transition-transform duration-300"/>
+              <Maximize2 size={24} className="sm:w-7 sm:h-7"/>
             )}
           </button>
         </div>
@@ -844,7 +803,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
             <iframe 
               key={currentStream.url} 
               src={currentStream.url} 
-              className={`w-full h-full border-0 ${isFullscreen && isLandscape ? 'landscape:w-full landscape:h-full' : ''}`}
+              className="w-full h-full border-0"
               allowFullScreen 
               style={{ filter: filterPresets[videoFilter] }} 
               onLoad={() => setIsLoading(false)}
@@ -855,7 +814,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           ) : (
             <video 
               ref={videoRef} 
-              className={`w-full h-full bg-black ${isFullscreen && isLandscape ? 'landscape:w-full landscape:h-full object-contain' : ''}`}
+              className="w-full h-full bg-black object-contain"
               controls 
               playsInline 
               autoPlay 
