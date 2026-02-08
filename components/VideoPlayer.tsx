@@ -508,30 +508,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         hlsRef.current = hls;
         hls.loadSource(current.url);
         hls.attachMedia(videoRef.current);
-        
-        // Mute initially to allow autoplay
-        if (videoRef.current) {
-          videoRef.current.muted = true;
-        }
-        
         hls.on(Hls.Events.MANIFEST_PARSED, () => { 
           setIsLoading(false); 
-          // Force play muted, then unmute
-          if (videoRef.current) {
-            videoRef.current.play().then(() => {
-              // Unmute after playing starts
-              if (videoRef.current) {
-                videoRef.current.muted = false;
-              }
-            }).catch(() => {
-              // If autoplay fails, try again after a short delay
-              setTimeout(() => {
-                videoRef.current?.play().then(() => {
-                  if (videoRef.current) videoRef.current.muted = false;
-                }).catch(e => console.log('Autoplay prevented:', e));
-              }, 100);
-            });
-          }
+          videoRef.current?.play().catch(() => {});
         });
         hls.on(Hls.Events.ERROR, (event, data) => { 
           console.error('HLS Error:', data);
@@ -540,19 +519,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         });
       } else if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
         videoRef.current.src = current.url;
-        videoRef.current.muted = true;
         videoRef.current.onloadedmetadata = () => { 
           setIsLoading(false); 
-          // Force play on Safari/iOS
-          videoRef.current?.play().then(() => {
-            if (videoRef.current) videoRef.current.muted = false;
-          }).catch(() => {
-            setTimeout(() => {
-              videoRef.current?.play().then(() => {
-                if (videoRef.current) videoRef.current.muted = false;
-              }).catch(e => console.log('Autoplay prevented:', e));
-            }, 100);
-          }); 
+          videoRef.current?.play().catch(() => {}); 
         };
         videoRef.current.onerror = () => {
           setPlayerError(true);
@@ -849,16 +818,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               referrerPolicy="strict-origin-when-cross-origin"
             />
           ) : (
-          <video
-          ref={videoRef}
-          className="w-full h-full bg-black object-contain"
-          style={filterStyle}
-          controls
-          playsInline
-          autoPlay
-          crossOrigin="anonymous"
-        />
-
+            <video
+              ref={videoRef}
+              className="w-full h-full bg-black object-contain"
+              style={{ filter: filterPresets[videoFilter] }}
+              controls
+              playsInline
+              autoPlay
+              crossOrigin="anonymous"
+            />
           )}
         </div>
       </div>
