@@ -335,8 +335,6 @@
 
 
 
-
-
 import React, { useState, useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -369,8 +367,10 @@ const LatestAccordionSection: React.FC<{
         e.stopPropagation();
         setVisibleCount(prev => prev + 12);
     };
+ 
 
     return (
+     
         <div className="mb-4 bg-black/20 border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
             <button 
                 onClick={() => setIsOpen(!isOpen)}
@@ -387,7 +387,6 @@ const LatestAccordionSection: React.FC<{
                     <ChevronDown size={20} />
                 </div>
             </button>
-            
             <div className={`transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="p-4 md:p-6 border-t border-white/5">
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
@@ -537,7 +536,7 @@ const Home: React.FC<HomePageProps> = ({ trending, popularMovies, topRatedTV, he
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Justwatch Free Official | Premium Video Entertainment",
+    "name": "Justwatch Free Official",
     "url": "https://justwatchfree.vercel.app",
     "potentialAction": {
       "@type": "SearchAction",
@@ -549,8 +548,8 @@ const Home: React.FC<HomePageProps> = ({ trending, popularMovies, topRatedTV, he
   return (
     <div className="min-h-screen bg-miraj-black pb-20">
       <SEO 
-        title="Justwatch Free Official | Premium Video Entertainment" 
-        description="Justwatch Free Official - Stream thousands of Movies, TV Shows, and Live Sports for free in HD quality. No registration required."
+        title="Justwatch Free Official" 
+        description="Justwatch Free Official - Official Site for free Movie and Tv Shows in HD quality. No registration required."
         schema={schema}
       />
       
