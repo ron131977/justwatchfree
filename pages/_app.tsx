@@ -60,15 +60,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       // Load clicky script
       const clickyScript1 = document.createElement('script');
       clickyScript1.async = true;
-      clickyScript1.setAttribute('data-id', '101480127');
+      clickyScript1.setAttribute('data-id', '101501170');
       clickyScript1.src = '//static.getclicky.com/js';
       document.head.appendChild(clickyScript1);
+
 
       // Load additional script
       const clickyScript2 = document.createElement('script');
       clickyScript2.async = true;
-      clickyScript2.setAttribute('data-id', '101480127');
-      clickyScript2.src = '/69e4fc5642f327d1b.js';
+      clickyScript2.setAttribute('data-id', '101501170');
+      clickyScript2.src = '/fde4207833.js';
       document.head.appendChild(clickyScript2);
     };
 
