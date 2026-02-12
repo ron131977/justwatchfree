@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/globals.css';
+import Script from 'next/script';   
 import { useRouter } from 'next/router';
 import { AlertTriangle } from 'lucide-react';
 
@@ -108,21 +109,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="canonical" href="https://justwatchfree.vercel.app/" />
         <title>Justwatch Free Official | Premium Video Entertainment</title>
         
-              
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3E2NGMBQ1"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-P3E2NGMBQ1');
-            `,
-          }}
-        />
       </Head>
       {/* Security Warning Toast */}
+        {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-P3E2NGMBQ1"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P3E2NGMBQ1');
+        `}
+      </Script>
       <div 
         className={`fixed top-24 left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-300 pointer-events-none ${
           showSecurityWarning ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
